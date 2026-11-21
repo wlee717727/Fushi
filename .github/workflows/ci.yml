@@ -1,0 +1,70 @@
+# Continuous integration: runs on every push to main and every pull request.
+# Same checks as scripts/build.sh: unit tests, Release build of both apps,
+# and the String Catalog check (no missing translations, catalog in sync).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select the newest Xcode
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE/Contents/Developer"
+          xcodebuild -version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate project
+        run: xcodegen generate --quiet
+
+      - name: Unit tests
+        run: |
+          xcodebuild -project Fushi.xcodeproj -scheme Fushi -configuration Debug \
+            -derivedDataPath build/DerivedData -destination 'platform=macOS' \
+            test -quiet
+
+      - name: Release build (Fushi and FushiProbe)
+        run: |
+          for scheme in Fushi FushiProbe; do
+            xcodebuild -project Fushi.xcodeproj -scheme "$scheme" -configuration Release \
+              -derivedDataPath build/DerivedData -destination 'platform=macOS' \
+              build -quiet
+          done
+
+      - name: Check translations
+        run: |
+          set +e
+          python3 scripts/sync-strings.py Release | tee sync.log
+          status=${PIPESTATUS[0]}
+          set -e
+          if [ "$status" = 10 ]; then
+            echo "::error::String Catalog is out of date. Run scripts/build.sh locally and commit the updated .xcstrings files."
+            git diff --stat
+            exit 1
+          elif [ "$status" != 0 ]; then
+            echo "::error::sync-strings.py failed ($status)"
+            exit "$status"
+          fi
+          if grep -E "還缺 [1-9][0-9]* 句翻譯" sync.log; then
+            echo "::error::Some languages have missing translations."
+            exit 1
+          fi

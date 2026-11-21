@@ -11,6 +11,10 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/wlee717727/Fushi/actions/workflows/ci.yml"><img src="https://github.com/wlee717727/Fushi/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
+
+<p align="center">
   <a href="README.md">English</a> · 繁體中文
 </p>
 
