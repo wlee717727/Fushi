@@ -3,15 +3,15 @@
 name: Fushi
 options:
   bundleIdPrefix: com.wlee717727
-  developmentLanguage: zh-Hant
+  developmentLanguage: en
   createIntermediateGroups: true
   deploymentTarget:
     macOS: "14.0"
 
 settings:
   base:
-    MARKETING_VERSION: 0.3.0
-    CURRENT_PROJECT_VERSION: 3
+    MARKETING_VERSION: 0.4.0
+    CURRENT_PROJECT_VERSION: 4
     SWIFT_VERSION: "5.0"
     # 最低支援 macOS 14 Sonoma；通用版 (Apple Silicon＋Intel)，沒有觸控螢幕的 Mac 也能用
     MACOSX_DEPLOYMENT_TARGET: "14.0"
@@ -43,7 +43,7 @@ targets:
     settings:
       base:
         PRODUCT_NAME: Fushi
-        FUSHI_DISPLAY_NAME: 拂拭
+        FUSHI_DISPLAY_NAME: Fushi
         PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.Fushi
         INFOPLIST_FILE: Sources/Fushi/Info.plist
         # 簽章身分改用 Bundle ID (預設是每次建置都會變的 cdhash)，
@@ -52,7 +52,9 @@ targets:
         # 開發版用不同的 Bundle ID 與名稱，避免系統把它跟正式版搞混 (例如雙擊卻開到開發版)
         Debug:
           PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.Fushi.debug
-          FUSHI_DISPLAY_NAME: 拂拭 (開發版)
+          FUSHI_DISPLAY_NAME: Fushi Dev
+          # 開發版不套用名稱翻譯，各語言都叫 Fushi Dev，避免和正式版的「拂拭」混淆
+          EXCLUDED_SOURCE_FILE_NAMES: InfoPlist.xcstrings
         Release:
           OTHER_CODE_SIGN_FLAGS: --requirements $(SRCROOT)/signing/Fushi.req
     info:
@@ -60,15 +62,16 @@ targets:
       properties:
         CFBundleName: $(FUSHI_DISPLAY_NAME)
         CFBundleDisplayName: $(FUSHI_DISPLAY_NAME)
-        CFBundleDevelopmentRegion: zh-Hant
-        CFBundleLocalizations: [zh-Hant]
+        CFBundleDevelopmentRegion: en
+        # App 支援的語言：新增翻譯時要加到這裡，系統才會對該語言的使用者顯示
+        CFBundleLocalizations: [en, zh-Hant, zh-Hans, ja, ko, es]
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CFBundleIconName: AppIcon
         CFBundleIconFile: AppIcon
         LSApplicationCategoryType: public.app-category.utilities
         LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
-        NSHumanReadableCopyright: 時時勤拂拭，勿使惹塵埃。
+        NSHumanReadableCopyright: Wipe it diligently, and let no dust gather.
         NSSupportsAutomaticTermination: false
         NSSupportsSuddenTermination: false
 

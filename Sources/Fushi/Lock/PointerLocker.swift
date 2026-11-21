@@ -153,8 +153,8 @@ final class PointerLocker: @unchecked Sendable {
         lock.unlock()
         if wasActive {
             let text = summary.sorted { $0.key < $1.key }
-                .map { "\($0.key) 收到 \($0.value.seen)、擋下 \($0.value.blocked)" }
-                .joined(separator: "；")
+                .map { "\($0.key) seen \($0.value.seen), blocked \($0.value.blocked)" }
+                .joined(separator: "; ")
             Diagnostics.log("指標攔截結束：\(text.isEmpty ? "沒有收到任何指標事件" : text)")
         }
         emergency.stop()

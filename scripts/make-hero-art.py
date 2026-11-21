@@ -22,13 +22,17 @@ DUSTER_START = '<g><path d="M650,470'
 DUSTER_END = '<circle cx="662" cy="482" r="18" fill="#A8762C"/></g>'
 
 # 每張插畫：名稱、取景範圍 (圖示座標，16:10)、拂塵的變形 (SVG transform，None 表示不動)
+# 四張插畫用「完全相同」的取景：整台筆電 (含最下方的觸控板) 都入鏡，16:10。
+# 切換頁面時筆電不動，只有拂塵移動：螢幕 → 鍵盤 → 觸控板 → 蓋過整台 (全鎖)。
+VIEW = (-96, 130, 1216, 760)   # 上下各留空間：拂塵最頂端約 177、筆電底座約 860
+DUSTER_KEYBOARD = "translate(-40,196) rotate(-35 650 470) translate(650 470) scale(0.85) translate(-650 -470)"
+DUSTER_TRACKPAD = "translate(28,296) rotate(-38 650 470) translate(650 470) scale(0.88) translate(-650 -470)"
+DUSTER_ALL = "translate(10,120) rotate(-12 650 470) translate(650 470) scale(1.12) translate(-650 -470)"
 ARTS = [
-    # B 面：拂塵掃螢幕。上緣留到拂塵最頂端 (約 177) 以上，下緣含握把末端
-    ("HeroScreen", "Hero-B-screen.svg", (16, 140, 992, 620), None),
-    # C 面：拂塵掃鍵盤。取景往下移到鍵盤，拂塵往左下移到鍵盤上
-    # 和 B 面完全相同的取景 (同比例、同留白)，只把拂塵縮小 85%、逆時針轉 35 度、移到鍵盤上
-    ("HeroKeyboard", "Hero-C-keyboard.svg", (16, 140, 992, 620),
-     "translate(-40,196) rotate(-35 650 470) translate(650 470) scale(0.85) translate(-650 -470)"),
+    ("HeroScreen", "Hero-1-screen.svg", VIEW, None),
+    ("HeroKeyboard", "Hero-2-keyboard.svg", VIEW, DUSTER_KEYBOARD),
+    ("HeroTrackpad", "Hero-3-trackpad.svg", VIEW, DUSTER_TRACKPAD),
+    ("HeroAll", "Hero-4-all.svg", VIEW, DUSTER_ALL),
 ]
 
 
@@ -65,6 +69,9 @@ for asset, svg_name, view, offset in ARTS:
     # 用系統的 WebKit 轉檔，陰影與光暈濾鏡才完整
     r = subprocess.run(["swift", os.path.join(ROOT, "scripts", "render-svg.swift"), out_svg, png,
                         str(view[2] * 2), str(view[3] * 2)], capture_output=True, text=True)
+    if r.returncode == 0:
+        # 主視窗插畫最寬 560 點，Retina 約需 1120 像素；輸出 1680 像素寬保留餘裕，檔案小很多
+        subprocess.run(["sips", "-Z", "1680", png], capture_output=True)
     if r.returncode != 0:
         print(r.stdout, r.stderr)
         sys.exit(r.returncode)

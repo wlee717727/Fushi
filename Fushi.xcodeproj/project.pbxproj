@@ -34,6 +34,7 @@
 		835BF1CCF9158F09A4467FB1 /* SessionMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2915391033595F39F7F2927 /* SessionMachine.swift */; };
 		868894A989112944F62F7B14 /* EscapeHold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0DA6757ACD17BE9EA47C1 /* EscapeHold.swift */; };
 		8D89345DED945B2AF8E979AD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 97F66546505785E2ED0B5A88 /* Localizable.xcstrings */; };
+		8F15A549E85ED454E5C9646F /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 87E82629AD41424188F9E307 /* InfoPlist.xcstrings */; };
 		A50B4BB5063EE2F9CE376F95 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286AA2137DEF6BC1878837C9 /* Diagnostics.swift */; };
 		AC5D6DF94393C7F231773AEF /* PanelSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = C218C4281DD1A6D3D37AF7E9 /* PanelSnapshots.swift */; };
 		B43463F7BB3B6BF0534D5ABF /* EmergencyGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE408DCD66C24B54B9758DB8 /* EmergencyGuard.swift */; };
@@ -74,6 +75,7 @@
 		7641A43853665457B257B08F /* CleaningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningMode.swift; sourceTree = "<group>"; };
 		80BDEC1579071F7A51FB0107 /* PermissionGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionGuideView.swift; sourceTree = "<group>"; };
 		82485686D3F1C05234153C67 /* LockViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViews.swift; sourceTree = "<group>"; };
+		87E82629AD41424188F9E307 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		9569D0D05CB670CD61D0B2D1 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		967266E60F9086337E8677BD /* KeyboardLocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLocker.swift; sourceTree = "<group>"; };
 		97F66546505785E2ED0B5A88 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				53562E471E05A85E313126E9 /* Assets.xcassets */,
+				87E82629AD41424188F9E307 /* InfoPlist.xcstrings */,
 				97F66546505785E2ED0B5A88 /* Localizable.xcstrings */,
 			);
 			path = Resources;
@@ -383,10 +386,15 @@
 				};
 			};
 			buildConfigurationList = 377FAA3217BF5252C442202E /* Build configuration list for PBXProject "Fushi" */;
-			developmentRegion = "zh-Hant";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				en,
+				es,
+				ja,
+				ko,
+				"zh-Hans",
 				"zh-Hant",
 			);
 			mainGroup = 62D82A2A02D1CC37E0067A14;
@@ -409,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				513F2592531FF3F928143A3E /* Assets.xcassets in Resources */,
+				8F15A549E85ED454E5C9646F /* InfoPlist.xcstrings in Resources */,
 				8D89345DED945B2AF8E979AD /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,7 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				FUSHI_DISPLAY_NAME = "拂拭";
+				FUSHI_DISPLAY_NAME = Fushi;
 				INFOPLIST_FILE = Sources/Fushi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +592,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				FUSHI_DISPLAY_NAME = "拂拭 (開發版)";
+				EXCLUDED_SOURCE_FILE_NAMES = InfoPlist.xcstrings;
+				FUSHI_DISPLAY_NAME = "Fushi Dev";
 				INFOPLIST_FILE = Sources/Fushi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,7 +645,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
@@ -654,7 +664,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -707,7 +717,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
@@ -732,7 +742,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;

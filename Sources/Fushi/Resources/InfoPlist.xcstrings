@@ -1,0 +1,78 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "CFBundleDisplayName": {
+      "comment": "App 在 Finder、Dock 顯示的名稱",
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        }
+      }
+    },
+    "CFBundleName": {
+      "comment": "選單列上的 App 名稱",
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        }
+      }
+    },
+    "NSHumanReadableCopyright": {
+      "comment": "關於視窗的一句話 (拂拭名稱的出處)",
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Límpialo con constancia y no dejes que se acumule el polvo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時時に勤めて払拭せよ、塵埃を惹かしむること勿かれ。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "늘 부지런히 닦아 먼지가 앉지 않게 하라."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时时勤拂拭，勿使惹尘埃。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時時勤拂拭，勿使惹塵埃。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

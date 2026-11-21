@@ -1,303 +1,32 @@
 {
-  "sourceLanguage": "zh-Hant",
+  "sourceLanguage": "en",
   "strings": {
-    "%@ 後自動結束": {
-      "extractionState": "stale",
+    "%@ left": {
       "localizations": {
-        "zh-Hant": {
+        "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ 後自動結束"
+            "value": "Quedan %@"
           }
-        }
-      }
-    },
-    "%@ 後自動解鎖": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@ 後自動解鎖"
+            "value": "残り %@"
           }
-        }
-      }
-    },
-    "%@後自動解鎖": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "%@後自動解鎖"
+            "value": "%@ 남음"
           }
-        }
-      }
-    },
-    "%lld": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld"
+            "value": "剩余 %@"
           }
-        }
-      }
-    },
-    "%lld 秒後結束清潔 · 放開就取消": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld 秒後結束清潔 · 放開就取消"
-          }
-        }
-      }
-    },
-    "10 分": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "10 分"
-          }
-        }
-      }
-    },
-    "30 秒": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "30 秒"
-          }
-        }
-      }
-    },
-    "B 面清潔 (螢幕) 不需要任何權限。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "B 面清潔 (螢幕) 不需要任何權限。"
-          }
-        }
-      }
-    },
-    "B 面清潔不需要任何權限。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "B 面清潔不需要任何權限。"
-          }
-        }
-      }
-    },
-    "B 面清潔不需要任何權限。勾選後這一頁會自動更新。": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "B 面清潔不需要任何權限。勾選後這一頁會自動更新。"
-          }
-        }
-      }
-    },
-    "C 面「鎖鍵盤」需要「輔助使用」權限 (B 面不需要)。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "C 面「鎖鍵盤」需要「輔助使用」權限 (B 面不需要)。"
-          }
-        }
-      }
-    },
-    "C 面全部": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "C 面全部"
-          }
-        }
-      }
-    },
-    "C 面清潔": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "C 面清潔"
-          }
-        }
-      }
-    },
-    "•": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "•"
-          }
-        }
-      }
-    },
-    "上次的模式：%@": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "上次的模式：%@"
-          }
-        }
-      }
-    },
-    "上次：%@": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "上次：%@"
-          }
-        }
-      }
-    },
-    "上次：%@，一樣會先倒數 3 秒，可以取消": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "上次：%@，一樣會先倒數 3 秒，可以取消"
-          }
-        }
-      }
-    },
-    "也可以長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "也可以長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。"
-          }
-        }
-      }
-    },
-    "也可以長按 Esc 3 秒結束。8 秒沒有操作會自動變回全黑。": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "也可以長按 Esc 3 秒結束。8 秒沒有操作會自動變回全黑。"
-          }
-        }
-      }
-    },
-    "使用說明": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "使用說明"
-          }
-        }
-      }
-    },
-    "倒數 3 秒後鎖定，%@後自動解鎖": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "倒數 3 秒後鎖定，%@後自動解鎖"
-          }
-        }
-      }
-    },
-    "允許一次之後就不用再設定": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "允許一次之後就不用再設定"
-          }
-        }
-      }
-    },
-    "先允許權限…": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "先允許權限…"
-          }
-        }
-      }
-    },
-    "全部已鎖定，清潔中": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "全部已鎖定，清潔中"
-          }
-        }
-      }
-    },
-    "全鎖": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "全鎖"
-          }
-        }
-      }
-    },
-    "全鎖即將推出": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "全鎖即將推出"
-          }
-        }
-      }
-    },
-    "全鎖會把鍵盤、觸控板、觸控螢幕全部鎖住，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。\n要先用偵測工具確認三種輸入分得出來，才能安全開放。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "全鎖會把鍵盤、觸控板、觸控螢幕全部鎖住，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。\n要先用偵測工具確認三種輸入分得出來，才能安全開放。"
-          }
-        }
-      }
-    },
-    "全鎖期間只有它能操作": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "全鎖期間只有它能操作"
-          }
-        }
-      }
-    },
-    "剩餘 %@": {
-      "localizations": {
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
@@ -306,178 +35,270 @@
         }
       }
     },
-    "剩餘 %@ 自動結束": {
-      "extractionState": "stale",
+    "%lld min": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld분"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分钟"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "剩餘 %@ 自動結束"
+            "value": "%lld 分鐘"
           }
         }
       }
     },
-    "剩餘 %@ 自動解鎖": {
-      "extractionState": "stale",
+    "%lld min %lld s": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min %lld s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分 %lld 秒"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld분 %lld초"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分 %lld 秒"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "剩餘 %@ 自動解鎖"
+            "value": "%lld 分 %lld 秒"
           }
         }
       }
     },
-    "勾選後這個畫面會自動更新，不需要重新開啟。": {
-      "extractionState": "stale",
+    "%lld s": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld초"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "勾選後這個畫面會自動更新，不需要重新開啟。"
+            "value": "%lld 秒"
           }
         }
       }
     },
-    "即將推出": {
-      "extractionState": "stale",
+    "A panel appears at the top of the screen; hold “Hold 2 s to end cleaning” to unlock. When the trackpad is locked, use the touch screen or an external mouse; without either, hold Esc for 3 s.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aparece un panel en la parte superior de la pantalla; mantén pulsado «Mantén 2 s para terminar» para desbloquear. Si el trackpad está bloqueado, usa la pantalla táctil o un ratón externo; si no tienes ninguno, mantén pulsada Esc 3 s."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面の上部にパネルが表示されます。「2 秒押して清掃を終了」を押し続けるとロックが解除されます。トラックパッドがロックされているときは、タッチスクリーンまたは外付けマウスで押してください。どちらもない場合は Esc を 3 秒押し続けます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 상단에 패널이 나타납니다. ‘2초 눌러 청소 종료’를 길게 누르면 잠금이 해제됩니다. 트랙패드가 잠겨 있으면 터치스크린이나 외장 마우스로 누르세요. 둘 다 없으면 Esc를 3초 동안 누르세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面上方会出现面板，按住“按住 2 秒结束清洁”就能解锁。触控板锁住时请用触摸屏或外接鼠标按；两者都没有时，长按 Esc 3 秒。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "即將推出"
+            "value": "畫面上方會出現面板，按住「按住 2 秒結束清潔」就能解鎖。觸控板鎖住時請用觸控螢幕或外接滑鼠按；兩者都沒有時，長按 Esc 3 秒。"
           }
         }
       }
     },
-    "即將開始": {
+    "Accessibility": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accesibilidad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセシビリティ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "辅助功能"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "即將開始"
+            "value": "輔助使用"
           }
         }
       }
     },
-    "即將開始：%@": {
+    "Accessibility permission was turned off during cleaning, so the lock was released.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se desactivó el permiso de Accesibilidad durante la limpieza, así que se quitó el bloqueo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃中にアクセシビリティの権限がオフになったため、ロックを解除しました。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 중에 손쉬운 사용 권한이 꺼져서 잠금을 해제했습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“辅助功能”权限在清洁中被关闭，已经自动解除锁定。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "即將開始：%@"
+            "value": "「輔助使用」權限在清潔中被關閉，已經自動解除鎖定。"
           }
         }
       }
     },
-    "取消": {
+    "Allow it once and you’re set": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concédelo una vez y listo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一度許可すれば、以後の設定は不要です"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "한 번만 허용하면 됩니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许一次之后就不用再设置"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "取消"
+            "value": "允許一次之後就不用再設定"
           }
         }
       }
     },
-    "取消倒數": {
+    "Allowed": {
       "localizations": {
-        "zh-Hant": {
+        "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "取消倒數"
+            "value": "Permitido"
           }
-        }
-      }
-    },
-    "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖。"
+            "value": "許可済み"
           }
-        }
-      }
-    },
-    "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。"
+            "value": "허용됨"
           }
-        }
-      }
-    },
-    "啟動": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "啟動"
+            "value": "已允许"
           }
-        }
-      }
-    },
-    "在系統設定的清單裡，先用「−」移除舊的「拂拭」，再按「+」重新加入並打開開關。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在系統設定的清單裡，先用「−」移除舊的「拂拭」，再按「+」重新加入並打開開關。"
-          }
-        }
-      }
-    },
-    "好": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "好"
-          }
-        }
-      }
-    },
-    "完成": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "完成"
-          }
-        }
-      }
-    },
-    "尚未授權": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "尚未授權"
-          }
-        }
-      }
-    },
-    "就算忘了結束，也一定會解鎖": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "就算忘了結束，也一定會解鎖"
-          }
-        }
-      }
-    },
-    "已允許": {
-      "localizations": {
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
@@ -486,637 +307,236 @@
         }
       }
     },
-    "已允許所需權限": {
-      "extractionState": "stale",
+    "Also lock the trackpad": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bloquear también el trackpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッドもロック"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "트랙패드도 잠그기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同时锁住触控板"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "已允許所需權限"
+            "value": "同時鎖住觸控板"
           }
         }
       }
     },
-    "已授權": {
-      "extractionState": "stale",
+    "Always unlocks: input is released when time is up, and locks have their own independent backup timers.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siempre se desbloquea: la entrada se libera al acabar el tiempo y cada bloqueo tiene su propio temporizador de respaldo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必ず自動で解除：時間になると解除されます。ロックにはそれぞれ独立した予備タイマーもあります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "항상 자동 해제: 시간이 되면 해제되며, 각 잠금에는 독립된 예비 타이머가 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一定会自动解锁：时间到就解锁，各项锁定另有独立的备用计时器。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "已授權"
+            "value": "一定會自動解鎖：時間到就解鎖，各種鎖定另有獨立的保險計時器。"
           }
         }
       }
     },
-    "已連接": {
+    "An app is using Secure Input (for example, the cursor is in a password field, or Terminal has Secure Keyboard Entry on), so macOS won’t let any app lock the keyboard. Click outside the password field, then start cleaning.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una app está usando la entrada segura (por ejemplo, el cursor está en un campo de contraseña o Terminal tiene activada la entrada de teclado segura), así que macOS no permite que ninguna app bloquee el teclado. Haz clic fuera del campo de contraseña y empieza la limpieza."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "他の アプリ が「セキュリティ保護された入力」を使用中です (パスワード欄にカーソルがある、またはターミナルで「キーボード入力のセキュリティを保護」がオンなど)。この間は macOS がキーボードのロックを許可しません。パスワード欄以外をクリックしてから清掃を始めてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다른 앱이 ‘보안 입력’을 사용 중입니다(예: 암호 입력란에 커서가 있거나 터미널에서 ‘보안 키보드 입력’이 켜져 있음). 이때는 macOS가 키보드 잠금을 허용하지 않습니다. 암호 입력란 밖을 클릭한 다음 청소를 시작하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目前有 App 正在使用“安全输入”(例如光标停在密码框，或“终端”开启了安全键盘输入)，macOS 不允许任何 App 锁住键盘。请先点按其他地方离开密码框，再开始清洁。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "已連接"
+            "value": "目前有 App 正在使用「安全輸入」(例如游標停在密碼欄位，或終端機開了安全鍵盤輸入)，macOS 不允許任何 App 鎖住鍵盤。請先點一下別的地方離開密碼欄位，再開始清潔。"
           }
         }
       }
     },
-    "待偵測結果確認": {
-      "extractionState": "stale",
+    "An external mouse must be connected before you start. Move it to bring up the control panel, then hold the red button for 2 s with the mouse.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debes conectar un ratón externo antes de empezar. Muévelo para mostrar el panel de control y mantén pulsado el botón rojo 2 s con el ratón."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始する前に外付けマウスを接続してください。マウスを動かすとコントロールパネルが表示されるので、マウスで赤いボタンを 2 秒押し続けます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시작하기 전에 외장 마우스를 연결해야 합니다. 마우스를 움직이면 제어 패널이 나타나고, 마우스로 빨간 버튼을 2초 동안 누르면 됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要先接上外接鼠标才能开始。动一下鼠标就会调出控制面板，再用鼠标按住红色按钮 2 秒。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "待偵測結果確認"
+            "value": "要先接上外接滑鼠才能開始。動一下滑鼠就會叫出控制面板，再用滑鼠按住紅色按鈕 2 秒。"
           }
         }
       }
     },
-    "怎麼用": {
-      "extractionState": "stale",
+    "Are the power button and Touch ID locked too?": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿También se bloquean el botón de encendido y Touch ID?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "電源ボタンや Touch ID もロックされますか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "전원 버튼과 Touch ID도 잠기나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电源键、Touch ID 也会被锁住吗？"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "怎麼用"
+            "value": "電源鍵、Touch ID 也會被鎖住嗎？"
           }
         }
       }
     },
-    "打開拂拭主視窗": {
+    "Auto-unlock is 3 minutes by default. Change it from 30 seconds to 10 minutes in Fushi › Settings (⌘,).": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El desbloqueo automático es de 3 minutos por omisión. Puedes cambiarlo de 30 segundos a 10 minutos en Fushi › Ajustes (⌘,)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動解除までの時間は初期設定で 3 分です。「Fushi › 設定」(⌘,) で 30 秒〜10 分に変更できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자동 해제 시간은 기본 3분입니다. ‘Fushi › 설정’(⌘,)에서 30초~10분으로 바꿀 수 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动解锁时间默认 3 分钟，可以在“拂拭 › 设置”(⌘,) 调整为 30 秒到 10 分钟。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "打開拂拭主視窗"
+            "value": "自動解鎖時間預設 3 分鐘，可以在「拂拭 › 設定」(⌘,) 調整為 30 秒到 10 分鐘。"
           }
         }
       }
     },
-    "打開拂拭主視窗…": {
-      "extractionState": "stale",
+    "Auto-unlock time": {
       "localizations": {
-        "zh-Hant": {
+        "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "打開拂拭主視窗…"
+            "value": "Desbloqueo automático"
           }
-        }
-      }
-    },
-    "打開拂拭時，直接開始上次的模式": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "打開拂拭時，直接開始上次的模式"
+            "value": "自動解除までの時間"
           }
-        }
-      }
-    },
-    "打開系統設定…": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "打開系統設定…"
+            "value": "자동 해제 시간"
           }
-        }
-      }
-    },
-    "找不到或勾了沒反應？": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "找不到或勾了沒反應？"
+            "value": "自动解锁时间"
           }
-        }
-      }
-    },
-    "拂拭": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拂拭"
-          }
-        }
-      }
-    },
-    "拂拭 使用說明": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拂拭 使用說明"
-          }
-        }
-      }
-    },
-    "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。"
-          }
-        }
-      }
-    },
-    "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。勾選後這裡會自動更新。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。勾選後這裡會自動更新。"
-          }
-        }
-      }
-    },
-    "拂拭需要兩項權限": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拂拭需要兩項權限"
-          }
-        }
-      }
-    },
-    "拂拭：待命中": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拂拭：待命中"
-          }
-        }
-      }
-    },
-    "拷貝診斷資訊": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拷貝診斷資訊"
-          }
-        }
-      }
-    },
-    "拷貝診斷資訊 (給開發者)": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "拷貝診斷資訊 (給開發者)"
-          }
-        }
-      }
-    },
-    "按 Esc 或「取消」可以停止": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "按 Esc 或「取消」可以停止"
-          }
-        }
-      }
-    },
-    "按住 %lld 秒": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "按住 %lld 秒"
-          }
-        }
-      }
-    },
-    "按住【結束清潔】2 秒，或長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "按住【結束清潔】2 秒，或長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。"
-          }
-        }
-      }
-    },
-    "接上滑鼠或外接觸控板後就能開始 (藍牙或 USB 都可以)": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "接上滑鼠或外接觸控板後就能開始 (藍牙或 USB 都可以)"
-          }
-        }
-      }
-    },
-    "擦螢幕、擦鍵盤時，手一定會碰到按鍵、觸控板和觸控螢幕，很容易誤觸。拂拭會在清潔期間暫時鎖住這些輸入，時間到自動解鎖。名稱出自「時時勤拂拭，勿使惹塵埃」。": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "擦螢幕、擦鍵盤時，手一定會碰到按鍵、觸控板和觸控螢幕，很容易誤觸。拂拭會在清潔期間暫時鎖住這些輸入，時間到自動解鎖。名稱出自「時時勤拂拭，勿使惹塵埃」。"
-          }
-        }
-      }
-    },
-    "時時勤拂拭，勿使惹塵埃。選好模式後按【開始清潔】，倒數 3 秒後鎖定。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "時時勤拂拭，勿使惹塵埃。選好模式後按【開始清潔】，倒數 3 秒後鎖定。"
-          }
-        }
-      }
-    },
-    "時間一到一定會解鎖，就算忘了結束也沒關係": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "時間一到一定會解鎖，就算忘了結束也沒關係"
-          }
-        }
-      }
-    },
-    "時間到自動解鎖": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "時間到自動解鎖"
-          }
-        }
-      }
-    },
-    "更改": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "更改"
-          }
-        }
-      }
-    },
-    "更改時間": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "更改時間"
-          }
-        }
-      }
-    },
-    "會鎖住": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "會鎖住"
-          }
-        }
-      }
-    },
-    "會鎖住什麼": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "會鎖住什麼"
-          }
-        }
-      }
-    },
-    "查看偵測步驟": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "查看偵測步驟"
-          }
-        }
-      }
-    },
-    "權限": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "權限"
-          }
-        }
-      }
-    },
-    "權限設定…": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "權限設定…"
-          }
-        }
-      }
-    },
-    "正在解鎖…": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "正在解鎖…"
-          }
-        }
-      }
-    },
-    "清潔": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔"
-          }
-        }
-      }
-    },
-    "清潔 Mac 時暫時鎖住輸入。版本 %@": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔 Mac 時暫時鎖住輸入。版本 %@"
-          }
-        }
-      }
-    },
-    "清潔中…": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔中…"
-          }
-        }
-      }
-    },
-    "清潔中・觸控已鎖定": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔中・觸控已鎖定"
-          }
-        }
-      }
-    },
-    "清潔中，螢幕已鎖定": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔中，螢幕已鎖定"
-          }
-        }
-      }
-    },
-    "清潔中，觸控已鎖定": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔中，觸控已鎖定"
-          }
-        }
-      }
-    },
-    "清潔中：%@": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔中：%@"
-          }
-        }
-      }
-    },
-    "清潔已結束": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔已結束"
-          }
-        }
-      }
-    },
-    "清潔模式": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "清潔模式"
-          }
-        }
-      }
-    },
-    "無法開始": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "無法開始"
-          }
-        }
-      }
-    },
-    "用外接滑鼠按住按鈕；拔掉外接滑鼠或長按 Esc 3 秒也會立刻解鎖。8 秒沒有操作會變回全黑，動一下滑鼠就會再出現。": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用外接滑鼠按住按鈕；拔掉外接滑鼠或長按 Esc 3 秒也會立刻解鎖。8 秒沒有操作會變回全黑，動一下滑鼠就會再出現。"
-          }
-        }
-      }
-    },
-    "用觸控板、滑鼠或觸控螢幕按住按鈕": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕"
-          }
-        }
-      }
-    },
-    "用觸控板、滑鼠或觸控螢幕按住按鈕 2 秒": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕 2 秒"
-          }
-        }
-      }
-    },
-    "用觸控板、滑鼠或觸控螢幕按住按鈕。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕。"
-          }
-        }
-      }
-    },
-    "用觸控板、滑鼠或觸控螢幕按住按鈕；或長按 Esc 3 秒。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕；或長按 Esc 3 秒。"
-          }
-        }
-      }
-    },
-    "畫面已鎖定，清潔中": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "畫面已鎖定，清潔中"
-          }
-        }
-      }
-    },
-    "秒後開始清潔": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "秒後開始清潔"
-          }
-        }
-      }
-    },
-    "稍後再說": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "稍後再說"
-          }
-        }
-      }
-    },
-    "系統有時要重新打開拂拭，新權限才會生效。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "系統有時要重新打開拂拭，新權限才會生效。"
-          }
-        }
-      }
-    },
-    "系統權限": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "系統權限"
-          }
-        }
-      }
-    },
-    "結束拂拭": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "結束拂拭"
-          }
-        }
-      }
-    },
-    "結束清潔": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "結束清潔"
-          }
-        }
-      }
-    },
-    "繼續按住 Esc": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "繼續按住 Esc"
-          }
-        }
-      }
-    },
-    "繼續按住 Esc 結束清潔": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "繼續按住 Esc 結束清潔"
-          }
-        }
-      }
-    },
-    "繼續清潔": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "繼續清潔"
-          }
-        }
-      }
-    },
-    "自動解鎖": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "自動解鎖"
-          }
-        }
-      }
-    },
-    "自動解鎖時間": {
-      "localizations": {
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
@@ -1125,284 +545,678 @@
         }
       }
     },
-    "要清潔哪裡？": {
-      "extractionState": "stale",
+    "Built-in trackpad": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trackpad integrado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内蔵トラックパッド"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내장 트랙패드"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内置触控板"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "要清潔哪裡？"
+            "value": "內建觸控板"
           }
         }
       }
     },
-    "要鎖住什麼": {
-      "extractionState": "stale",
+    "Cancel": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "要鎖住什麼"
+            "value": "取消"
           }
         }
       }
     },
-    "觸控板": {
-      "extractionState": "stale",
+    "Cancel Countdown": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar cuenta atrás"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カウントダウンをキャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "카운트다운 취소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消倒计时"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "觸控板"
+            "value": "取消倒數"
           }
         }
       }
     },
-    "設定": {
+    "Cancel countdown (main window)": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar cuenta atrás (ventana principal)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カウントダウンをキャンセル (メインウインドウ)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "카운트다운 취소(메인 윈도우)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消倒计时 (主窗口)"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "設定"
+            "value": "取消倒數 (主視窗)"
           }
         }
       }
     },
-    "設定…": {
+    "Can’t find it, or turning it on has no effect?": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿No lo encuentras o activarlo no hace nada?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "見つからない、またはオンにしても反応しない場合"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "찾을 수 없거나 켜도 반응이 없나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到或打开了没反应？"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "設定…"
+            "value": "找不到或勾了沒反應？"
           }
         }
       }
     },
-    "設定權限…": {
-      "extractionState": "stale",
+    "Can’t start": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se puede empezar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始できません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시작할 수 없음"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法开始"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "設定權限…"
+            "value": "無法開始"
           }
         }
       }
     },
-    "還沒允許「輔助使用」": {
-      "extractionState": "stale",
+    "Change Time": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar tiempo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時間を変更"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시간 변경"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改时间"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "還沒允許「輔助使用」"
+            "value": "更改時間"
           }
         }
       }
     },
-    "還沒有清潔紀錄": {
+    "Cleaning": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "還沒有清潔紀錄"
+            "value": "清潔"
           }
         }
       }
     },
-    "鍵盤": {
-      "extractionState": "stale",
+    "Cleaning finished": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpieza terminada"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃が終了しました"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소가 끝났습니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁已结束"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "鍵盤"
+            "value": "清潔已結束"
           }
         }
       }
     },
-    "鍵盤 (含亮度、音量等功能鍵)": {
-      "extractionState": "stale",
+    "Cleaning modes": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modos de limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃モード"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 모드"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁模式"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "鍵盤 (含亮度、音量等功能鍵)"
+            "value": "清潔模式"
           }
         }
       }
     },
-    "鍵盤已鎖定": {
-      "extractionState": "stale",
+    "Cleaning · unlocks in %@": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiando · se desbloquea en %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃中 · %@ 後に自動解除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 중 · %@ 후 자동 해제"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁中，%@ 后自动解锁"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "鍵盤已鎖定"
+            "value": "清潔中，%@ 後自動解鎖"
           }
         }
       }
     },
-    "鎖觸控板要等偵測工具確認「觸控板」和「觸控螢幕」分得出來才會開放，避免連解鎖用的觸控螢幕也被鎖住。": {
-      "extractionState": "stale",
+    "Cleaning: %@": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiando: %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃中：%@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 중: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁中：%@"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "鎖觸控板要等偵測工具確認「觸控板」和「觸控螢幕」分得出來才會開放，避免連解鎖用的觸控螢幕也被鎖住。"
+            "value": "清潔中：%@"
           }
         }
       }
     },
-    "鎖觸控板開放後才能一次全選": {
-      "extractionState": "stale",
+    "Cleaning…": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiando…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃中…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 중…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁中…"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "鎖觸控板開放後才能一次全選"
+            "value": "清潔中…"
           }
         }
       }
     },
-    "長按 Esc 3 秒結束 · 或動一下外接滑鼠": {
+    "Click Start Cleaning (or press Return). Locking begins after a 3-second countdown; click Cancel or press Esc during the countdown to stop.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haz clic en Iniciar limpieza (o pulsa Retorno). El bloqueo empieza tras una cuenta atrás de 3 segundos; durante la cuenta atrás, haz clic en Cancelar o pulsa Esc para detenerla."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「清掃を開始」をクリック (または Return キー) すると、3 秒のカウントダウン後にロックされます。カウントダウン中は「キャンセル」または Esc で中止できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘청소 시작’을 클릭(또는 Return)하면 3초 카운트다운 후 잠깁니다. 카운트다운 중에는 ‘취소’나 Esc로 멈출 수 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按下方的“开始清洁”(或按 Return)，倒计时 3 秒后开始锁定；倒计时中可以按“取消”或 Esc。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "長按 Esc 3 秒結束 · 或動一下外接滑鼠"
+            "value": "按下方的「開始清潔」(或按 Return)，倒數 3 秒後開始鎖定；倒數中可以按「取消」或 Esc。"
           }
         }
       }
     },
-    "長按 Esc 3 秒結束 · 或按任意鍵叫出面板": {
-      "extractionState": "stale",
+    "Connect a mouse to start": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta un ratón para empezar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスを接続すると開始できます"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "마우스를 연결하면 시작할 수 있습니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接上鼠标就能开始"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "長按 Esc 3 秒結束 · 或按任意鍵叫出面板"
+            "value": "接上滑鼠就能開始"
           }
         }
       }
     },
-    "長按 Esc 3 秒結束清潔": {
+    "Connect an external mouse first": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Primero conecta un ratón externo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先に外付けマウスを接続してください"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "먼저 외장 마우스를 연결하세요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先连接外接鼠标"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "長按 Esc 3 秒結束清潔"
+            "value": "請先連接外接滑鼠"
           }
         }
       }
     },
-    "開啟拂拭時，立即開始上次的模式": {
-      "extractionState": "stale",
+    "Connected": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接続済み"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "연결됨"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已连接"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "開啟拂拭時，立即開始上次的模式"
+            "value": "已連接"
           }
         }
       }
     },
-    "開始 %@": {
+    "Copy Diagnostics (for Developers)": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar diagnóstico (para desarrolladores)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "診断情報をコピー (開発者向け)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "진단 정보 복사(개발자용)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制诊断信息 (给开发者)"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "開始 %@"
+            "value": "拷貝診斷資訊 (給開發者)"
           }
         }
       }
     },
-    "開始 B 面清潔 (螢幕)": {
-      "extractionState": "stale",
+    "Couldn’t lock: make sure “Fushi” is turned on in System Settings › Privacy & Security › Accessibility.": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo bloquear: comprueba que «Fushi» está activado en Ajustes del Sistema › Privacidad y seguridad › Accesibilidad."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ロックできません：「システム設定 › プライバシーとセキュリティ › アクセシビリティ」で「Fushi」がオンになっているか確認してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠글 수 없음: ‘시스템 설정 › 개인정보 보호 및 보안 › 손쉬운 사용’에서 ‘Fushi’가 켜져 있는지 확인하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法锁定：请确认已在“系统设置 › 隐私与安全性 › 辅助功能”打开“拂拭”。"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "開始 B 面清潔 (螢幕)"
+            "value": "無法鎖定：請確認已在「系統設定 › 隱私權與安全性 › 輔助使用」勾選「拂拭」。"
           }
         }
       }
     },
-    "開始 C 面清潔 (只鎖鍵盤)": {
-      "extractionState": "stale",
+    "Development build: auto-unlock is capped at %lld seconds.": {
       "localizations": {
-        "zh-Hant": {
+        "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "開始 C 面清潔 (只鎖鍵盤)"
+            "value": "Versión de desarrollo: el desbloqueo automático está limitado a %lld segundos."
           }
-        }
-      }
-    },
-    "開始上次的模式": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "開始上次的模式"
+            "value": "開発版：自動解除は最大 %lld 秒です。"
           }
-        }
-      }
-    },
-    "開始上次的模式：%@": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "開始上次的模式：%@"
+            "value": "개발 버전: 자동 해제는 최대 %lld초입니다."
           }
-        }
-      }
-    },
-    "開始全鎖 (需要外接滑鼠)": {
-      "localizations": {
-        "zh-Hant": {
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "開始全鎖 (需要外接滑鼠)"
+            "value": "开发版：自动解锁最多 %lld 秒。"
           }
-        }
-      }
-    },
-    "開始清潔": {
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "開始清潔"
-          }
-        }
-      }
-    },
-    "開發中的版本是 ad-hoc 簽章：每次重新建置後，系統會把它當成新的 App，要把清單裡舊的「拂拭」移除再重新勾選。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "開發中的版本是 ad-hoc 簽章：每次重新建置後，系統會把它當成新的 App，要把清單裡舊的「拂拭」移除再重新勾選。"
-          }
-        }
-      }
-    },
-    "開發測試版：自動解鎖最多 %lld 秒。": {
-      "extractionState": "stale",
-      "localizations": {
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "開發測試版：自動解鎖最多 %lld 秒。"
-          }
-        }
-      }
-    },
-    "開發版：自動解鎖最多 %lld 秒。": {
-      "localizations": {
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
@@ -1411,16 +1225,4783 @@
         }
       }
     },
-    "需要外接滑鼠才能使用": {
-      "extractionState": "stale",
+    "Does the Caps Lock light still turn on?": {
       "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Se sigue encendiendo la luz de Bloq Mayús?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caps Lock のランプは点灯しますか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caps Lock 표시등이 켜지나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caps Lock 灯还会亮吗？"
+          }
+        },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "需要外接滑鼠才能使用"
+            "value": "Caps Lock 燈還會亮嗎？"
           }
         }
       }
+    },
+    "During screen cleaning, can trackpad gestures still switch desktops?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durante la limpieza de pantalla, ¿los gestos del trackpad pueden cambiar de escritorio?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面の清掃中、トラックパッドのジェスチャでデスクトップが切り替わりますか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 청소 중에 트랙패드 제스처로 데스크탑이 전환되나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕清洁时，触控板手势还会切换桌面吗？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕清潔時，觸控板手勢還會切換桌面嗎？"
+          }
+        }
+      }
+    },
+    "Emergency exit: ends any cleaning mode": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salida de emergencia: termina cualquier modo de limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊急終了：すべての清掃モードを終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 종료: 모든 청소 모드 종료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紧急退出：结束任何清洁模式"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊急退出：結束任何清潔模式"
+          }
+        }
+      }
+    },
+    "Emergency exit: in any mode, holding Esc for 3 s always ends cleaning (even with the keyboard locked). A 3‑2‑1 ring appears while you hold; release to cancel.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salida de emergencia: en cualquier modo, mantener pulsada Esc 3 s siempre termina la limpieza (incluso con el teclado bloqueado). Mientras la mantienes aparece un anillo con cuenta atrás 3‑2‑1; suéltala para cancelar."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊急終了：どのモードでも Esc を 3 秒押し続けると必ず清掃を終了できます (キーボードがロック中でも有効)。押している間は 3・2・1 のカウントダウンリングが表示され、離すとキャンセルされます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급 종료: 어떤 모드에서든 Esc를 3초 동안 누르면 반드시 청소가 끝납니다(키보드가 잠겨 있어도 동작합니다). 누르는 동안 3·2·1 카운트다운 링이 나타나며, 손을 떼면 취소됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紧急退出：任何模式下长按 Esc 3 秒，一定能结束清洁 (键盘锁住时也有效)。按住时画面会出现 3、2、1 倒计时圆环，松开就取消。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊急退出：任何模式下長按 Esc 3 秒，一定能結束清潔 (鍵盤鎖住時也有效)。按住時畫面會出現 3、2、1 倒數圓環，放開就取消。"
+          }
+        }
+      }
+    },
+    "End Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃を終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 종료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结束清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束清潔"
+          }
+        }
+      }
+    },
+    "Ends in %lld s · release to cancel": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Termina en %lld s · suelta para cancelar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒後に清掃を終了 · 離すとキャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld초 후 청소 종료 · 손을 떼면 취소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒后结束清洁 · 松开就取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒後結束清潔 · 放開就取消"
+          }
+        }
+      }
+    },
+    "Esc": {
+      "shouldTranslate": false
+    },
+    "Every display turns black. With OLED the pixels go dark, so dust and fingerprints are easiest to see.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las pantallas se vuelven negras. En OLED los píxeles se apagan, así que el polvo y las huellas se ven mejor que nunca."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのディスプレイが真っ黒になります。OLED は発光しないので、ほこりや指紋がいちばん見やすくなります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모든 디스플레이가 검게 바뀝니다. OLED는 빛을 내지 않아 먼지와 지문이 가장 잘 보입니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有屏幕变成全黑，OLED 不发光，最容易看出灰尘与指纹。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有螢幕變成全黑，OLED 不發光，最容易看出灰塵與指紋。"
+          }
+        }
+      }
+    },
+    "Every key is paused.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las teclas quedan en pausa."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのキーを一時停止します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모든 키가 일시 정지됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有按键暂时失效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有按鍵暫停作用。"
+          }
+        }
+      }
+    },
+    "Everything locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo bloqueado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてロック中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모두 잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部已锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部已鎖定"
+          }
+        }
+      }
+    },
+    "Everything locked · cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo bloqueado · limpiando"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてロック中 · 清掃中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모두 잠김 · 청소 중"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部已锁定，清洁中"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部已鎖定，清潔中"
+          }
+        }
+      }
+    },
+    "External mouse": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ratón externo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウス"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外接鼠标"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外接滑鼠"
+          }
+        }
+      }
+    },
+    "FAQ": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preguntas frecuentes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "よくある質問"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자주 묻는 질문"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常见问题"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常見問題"
+          }
+        }
+      }
+    },
+    "From the menu bar you can start or end cleaning and open the main window or Settings.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desde la barra de menús puedes empezar o terminar la limpieza y abrir la ventana principal o los ajustes."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メニューバーから清掃の開始・終了、メインウインドウや設定を開く操作ができます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메뉴 막대에서 청소를 시작하거나 끝내고, 메인 윈도우나 설정을 열 수 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从菜单栏可以直接开始清洁、结束清洁、打开主窗口或设置。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "從選單列可以直接開始清潔、結束清潔、打開主視窗或設定。"
+          }
+        }
+      }
+    },
+    "Full Lock": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bloqueo total"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてロック"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모두 잠그기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部鎖定"
+          }
+        }
+      }
+    },
+    "Full Lock needs an external mouse (Bluetooth or USB); you’ll use it to finish.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El bloqueo total necesita un ratón externo (Bluetooth o USB); lo usarás para terminar."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「すべてロック」には外付けマウス (Bluetooth または USB) が必要です。終了するときに使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘모두 잠그기’에는 외장 마우스(Bluetooth 또는 USB)가 필요합니다. 끝낼 때 사용합니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部锁定需要先接上外接鼠标 (蓝牙或 USB 都可以)，结束时要用它来操作。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部鎖定需要先接上外接滑鼠 (藍牙或 USB 都可以)，結束時要用它來操作。"
+          }
+        }
+      }
+    },
+    "Fushi": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        }
+      }
+    },
+    "Fushi Help": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuda de Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi ヘルプ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi 도움말"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭使用说明"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭使用說明"
+          }
+        }
+      }
+    },
+    "Fushi blocks input only while cleaning and releases it the moment you finish. It never records what you type.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi solo bloquea la entrada mientras limpias y la libera en cuanto terminas. Nunca registra lo que escribes."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi は清掃中だけ入力をブロックし、終わるとすぐに元に戻します。入力した内容は一切記録しません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi는 청소 중에만 입력을 막고, 끝나면 바로 풀어 줍니다. 입력한 내용은 전혀 기록하지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭只在清洁期间拦截输入，结束后立刻放行，不会记录你按了什么。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。"
+          }
+        }
+      }
+    },
+    "Fushi: Idle": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi: en espera"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi：待機中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi: 대기 중"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭：待机中"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭：待命中"
+          }
+        }
+      }
+    },
+    "Grant Permission…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conceder permiso…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "権限を許可…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 허용…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许权限…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允許權限…"
+          }
+        }
+      }
+    },
+    "Hold 2 s to end cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén 2 s para terminar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 秒押して清掃を終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2초 눌러 청소 종료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住 2 秒结束清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住 2 秒結束清潔"
+          }
+        }
+      }
+    },
+    "Hold Esc for 3 s": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsada Esc 3 s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc を 3 秒押す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc 3초 누르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长按 Esc 3 秒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長按 Esc 3 秒"
+          }
+        }
+      }
+    },
+    "Hold Esc for 3 s to end cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsada Esc 3 s para terminar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc を 3 秒押して清掃を終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc를 3초 눌러 청소 종료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长按 Esc 3 秒结束清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長按 Esc 3 秒結束清潔"
+          }
+        }
+      }
+    },
+    "Hold Esc for 3 s to end · or move the external mouse": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsada Esc 3 s para terminar · o mueve el ratón externo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc を 3 秒押して終了 · または外付けマウスを動かす"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc를 3초 눌러 종료 · 또는 외장 마우스를 움직이기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长按 Esc 3 秒结束 · 或动一下外接鼠标"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長按 Esc 3 秒結束 · 或動一下外接滑鼠"
+          }
+        }
+      }
+    },
+    "Hold for %lld seconds": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado %lld segundos"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒押し続ける"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld초 동안 누르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住 %lld 秒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住 %lld 秒"
+          }
+        }
+      }
+    },
+    "Hold the button with an external mouse — or hold Esc for 3 s.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón con un ratón externo, o mantén pulsada Esc 3 s."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスでボタンを押し続けるか、Esc を 3 秒押してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스로 버튼을 길게 누르거나 Esc를 3초 동안 누르세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接鼠标按住按钮；或长按 Esc 3 秒。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接滑鼠按住按鈕；或長按 Esc 3 秒。"
+          }
+        }
+      }
+    },
+    "Hold the button with the external mouse. Unplugging the mouse or holding Esc for 3 s also unlocks right away. After 8 s without activity the screen goes black again; move the mouse to bring this back.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón con el ratón externo. Desconectar el ratón o mantener pulsada Esc 3 s también desbloquea al instante. Tras 8 s sin actividad la pantalla vuelve a ponerse negra; mueve el ratón para que esto reaparezca."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスでボタンを押し続けてください。マウスを外すか Esc を 3 秒押してもすぐに解除されます。8 秒操作がないと画面は再び真っ黒になり、マウスを動かすと再表示されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스로 버튼을 길게 누르세요. 마우스를 분리하거나 Esc를 3초 동안 눌러도 바로 해제됩니다. 8초 동안 조작이 없으면 화면이 다시 검게 바뀌며, 마우스를 움직이면 다시 나타납니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接鼠标按住按钮；拔掉外接鼠标或长按 Esc 3 秒也会立刻解锁。8 秒没有操作会变回全黑，动一下鼠标就会再出现。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接滑鼠按住按鈕；拔掉外接滑鼠或長按 Esc 3 秒也會立刻解鎖。8 秒沒有操作會變回全黑，動一下滑鼠就會再出現。"
+          }
+        }
+      }
+    },
+    "Hold the button with the touch screen or an external mouse — or hold Esc for 3 s.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón con la pantalla táctil o un ratón externo, o mantén pulsada Esc 3 s."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タッチスクリーンか外付けマウスでボタンを押し続けるか、Esc を 3 秒押してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "터치스크린이나 외장 마우스로 버튼을 길게 누르거나 Esc를 3초 동안 누르세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用触摸屏或外接鼠标按住按钮；或长按 Esc 3 秒。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控螢幕或外接滑鼠按住按鈕；或長按 Esc 3 秒。"
+          }
+        }
+      }
+    },
+    "Hold the button with the trackpad or a mouse — or hold Esc for 3 s.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón con el trackpad o un ratón, o mantén pulsada Esc 3 s."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッドかマウスでボタンを押し続けるか、Esc を 3 秒押してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "트랙패드나 마우스로 버튼을 길게 누르거나 Esc를 3초 동안 누르세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用触控板或鼠标按住按钮；或长按 Esc 3 秒。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控板或滑鼠按住按鈕；或長按 Esc 3 秒。"
+          }
+        }
+      }
+    },
+    "Hold the button with the trackpad, a mouse, or the touch screen — or hold Esc for 3 s.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón con el trackpad, un ratón o la pantalla táctil, o mantén pulsada Esc 3 s."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッド、マウス、タッチスクリーンのいずれかでボタンを押し続けるか、Esc を 3 秒押してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "트랙패드, 마우스 또는 터치스크린으로 버튼을 길게 누르거나 Esc를 3초 동안 누르세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用触控板、鼠标或触摸屏按住按钮；或长按 Esc 3 秒。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕；或長按 Esc 3 秒。"
+          }
+        }
+      }
+    },
+    "Hold the red button for 2 s with an external mouse": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón rojo 2 s con un ratón externo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスで赤いボタンを 2 秒押す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스로 빨간 버튼을 2초 동안 누르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接鼠标按住红色按钮 2 秒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接滑鼠按住紅色按鈕 2 秒"
+          }
+        }
+      }
+    },
+    "Hold the red button for 2 s with the touch screen or a mouse": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón rojo 2 s con la pantalla táctil o un ratón"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タッチスクリーンかマウスで赤いボタンを 2 秒押す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "터치스크린이나 마우스로 빨간 버튼을 2초 동안 누르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用触摸屏或鼠标按住红色按钮 2 秒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控螢幕或滑鼠按住紅色按鈕 2 秒"
+          }
+        }
+      }
+    },
+    "Hold the red button on the panel for 2 s": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén pulsado el botón rojo del panel 2 s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パネルの赤いボタンを 2 秒押す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "패널의 빨간 버튼을 2초 동안 누르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住面板上的红色按钮 2 秒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住面板上的紅色按鈕 2 秒"
+          }
+        }
+      }
+    },
+    "How do I unlock in an emergency?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Cómo desbloqueo en una emergencia?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊急時に解除するには？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "긴급할 때는 어떻게 해제하나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锁住时要怎么紧急解除？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鎖住時要怎麼緊急解除？"
+          }
+        }
+      }
+    },
+    "How to finish": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cómo terminar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "終了方法"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "끝내는 방법"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "怎么结束"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "怎麼結束"
+          }
+        }
+      }
+    },
+    "If Fushi crashes or is force-quit, the lock disappears with it and input returns immediately. Fushi never changes system settings.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si Fushi falla o se fuerza su salida, el bloqueo desaparece con él y la entrada vuelve de inmediato. Fushi nunca cambia los ajustes del sistema."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi がクラッシュしたり強制終了されたりした場合も、ロックは一緒に消えて入力はすぐに戻ります。Fushi はシステム設定を一切変更しません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi가 충돌하거나 강제 종료되면 잠금도 함께 사라지고 입력이 즉시 돌아옵니다. Fushi는 시스템 설정을 전혀 바꾸지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "万一拂拭崩溃或被强制退出，锁定会跟着消失，输入立刻恢复。拂拭不修改任何系统设置。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "萬一拂拭當掉或被強制結束，鎖定會跟著消失，輸入立刻恢復。拂拭不修改任何系統設定。"
+          }
+        }
+      }
+    },
+    "In any mode, holding Esc for 3 s always ends cleaning (a 3‑2‑1 countdown appears). In Keyboard and Trackpad Cleaning you can hold “Hold 2 s to end cleaning” with the touch screen or an external mouse; in Full Lock, unplugging the external mouse unlocks immediately. Input always unlocks when time is up, and turning off Accessibility during cleaning releases the lock at once. As a last resort, holding the power button to force a shutdown always restores input.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En cualquier modo, mantener pulsada Esc 3 s siempre termina la limpieza (aparece una cuenta atrás 3‑2‑1). En la limpieza de teclado y de trackpad puedes mantener pulsado «Mantén 2 s para terminar» con la pantalla táctil o un ratón externo; en el bloqueo total, desconectar el ratón externo desbloquea al instante. La entrada siempre se desbloquea al acabar el tiempo, y desactivar Accesibilidad durante la limpieza quita el bloqueo de inmediato. Como último recurso, mantener pulsado el botón de encendido para forzar el apagado siempre recupera la entrada."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "どのモードでも Esc を 3 秒押し続けると必ず清掃を終了できます (3・2・1 のカウントダウンが表示されます)。キーボードの清掃とトラックパッド清掃では、タッチスクリーンか外付けマウスで「2 秒押して清掃を終了」を押し続けても終了できます。「すべてロック」では外付けマウスを外すとすぐに解除されます。時間になれば必ず自動で解除され、清掃中にアクセシビリティをオフにした場合もすぐに解除されます。それでも解除できない場合は、電源ボタンを長押しして強制終了すれば必ず元に戻ります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "어떤 모드에서든 Esc를 3초 동안 누르면 반드시 청소가 끝납니다(3·2·1 카운트다운이 나타남). 키보드 청소와 트랙패드 청소에서는 터치스크린이나 외장 마우스로 ‘2초 눌러 청소 종료’를 길게 눌러도 됩니다. ‘모두 잠그기’에서는 외장 마우스를 분리하면 바로 해제됩니다. 시간이 되면 반드시 자동 해제되며, 청소 중에 손쉬운 사용을 끄면 즉시 해제됩니다. 그래도 안 되면 전원 버튼을 길게 눌러 강제로 끄면 항상 복구됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任何模式长按 Esc 3 秒一定能结束 (画面会出现 3、2、1 倒计时)。键盘清洁、触控板清洁可以用触摸屏或外接鼠标按住“按住 2 秒结束清洁”；全部锁定时拔掉外接鼠标也会立刻解锁。时间到一定会自动解锁；清洁中如果关掉“辅助功能”权限，拂拭也会立刻解除。真的不行时，按住电源键强制关机也一定能恢复。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任何模式長按 Esc 3 秒一定能結束 (畫面會出現 3、2、1 倒數)。鍵盤清潔、觸控板清潔可以用觸控螢幕或外接滑鼠按住「按住 2 秒結束清潔」；全部鎖定時拔掉外接滑鼠也會立刻解鎖。時間到一定會自動解鎖；清潔中如果關掉「輔助使用」權限，拂拭也會立刻解除。真的不行時，按住電源鍵強制關機也一定能恢復。"
+          }
+        }
+      }
+    },
+    "In the list in System Settings, remove the old “Fushi” with “−”, then add it with “+” and turn it on.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En la lista de Ajustes del Sistema, elimina el «Fushi» antiguo con «−», añádelo de nuevo con «+» y actívalo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム設定の一覧で、古い「Fushi」を「−」で削除してから「+」で追加し、オンにしてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 설정 목록에서 이전 ‘Fushi’를 ‘−’로 제거한 다음 ‘+’로 추가하고 켜세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在系统设置的列表里，先用“−”移除旧的“拂拭”，再按“+”加入并打开开关。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在系統設定的清單裡，先用「−」移除舊的「拂拭」，再按「+」加入並打開開關。"
+          }
+        }
+      }
+    },
+    "In the sidebar of the main window, choose Screen Cleaning, Keyboard Cleaning, Trackpad Cleaning, or Full Lock.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En la barra lateral de la ventana principal, elige Limpiar pantalla, Limpiar teclado, Limpiar trackpad o Bloqueo total."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メインウインドウのサイドバーで「画面の清掃」「キーボードの清掃」「トラックパッドの清掃」「すべてロック」のいずれかを選びます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메인 윈도우 사이드바에서 ‘화면 청소’, ‘키보드 청소’, ‘트랙패드 청소’, ‘모두 잠그기’ 중 하나를 선택하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在主窗口左侧选择“屏幕清洁”、“键盘清洁”、“触控板清洁”或“全部锁定”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在主視窗左側選擇「螢幕清潔」、「鍵盤清潔」、「觸控板清潔」或「全部鎖定」。"
+          }
+        }
+      }
+    },
+    "Input always unlocks when time is up, even if you forget to end cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La entrada siempre se desbloquea al acabar el tiempo, aunque olvides terminar la limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃の終了を忘れても、時間になれば必ず解除されます"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 종료를 잊어도 시간이 되면 반드시 해제됩니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间一到一定会解锁，就算忘了结束也没关系"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時間一到一定會解鎖，就算忘了結束也沒關係"
+          }
+        }
+      }
+    },
+    "It may. Caps Lock is handled by the keyboard hardware, so if you touch it while cleaning, Caps Lock may be toggled after unlocking. Check the Caps Lock light when you finish.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puede que sí. Bloq Mayús lo gestiona el hardware del teclado, así que si lo tocas al limpiar, las mayúsculas pueden quedar activadas tras desbloquear. Revisa la luz de Bloq Mayús al terminar."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点灯することがあります。Caps Lock はキーボードのハードウェアで処理されるため、清掃中に触れると、解除後に大文字ロックが切り替わっている場合があります。終了後に Caps Lock のランプを確認してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "켜질 수 있습니다. Caps Lock은 키보드 하드웨어가 처리하므로 청소 중에 건드리면 해제 후 대문자 잠금이 바뀌어 있을 수 있습니다. 끝난 뒤 Caps Lock 표시등을 확인하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可能会。Caps Lock 由键盘硬件处理，清洁时碰到它，解锁后大写锁定可能已经被切换。结束清洁后请看一下 Caps Lock 灯。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可能會。Caps Lock 由鍵盤硬體處理，清潔時碰到它，解鎖後大寫鎖定可能已經被切換。結束清潔後請看一下 Caps Lock 燈。"
+          }
+        }
+      }
+    },
+    "Keep cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguir limpiando"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃を続ける"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "계속 청소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續清潔"
+          }
+        }
+      }
+    },
+    "Keep holding Esc": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sigue pulsando Esc"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc を押し続けてください"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc를 계속 누르세요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续按住 Esc"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續按住 Esc"
+          }
+        }
+      }
+    },
+    "Keep holding Esc to end cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sigue pulsando Esc para terminar la limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc を押し続けて清掃を終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc를 계속 눌러 청소 종료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续按住 Esc 结束清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續按住 Esc 結束清潔"
+          }
+        }
+      }
+    },
+    "Keyboard": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teclado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤"
+          }
+        }
+      }
+    },
+    "Keyboard & trackpad locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teclado y trackpad bloqueados"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードとトラックパッドをロック中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드와 트랙패드 잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘与触控板已锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤與觸控板已鎖定"
+          }
+        }
+      }
+    },
+    "Keyboard Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiar teclado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードの清掃"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드 청소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤清潔"
+          }
+        }
+      }
+    },
+    "Keyboard and trackpad": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teclado y trackpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードとトラックパッド"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드와 트랙패드"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘与触控板"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤與觸控板"
+          }
+        }
+      }
+    },
+    "Keyboard locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teclado bloqueado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードをロック中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드 잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘已锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤已鎖定"
+          }
+        }
+      }
+    },
+    "Keyboard locking fails after updating Fushi?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Falla el bloqueo del teclado tras actualizar Fushi?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi をアップデートしたらキーボードをロックできなくなりましたか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi를 업데이트한 뒤 키보드가 잠기지 않나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新拂拭后，锁键盘失败？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新拂拭後，鎖鍵盤失敗？"
+          }
+        }
+      }
+    },
+    "Keyboard shortcuts": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atajos de teclado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードショートカット"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드 단축키"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘快捷键"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤快速鍵"
+          }
+        }
+      }
+    },
+    "Keyboard, trackpad, and touch screen": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teclado, trackpad y pantalla táctil"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード、トラックパッド、タッチスクリーン"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드, 트랙패드, 터치스크린"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘、触控板与触摸屏"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤、觸控板與觸控螢幕"
+          }
+        }
+      }
+    },
+    "Last mode: %@. A 3-second countdown still runs, so you can cancel": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último modo: %@. Sigue habiendo una cuenta atrás de 3 segundos, así que puedes cancelar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前回：%@。3 秒のカウントダウンがあるのでキャンセルできます"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이전 모드: %@. 3초 카운트다운이 있어 취소할 수 있습니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次：%@，一样会先倒计时 3 秒，可以取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次：%@，一樣會先倒數 3 秒，可以取消"
+          }
+        }
+      }
+    },
+    "Launch": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Al abrir"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "起動"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실행"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "啟動"
+          }
+        }
+      }
+    },
+    "Locking requires Accessibility permission": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Requiere permiso de Accesibilidad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ロックにはアクセシビリティの権限が必要です"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠그려면 손쉬운 사용 권한이 필요합니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锁定需要“辅助功能”权限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鎖定需要「輔助使用」權限"
+          }
+        }
+      }
+    },
+    "Locks": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se bloquea"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ロック"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会锁住"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "會鎖住"
+          }
+        }
+      }
+    },
+    "Locks after a 3-second countdown": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se bloquea tras una cuenta atrás de 3 segundos"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 秒のカウントダウン後にロック"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3초 카운트다운 후 잠금"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "倒计时 3 秒后锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "倒數 3 秒後鎖定"
+          }
+        }
+      }
+    },
+    "Locks input while you clean your Mac. Version %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bloquea la entrada mientras limpias tu Mac. Versión %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac の清掃中に入力をロックします。バージョン %@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac을 청소하는 동안 입력을 잠급니다. 버전 %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁 Mac 时暂时锁住输入。版本 %@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔 Mac 時暫時鎖住輸入。版本 %@"
+          }
+        }
+      }
+    },
+    "Menu bar": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Barra de menús"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メニューバー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메뉴 막대"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "菜单栏"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選單列"
+          }
+        }
+      }
+    },
+    "Move the mouse, then hold the red button for 2 s": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mueve el ratón y mantén pulsado el botón rojo 2 s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスを動かして赤いボタンを 2 秒押す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "마우스를 움직이고 빨간 버튼을 2초 동안 누르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动一下鼠标，按住红色按钮 2 秒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "動一下滑鼠，按住紅色按鈕 2 秒"
+          }
+        }
+      }
+    },
+    "Needed for Keyboard Cleaning, Trackpad Cleaning, and Full Lock: blocks input before it reaches other apps.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesario para Limpiar teclado, Limpiar trackpad y Bloqueo total: bloquea la entrada antes de que llegue a otras apps."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードの清掃、トラックパッドの清掃、すべてロックに必要です：入力が他の アプリ に届く前にブロックします。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드 청소, 트랙패드 청소, 모두 잠그기에 필요: 입력이 다른 앱에 전달되기 전에 막습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "键盘清洁、触控板清洁与全部锁定需要：在输入送到其他 App 之前把它挡下来。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤清潔、觸控板清潔與全部鎖定需要：在輸入送到其他 App 之前把它擋下來。"
+          }
+        }
+      }
+    },
+    "Needs an external mouse": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesita un ratón externo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスが必要"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스 필요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要外接鼠标"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要外接滑鼠"
+          }
+        }
+      }
+    },
+    "Needs permission": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesita permiso"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "権限が必要"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한 필요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要权限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要權限"
+          }
+        }
+      }
+    },
+    "Needs setup": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Requiere configuración"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定が必要"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 필요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要設定"
+          }
+        }
+      }
+    },
+    "No cleaning history yet": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay historial de limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "まだ清掃の履歴はありません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "아직 청소 기록이 없습니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有清洁记录"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還沒有清潔紀錄"
+          }
+        }
+      }
+    },
+    "No external mouse detected": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se detecta ningún ratón externo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスが見つかりません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스가 감지되지 않음"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有检测到外接鼠标"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "沒有偵測到外接滑鼠"
+          }
+        }
+      }
+    },
+    "No key does anything, including brightness, volume, and media keys. The screen stays on.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ninguna tecla responde, ni siquiera las de brillo, volumen o multimedia. La pantalla sigue encendida."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明るさ、音量、メディアキーも含め、どのキーも反応しなくなります。画面は表示されたままです。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "밝기, 음량, 미디어 키를 포함해 어떤 키도 반응하지 않습니다. 화면은 그대로 켜져 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有按键都没反应，包括亮度、音量和媒体键。屏幕照常显示。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有按鍵都沒反應，包含亮度、音量、播放等功能鍵。螢幕照常顯示。"
+          }
+        }
+      }
+    },
+    "No permission needed.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No necesita permisos."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "権限は不要です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한이 필요 없습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不需要任何权限。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不需要任何權限。"
+          }
+        }
+      }
+    },
+    "No. The power button and Touch ID are handled directly by the hardware and the system; no app can block them. Avoid the power button / Touch ID at the top right while cleaning so the Mac doesn’t sleep or shut down.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No. El botón de encendido y Touch ID los gestionan directamente el hardware y el sistema; ninguna app puede bloquearlos. Evita el botón de encendido / Touch ID de la esquina superior derecha al limpiar para que el Mac no entre en reposo ni se apague."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "されません。電源ボタンと Touch ID はハードウェアとシステムが直接処理するため、どの アプリ でもブロックできません。Mac がスリープしたり電源が切れたりしないよう、清掃中は右上の電源ボタン／Touch ID を避けてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "아니요. 전원 버튼과 Touch ID는 하드웨어와 시스템이 직접 처리하므로 어떤 앱도 막을 수 없습니다. Mac이 잠자기 상태가 되거나 꺼지지 않도록 청소할 때 오른쪽 위의 전원 버튼/Touch ID는 피하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不会。电源键与 Touch ID 由硬件与系统直接处理，任何 App 都挡不住。清洁时请避开右上角的电源键／Touch ID，以免让 Mac 睡眠或关机。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不會。電源鍵與 Touch ID 由硬體與系統直接處理，任何 App 都擋不住。清潔時請避開右上角的電源鍵／Touch ID，以免讓 Mac 睡眠或關機。"
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aceptar"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
+          }
+        }
+      }
+    },
+    "Only the Mac’s built-in trackpad is locked (moving, clicking, gestures). The keyboard, external mice, and the touch screen keep working.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo se bloquea el trackpad integrado del Mac (movimiento, clics, gestos). El teclado, los ratones externos y la pantalla táctil siguen funcionando."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac の内蔵トラックパッドだけをロックします (移動、クリック、ジェスチャ)。キーボード、外付けマウス、タッチスクリーンは使えます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac의 내장 트랙패드만 잠급니다(이동, 클릭, 제스처). 키보드, 외장 마우스, 터치스크린은 계속 쓸 수 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只锁 Mac 内置的触控板 (移动、点按、手势)；键盘、外接鼠标、触摸屏照常可用。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只鎖 Mac 內建的觸控板 (移動、點按、手勢)；鍵盤、外接滑鼠、觸控螢幕照常可用。"
+          }
+        }
+      }
+    },
+    "Open Fushi Main Window": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir la ventana principal de Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi のメインウインドウを開く"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi 메인 윈도우 열기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开拂拭主窗口"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開拂拭主視窗"
+          }
+        }
+      }
+    },
+    "Open Help": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir la ayuda"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ヘルプを開く"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "도움말 열기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开使用说明"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開使用說明"
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir los ajustes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定を開く"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 열기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開設定"
+          }
+        }
+      }
+    },
+    "Open System Settings…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Ajustes del Sistema…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム設定を開く…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 설정 열기…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开系统设置…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開系統設定…"
+          }
+        }
+      }
+    },
+    "Open the Permissions page in the main window and check that Accessibility still says Allowed. If not, remove the old “Fushi” from the list in System Settings, then add it again and turn it on.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre la página Permisos de la ventana principal y comprueba que Accesibilidad sigue en Permitido. Si no, elimina el «Fushi» antiguo de la lista de Ajustes del Sistema, añádelo de nuevo y actívalo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メインウインドウの「権限」ページで、アクセシビリティが「許可済み」になっているか確認してください。なっていない場合は、システム設定の一覧から古い「Fushi」を削除し、追加し直してオンにしてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "메인 윈도우의 ‘권한’ 페이지에서 손쉬운 사용이 ‘허용됨’인지 확인하세요. 아니라면 시스템 설정 목록에서 이전 ‘Fushi’를 제거하고 다시 추가해 켜세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开主窗口的“权限”页看看“辅助功能”是否还是“已允许”。如果不是，到系统设置的列表里先移除旧的“拂拭”，再重新加入并打开开关。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開主視窗的「權限」頁看看「輔助使用」是否還是「已允許」。如果不是，到系統設定的清單裡先移除舊的「拂拭」，再重新加入並打開開關。"
+          }
+        }
+      }
+    },
+    "Password fields turn on macOS Secure Input, which prevents any app from intercepting the keyboard (it protects your passwords). Click somewhere outside the password field first, then start cleaning.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los campos de contraseña activan la entrada segura de macOS, que impide que cualquier app intercepte el teclado (así protege tus contraseñas). Haz clic fuera del campo de contraseña y luego empieza la limpieza."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パスワード欄では macOS の「セキュリティ保護された入力」がオンになり、どの アプリ もキーボードを取得できなくなります (パスワードを守るための仕組みです)。パスワード欄以外をクリックしてから清掃を始めてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "암호 입력란에서는 macOS의 ‘보안 입력’이 켜져 어떤 앱도 키보드를 가로챌 수 없습니다(암호를 보호하기 위한 기능). 암호 입력란 밖을 먼저 클릭한 다음 청소를 시작하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码框会启动 macOS 的“安全输入”，这时系统不允许任何 App 拦截键盘 (这是保护密码的设计)。请先点按其他地方离开密码框，再开始清洁。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密碼欄位會啟動 macOS 的「安全輸入」，這時系統不允許任何 App 攔截鍵盤 (這是保護密碼的設計)。請先點一下別的地方離開密碼欄位，再開始清潔。"
+          }
+        }
+      }
+    },
+    "Permissions": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permisos"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "権限"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권한"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "权限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "權限"
+          }
+        }
+      }
+    },
+    "Press Esc or Cancel to stop": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulsa Esc o Cancelar para detener"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc または「キャンセル」で中止"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc나 ‘취소’로 멈출 수 있습니다"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按 Esc 或“取消”可以停止"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按 Esc 或「取消」可以停止"
+          }
+        }
+      }
+    },
+    "Quick start": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio rápido"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クイックスタート"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "빠른 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速开始"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速開始"
+          }
+        }
+      }
+    },
+    "Quit Fushi": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir de Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi を終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi 종료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出拂拭"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束拂拭"
+          }
+        }
+      }
+    },
+    "Quit Fushi (disabled during screen cleaning to avoid accidents)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir de Fushi (desactivado durante la limpieza de pantalla para evitar accidentes)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi を終了 (画面の清掃中は誤操作防止のため無効)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi 종료(화면 청소 중에는 실수 방지를 위해 비활성화)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出拂拭 (屏幕清洁中无效，避免误触)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束拂拭 (螢幕清潔中無效，避免誤觸)"
+          }
+        }
+      }
+    },
+    "Remove and add it again": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar y añadir de nuevo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除してから追加し直す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제거 후 다시 추가"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除后重新加入"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除後重新加入"
+          }
+        }
+      }
+    },
+    "Reopen Fushi": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a abrir Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi を開き直す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi 다시 열기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新打开拂拭"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新打開拂拭"
+          }
+        }
+      }
+    },
+    "Requires Accessibility permission (the Permissions page guides you the first time).": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesita el permiso de Accesibilidad (la página Permisos te guía la primera vez)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセシビリティの権限が必要です (初回は「権限」ページが案内します)。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용 권한이 필요합니다(처음에는 ‘권한’ 페이지가 안내합니다)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要“辅助功能”权限 (第一次使用时“权限”页会引导你开启)。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要「輔助使用」權限 (第一次使用時「權限」頁會引導你開啟)。"
+          }
+        }
+      }
+    },
+    "Requires Accessibility permission.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesita el permiso de Accesibilidad."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセシビリティの権限が必要です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손쉬운 사용 권한이 필요합니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要“辅助功能”权限。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要「輔助使用」權限。"
+          }
+        }
+      }
+    },
+    "Return": {
+      "shouldTranslate": false
+    },
+    "Safety": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguridad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安全のしくみ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "안전 장치"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安全机制"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安全機制"
+          }
+        }
+      }
+    },
+    "Screen & touch locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla y función táctil bloqueadas"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面とタッチをロック中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면과 터치 잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕与触控已锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕與觸控已鎖定"
+          }
+        }
+      }
+    },
+    "Screen Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiar pantalla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面の清掃"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 청소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕清潔"
+          }
+        }
+      }
+    },
+    "Screen cleaning needs no permission. This page updates as soon as you turn it on.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiar pantalla no necesita permisos. Esta página se actualiza en cuanto lo activas."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面の清掃には権限は不要です。オンにするとこのページはすぐに更新されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 청소에는 권한이 필요 없습니다. 켜면 이 페이지가 바로 업데이트됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕清洁不需要任何权限。打开后这一页会自动更新。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕清潔不需要任何權限。勾選後這一頁會自動更新。"
+          }
+        }
+      }
+    },
+    "Screen clicks": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clics en pantalla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面のクリック"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 클릭"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕点击"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕點擊"
+          }
+        }
+      }
+    },
+    "Screen locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla bloqueada"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面をロック中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕已锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕已鎖定"
+          }
+        }
+      }
+    },
+    "Screen locked · cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla bloqueada · limpiando"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面をロック中 · 清掃中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 잠김 · 청소 중"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕已锁定，清洁中"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕已鎖定，清潔中"
+          }
+        }
+      }
+    },
+    "Screen touch": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toques en pantalla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面のタッチ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 터치"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕触控"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕觸控"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        }
+      }
+    },
+    "Settings…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定…"
+          }
+        }
+      }
+    },
+    "Sometimes an app must be reopened before a new permission takes effect.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A veces hay que volver a abrir una app para que un permiso nuevo surta efecto."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しい権限を反映するには アプリ を開き直す必要がある場合があります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새 권한을 적용하려면 앱을 다시 열어야 할 때가 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统有时要重新打开 App，新权限才会生效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系統有時要重新打開 App，新權限才會生效。"
+          }
+        }
+      }
+    },
+    "Start Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar limpieza"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃を開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始清潔"
+          }
+        }
+      }
+    },
+    "Start Full Lock": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar bloqueo total"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてロックを開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모두 잠그기 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始全部锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始全部鎖定"
+          }
+        }
+      }
+    },
+    "Start Full Lock (Needs External Mouse)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar bloqueo total (necesita ratón externo)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてロックを開始 (外付けマウスが必要)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모두 잠그기 시작(외장 마우스 필요)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始全部锁定 (需要外接鼠标)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始全部鎖定 (需要外接滑鼠)"
+          }
+        }
+      }
+    },
+    "Start Keyboard Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar limpieza de teclado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードの清掃を開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드 청소 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始键盘清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始鍵盤清潔"
+          }
+        }
+      }
+    },
+    "Start Last Mode": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar último modo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前回のモードを開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이전 모드 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始上次的模式"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始上次的模式"
+          }
+        }
+      }
+    },
+    "Start Last Mode: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar último modo: %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "前回のモードを開始：%@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이전 모드 시작: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始上次的模式：%@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始上次的模式：%@"
+          }
+        }
+      }
+    },
+    "Start Screen Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar limpieza de pantalla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面の清掃を開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면 청소 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始屏幕清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始螢幕清潔"
+          }
+        }
+      }
+    },
+    "Start Trackpad Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar limpieza de trackpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッドの清掃を開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "트랙패드 청소 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始触控板清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始觸控板清潔"
+          }
+        }
+      }
+    },
+    "Start cleaning (main window)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar limpieza (ventana principal)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃を開始 (メインウインドウ)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소 시작(메인 윈도우)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始清洁 (主窗口)"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始清潔 (主視窗)"
+          }
+        }
+      }
+    },
+    "Start the last mode when Fushi opens": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar el último modo al abrir Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi の起動時に前回のモードを開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi를 열면 이전 모드를 바로 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开拂拭时，直接开始上次的模式"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開拂拭時，直接開始上次的模式"
+          }
+        }
+      }
+    },
+    "Starting in %lld s": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza en %lld s"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒後に開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld초 후 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒后开始"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒後開始"
+          }
+        }
+      }
+    },
+    "Starting soon": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza ya"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "まもなく開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "곧 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即将开始"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即將開始"
+          }
+        }
+      }
+    },
+    "Starting: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza: %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "まもなく開始：%@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "곧 시작: %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即将开始：%@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即將開始：%@"
+          }
+        }
+      }
+    },
+    "System gestures such as three-finger swipes and Mission Control are handled by macOS and may still work. Fushi disables ⌘Tab and hides the Dock and menu bar.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los gestos del sistema, como deslizar con tres dedos o Mission Control, los gestiona macOS y pueden seguir funcionando. Fushi desactiva ⌘Tab y oculta el Dock y la barra de menús."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 本指スワイプや Mission Control などのシステムジェスチャは macOS が処理するため、動作する場合があります。Fushi は ⌘Tab を無効にし、Dock とメニューバーを隠します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "세 손가락 쓸기, Mission Control 같은 시스템 제스처는 macOS가 처리하므로 동작할 수 있습니다. Fushi는 ⌘Tab을 끄고 Dock과 메뉴 막대를 숨깁니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "三指轻扫、Mission Control 等系统手势由系统处理，可能仍会作用。拂拭已停用 ⌘Tab 并隐藏 Dock 与菜单栏。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "三指滑動、Mission Control 等系統手勢由系統處理，可能仍會作用。拂拭已停用 ⌘Tab 並隱藏 Dock 與選單列。"
+          }
+        }
+      }
+    },
+    "System permissions": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permisos del sistema"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システムの権限"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 권한"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统权限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系統權限"
+          }
+        }
+      }
+    },
+    "Taps on the touch screen land on the black screen and press nothing.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los toques en la pantalla táctil caen sobre la pantalla negra y no pulsan nada."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タッチスクリーンをタップしても黒い画面に当たるだけで、何も押されません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "터치스크린을 탭해도 검은 화면에 닿을 뿐 아무것도 눌리지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触摸屏的点击会落在黑色画面上，不会按到任何东西。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "觸控螢幕的點擊會落在黑色畫面上，不會按到任何東西。"
+          }
+        }
+      }
+    },
+    "The Fushi icon at the top right shows the current state: sparkles when idle, a timer during the countdown, a lock while cleaning.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El icono de Fushi arriba a la derecha muestra el estado: destellos en espera, un temporizador durante la cuenta atrás y un candado mientras limpias."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右上の Fushi アイコンで現在の状態がわかります：きらめきは待機中、タイマーはカウントダウン中、鍵は清掃中です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "오른쪽 위의 Fushi 아이콘으로 현재 상태를 알 수 있습니다: 반짝임은 대기 중, 타이머는 카운트다운 중, 자물쇠는 청소 중입니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕右上角的拂拭图标会显示目前状态：星星是待机、计时器是倒计时中、锁头是清洁中。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕右上角的拂拭圖示會顯示目前狀態：星星是待命、計時器是倒數中、鎖頭是清潔中。"
+          }
+        }
+      }
+    },
+    "The built-in trackpad is paused.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El trackpad integrado queda en pausa."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内蔵トラックパッドを一時停止します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "내장 트랙패드가 일시 정지됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内置触控板暂时失效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "內建觸控板暫停作用。"
+          }
+        }
+      }
+    },
+    "The external mouse disconnected, so Full Lock can’t start safely. Make sure the mouse is charged and connected, then try again.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El ratón externo se desconectó, así que el bloqueo total no puede empezar con seguridad. Comprueba que el ratón tiene batería y está conectado, y vuelve a intentarlo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスの接続が切れたため、安全に「すべてロック」を開始できません。マウスの電源と接続を確認してからもう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스 연결이 끊어져 ‘모두 잠그기’를 안전하게 시작할 수 없습니다. 마우스의 전원과 연결을 확인한 뒤 다시 시도하세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外接鼠标已断开连接，没有办法安全地全部锁定。请确认鼠标有电、已连接后再开始。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外接滑鼠已中斷連線，無法安全開始全部鎖定。請確認滑鼠有電、已連線後再開始。"
+          }
+        }
+      }
+    },
+    "The screen goes black and clicks do nothing.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pantalla se vuelve negra y los clics no hacen nada."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面が真っ黒になり、クリックは反応しません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면이 검게 바뀌고 클릭이 동작하지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕全黑，点击无效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕全黑，點擊無效。"
+          }
+        }
+      }
+    },
+    "The screen goes black and the keyboard, trackpad, and touch screen are all locked. Only an external mouse (Bluetooth or USB) still works.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pantalla se vuelve negra y el teclado, el trackpad y la pantalla táctil quedan bloqueados. Solo funciona un ratón externo (Bluetooth o USB)."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面が真っ黒になり、キーボード、トラックパッド、タッチスクリーンがすべてロックされます。外付けマウス (Bluetooth または USB) だけが使えます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면이 검게 바뀌고 키보드, 트랙패드, 터치스크린이 모두 잠깁니다. 외장 마우스(Bluetooth 또는 USB)만 사용할 수 있습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕全黑，键盘、触控板、触摸屏全部锁住，只留外接鼠标 (蓝牙或 USB 都可以)。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕全黑，鍵盤、觸控板、觸控螢幕全部鎖住，只留外接滑鼠 (藍牙或 USB 都可以)。"
+          }
+        }
+      }
+    },
+    "The screen goes black and touch is off.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pantalla se vuelve negra y la función táctil se desactiva."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面が真っ黒になり、タッチはオフになります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면이 검게 바뀌고 터치가 꺼집니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕全黑，触控停用。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕全黑，觸控停用。"
+          }
+        }
+      }
+    },
+    "The screen goes black. Only an external mouse works.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pantalla se vuelve negra. Solo funciona un ratón externo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面が真っ黒になります。外付けマウスだけが使えます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면이 검게 바뀝니다. 외장 마우스만 동작합니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "屏幕全黑，只留外接鼠标。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "螢幕全黑，只留外接滑鼠。"
+          }
+        }
+      }
+    },
+    "To end, hold “Hold 2 s to end cleaning” with the touch screen or an external mouse, or hold Esc for 3 s.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para terminar, mantén pulsado «Mantén 2 s para terminar» con la pantalla táctil o un ratón externo, o mantén pulsada Esc 3 s."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "終了するには、タッチスクリーンか外付けマウスで「2 秒押して清掃を終了」を押し続けるか、Esc を 3 秒押します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "끝내려면 터치스크린이나 외장 마우스로 ‘2초 눌러 청소 종료’를 길게 누르거나 Esc를 3초 동안 누르세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要结束时，用触摸屏或外接鼠标按住“按住 2 秒结束清洁”，或长按 Esc 3 秒。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要結束時，用觸控螢幕或外接滑鼠按住「按住 2 秒結束清潔」，或長按 Esc 3 秒。"
+          }
+        }
+      }
+    },
+    "To end: hold Esc for 3 s (a 3‑2‑1 countdown appears), or wait for the automatic unlock.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para terminar: mantén pulsada Esc 3 s (aparece una cuenta atrás 3‑2‑1) o espera al desbloqueo automático."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "終了するには Esc を 3 秒押し続けるか (3・2・1 のカウントダウンが表示されます)、自動解除を待ちます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "끝내려면 Esc를 3초 동안 누르거나(3·2·1 카운트다운이 나타남) 자동 해제를 기다리세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结束：长按 Esc 3 秒 (会出现 3、2、1 倒计时)，或等时间到自动解锁。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束：長按 Esc 3 秒 (會出現 3、2、1 倒數)，或等時間到自動解鎖。"
+          }
+        }
+      }
+    },
+    "Trackpad Cleaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiar trackpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッドの清掃"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "트랙패드 청소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触控板清洁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "觸控板清潔"
+          }
+        }
+      }
+    },
+    "Trackpad locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trackpad bloqueado"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッドをロック中"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "트랙패드 잠김"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触控板已锁定"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "觸控板已鎖定"
+          }
+        }
+      }
+    },
+    "Turn on “Start the last mode when Fushi opens” in Settings, and opening the app starts the countdown right away.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activa «Iniciar el último modo al abrir Fushi» en los ajustes y la cuenta atrás empezará en cuanto abras la app."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定で「Fushi の起動時に前回のモードを開始」をオンにすると、アプリを開くだけでカウントダウンが始まります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정에서 ‘Fushi를 열면 이전 모드를 바로 시작’을 켜면 앱을 열자마자 카운트다운이 시작됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在设置里打开“打开拂拭时，直接开始上次的模式”，打开 App 就会直接倒计时开始。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在設定裡打開「打開拂拭時，直接開始上次的模式」，打開 App 就會直接倒數開始。"
+          }
+        }
+      }
+    },
+    "Unlocking…": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloqueando…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解除中…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "해제 중…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在解锁…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在解鎖…"
+          }
+        }
+      }
+    },
+    "Unlocks automatically after %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se desbloquea automáticamente en %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 後に自動で解除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 후 자동 해제"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 后自动解锁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 後自動解鎖"
+          }
+        }
+      }
+    },
+    "Unlocks in %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se desbloquea en %@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 後に解除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 후 해제"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 后自动解锁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 後自動解鎖"
+          }
+        }
+      }
+    },
+    "Unplug the mouse to unlock instantly": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desconecta el ratón para desbloquear al instante"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "マウスを外すとすぐに解除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "마우스를 분리하면 즉시 해제"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拔掉鼠标，立刻解锁"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拔掉滑鼠，立刻解鎖"
+          }
+        }
+      }
+    },
+    "Unplugging the external mouse (or a Bluetooth disconnect or dead battery) unlocks everything instantly, so you can never be locked out. For mice with a USB receiver (such as Logitech Unifying or Bolt), unplug the receiver — turning off the mouse alone does not unlock.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desconectar el ratón externo (o una desconexión Bluetooth o batería agotada) desbloquea todo al instante, así que nunca te quedarás fuera. Con ratones de receptor USB (como Logitech Unifying o Bolt), desconecta el receptor: apagar solo el ratón no desbloquea."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外付けマウスを外す (または Bluetooth の切断や電池切れ) とすぐにすべて解除されるので、締め出されることはありません。USB レシーバーを使うマウス (Logicool Unifying／Bolt など) は、レシーバーを抜いてください。マウスの電源を切るだけでは解除されません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외장 마우스를 분리하면(또는 Bluetooth 연결 끊김, 배터리 방전) 즉시 모두 해제되므로 잠겨서 못 쓰는 일은 없습니다. USB 수신기를 쓰는 마우스(Logitech Unifying/Bolt 등)는 수신기를 뽑아야 합니다. 마우스 전원만 끄면 해제되지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拔掉外接鼠标 (或蓝牙断开、没电) 会立刻全部解锁，不会把你锁在电脑外面。使用 USB 接收器的鼠标 (例如罗技 Unifying／Bolt)，要拔掉接收器才算断开，只关鼠标电源不会解锁。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拔掉外接滑鼠 (或藍牙斷線、沒電) 會立刻全部解鎖，不會把你鎖在電腦外面。使用 USB 接收器的滑鼠 (例如羅技 Unifying／Bolt)，要拔掉接收器才算斷線，只關滑鼠電源不會解鎖。"
+          }
+        }
+      }
+    },
+    "What Fushi does": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qué hace Fushi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi でできること"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi가 하는 일"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这个 App 做什么"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "這個 App 做什麼"
+          }
+        }
+      }
+    },
+    "What gets locked": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qué se bloquea"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ロックされるもの"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잠기는 항목"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会锁住"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "會鎖住"
+          }
+        }
+      }
+    },
+    "When the screen is black, touching the keyboard, trackpad, or mouse makes a gold glow breathe around the edges to remind you the Mac is on and how to finish. Wiping the touch screen does not trigger it.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con la pantalla en negro, al tocar el teclado, el trackpad o el ratón, un brillo dorado respira en los bordes para recordarte que el Mac sigue encendido y cómo terminar. Limpiar la pantalla táctil no lo activa."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面が真っ黒のとき、キーボード、トラックパッド、マウスに触れると、画面の縁が金色にゆっくり光り、Mac が動いていることと終了方法を知らせます。タッチスクリーンを拭いても反応しません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면이 검은 상태에서 키보드, 트랙패드, 마우스를 건드리면 화면 가장자리에 금빛이 천천히 숨 쉬듯 빛나 Mac이 켜져 있다는 것과 끝내는 방법을 알려 줍니다. 터치스크린을 닦을 때는 반응하지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全黑时碰到键盘、触控板或鼠标，屏幕四周会亮起金色光晕呼吸一下，提醒电脑还开着、怎么结束；擦触摸屏不会触发。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全黑時碰到鍵盤、觸控板或滑鼠，螢幕四周會亮起金色光暈呼吸一下，提醒電腦還開著、怎麼結束；擦觸控螢幕不會觸發。"
+          }
+        }
+      }
+    },
+    "When you touch the keyboard, trackpad, or mouse, a gold glow slowly breathes around the edges to show the Mac is still on. No buttons appear, so wiping the screen can’t press anything.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Al tocar el teclado, el trackpad o el ratón, un brillo dorado respira lentamente en los bordes para mostrar que el Mac sigue encendido. No aparece ningún botón, así que limpiar la pantalla no pulsa nada."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボード、トラックパッド、マウスに触れると、画面の縁の金色の光がゆっくり呼吸するように光り、Mac が動いていることを知らせます。ボタンは表示されないので、画面を拭いても誤って押すことはありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "키보드, 트랙패드, 마우스를 건드리면 화면 가장자리의 금빛이 천천히 숨 쉬듯 빛나 Mac이 켜져 있음을 알려 줍니다. 버튼은 나타나지 않으므로 화면을 닦아도 잘못 누를 일이 없습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "碰到键盘、触控板或鼠标时，屏幕四周的金光会缓慢呼吸，提示电脑还开着；不会弹出按钮，擦屏幕时不会误触。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "碰到鍵盤、觸控板或滑鼠時，螢幕四周的金光會緩慢呼吸，提示電腦還開著；不會跳出按鈕，擦螢幕時不會誤觸。"
+          }
+        }
+      }
+    },
+    "When you wipe the screen or the keyboard, your hands inevitably touch keys, the trackpad, and the touch screen. Fushi temporarily locks those inputs while you clean and unlocks them automatically when time is up. The name comes from a Zen verse: “wipe it diligently, and let no dust gather.”": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Al limpiar la pantalla o el teclado, es inevitable tocar teclas, el trackpad y la pantalla táctil. Fushi bloquea esas entradas mientras limpias y las desbloquea automáticamente al acabar el tiempo. El nombre viene de un verso zen: «límpialo con constancia y no dejes que se acumule el polvo»."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画面やキーボードを拭くと、どうしてもキー、トラックパッド、タッチスクリーンに触れてしまいます。Fushi は清掃中だけこれらの入力を一時的にロックし、時間になると自動で解除します。名前は禅の言葉「時時に勤めて払拭せよ、塵埃を惹かしむること勿かれ」に由来します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "화면이나 키보드를 닦다 보면 키, 트랙패드, 터치스크린을 건드리기 마련입니다. Fushi는 청소하는 동안 이 입력들을 잠시 잠그고, 시간이 되면 자동으로 해제합니다. 이름은 선(禪)의 구절 ‘늘 부지런히 닦아 먼지가 앉지 않게 하라’에서 따왔습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "擦屏幕、擦键盘时，手一定会碰到按键、触控板和触摸屏，很容易误触。拂拭会在清洁期间暂时锁住这些输入，时间到自动解锁。名称出自“时时勤拂拭，勿使惹尘埃”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "擦螢幕、擦鍵盤時，手一定會碰到按鍵、觸控板和觸控螢幕，很容易誤觸。拂拭會在清潔期間暫時鎖住這些輸入，時間到自動解鎖。名稱出自「時時勤拂拭，勿使惹塵埃」。"
+          }
+        }
+      }
+    },
+    "When you’re done, hold “Hold 2 s to end cleaning”, or wait for the automatic unlock.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando termines, mantén pulsado «Mantén 2 s para terminar» o espera al desbloqueo automático."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清掃が終わったら「2 秒押して清掃を終了」を押し続けるか、自動解除を待ちます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "청소가 끝나면 ‘2초 눌러 청소 종료’를 길게 누르거나 자동 해제를 기다리세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清洁完按住“按住 2 秒结束清洁”，或等时间到自动解锁。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔完按住「按住 2 秒結束清潔」，或等時間到自動解鎖。"
+          }
+        }
+      }
+    },
+    "Why can’t I lock the keyboard while the cursor is in a password field?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Por qué no puedo bloquear el teclado si el cursor está en un campo de contraseña?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パスワード欄にカーソルがあるとキーボードをロックできないのはなぜですか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "암호 입력란에 커서가 있으면 왜 키보드를 잠글 수 없나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "光标在密码框时，为什么不能开始锁键盘？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "游標在密碼欄位時，為什麼不能開始鎖鍵盤？"
+          }
+        }
+      }
+    },
+    "Without the required permission, Fushi won’t lock; it takes you to the Permissions page instead.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin el permiso necesario, Fushi no bloquea nada: te lleva a la página Permisos."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必要な権限がない場合はロックせず、「権限」ページを表示します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "필요한 권한이 없으면 잠그지 않고 ‘권한’ 페이지로 안내합니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缺少权限时不会进入锁定，而是先带你到“权限”页。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缺少權限時不會進入鎖定，而是先帶你到「權限」頁。"
+          }
+        }
+      }
+    },
+    "You can also hold Esc for 3 s to end. After 8 s without activity the screen goes black again.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "También puedes mantener pulsada Esc 3 s para terminar. Tras 8 s sin actividad, la pantalla vuelve a ponerse negra."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc を 3 秒押しても終了できます。8 秒操作がないと画面は再び真っ黒になります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esc를 3초 동안 눌러도 끝낼 수 있습니다. 8초 동안 조작이 없으면 화면이 다시 검게 바뀝니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也可以长按 Esc 3 秒结束。8 秒没有操作会自动变回全黑。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也可以長按 Esc 3 秒結束。8 秒沒有操作會自動變回全黑。"
+          }
+        }
+      }
+    },
+    "“Also lock the trackpad” is on by default, so your palms won’t move the pointer while you wipe. Turn it off if you want to keep using the trackpad.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«Bloquear también el trackpad» está activado por omisión, así que tus palmas no moverán el puntero mientras limpias. Desactívalo si quieres seguir usando el trackpad."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「トラックパッドもロック」は初期設定でオンになっているので、拭いている間に手のひらでポインタが動くことはありません。トラックパッドを使い続けたい場合はオフにしてください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘트랙패드도 잠그기’는 기본으로 켜져 있어 닦는 동안 손바닥이 포인터를 움직이지 않습니다. 트랙패드를 계속 쓰려면 끄세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“同时锁住触控板”默认打开，擦键盘时手掌碰到也不会移动光标；想边擦边用触控板就把它关掉。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「同時鎖住觸控板」預設打開，擦鍵盤時手掌碰到也不會移動游標；想邊擦邊用觸控板就把它關掉。"
+          }
+        }
+      }
+    },
+    "•": {
+      "shouldTranslate": false
+    },
+    "⌘ ,": {
+      "shouldTranslate": false
+    },
+    "⌘ ?": {
+      "shouldTranslate": false
+    },
+    "⌘ Q": {
+      "shouldTranslate": false
     }
   },
   "version": "1.0"

@@ -73,11 +73,11 @@ enum CleaningMode: Hashable, Sendable {
 
     var title: String {
         switch self {
-        case .screenB: return "B 面清潔 · 螢幕"
-        case .deckC(.keyboard): return "C 面清潔 · 鍵盤"
-        case .deckC(.trackpad): return "C 面清潔 · 觸控板"
-        case .deckC(.keyboardAndTrackpad): return "C 面清潔 · 鍵盤與觸控板"
-        case .all: return "全鎖 · 全部"
+        case .screenB: return String(localized: "Screen Cleaning")
+        case .deckC(.keyboard): return String(localized: "Keyboard Cleaning")
+        case .deckC(.trackpad): return String(localized: "Trackpad Cleaning")
+        case .deckC(.keyboardAndTrackpad): return String(localized: "Keyboard Cleaning")   // 和側邊欄一致，只用四個名稱
+        case .all: return String(localized: "Full Lock")
         }
     }
 
@@ -110,5 +110,46 @@ enum CleaningMode: Hashable, Sendable {
                   let target = DeckTarget(rawValue: String(storageValue.dropFirst(prefix.count))) else { return nil }
             self = .deckC(target)
         }
+    }
+}
+
+/// 主畫面側邊欄的四個模式，順序是從筆電上方往下：螢幕 → 鍵盤 → 觸控板 → 全部。
+enum ModeKind: String, CaseIterable, Identifiable {
+    case screen, keyboard, trackpad, all
+    var id: String { rawValue }
+
+    /// 讀取舊版存的值 (0.3.0 以前只有 screenB／deckC／all 三個)
+    init?(storedValue: String) {
+        switch storedValue {
+        case "screenB": self = .screen
+        case "deckC": self = .keyboard
+        default: self.init(rawValue: storedValue)
+        }
+    }
+}
+
+extension ModeKind {
+    /// 這一頁實際要鎖什麼。鍵盤清潔依「同時鎖住觸控板」決定要不要連觸控板一起鎖。
+    func cleaningMode(keyboardAlsoLocksTrackpad: Bool) -> CleaningMode {
+        switch self {
+        case .screen: return .screenB
+        case .keyboard: return .deckC(keyboardAlsoLocksTrackpad ? .keyboardAndTrackpad : .keyboard)
+        case .trackpad: return .deckC(.trackpad)
+        case .all: return .all
+        }
+    }
+
+    /// 從 0.3.0 以前的設定換算：當時 C 面頁有「鍵盤」「觸控板」兩個開關。
+    /// - 只開觸控板 → 觸控板清潔
+    /// - 其他 → 鍵盤清潔，「同時鎖住觸控板」照舊版觸控板開關
+    /// 回傳 nil 代表沒有舊設定可換算。
+    static func migrate(storedKind: String?, deckKeyboard: Bool?, deckTrackpad: Bool?)
+        -> (kind: ModeKind, alsoTrackpad: Bool)? {
+        guard deckKeyboard != nil || deckTrackpad != nil else { return nil }
+        let keyboard = deckKeyboard ?? true
+        let trackpad = deckTrackpad ?? false
+        let stored = storedKind.flatMap(ModeKind.init(storedValue:)) ?? .screen
+        if storedKind == "deckC" && !keyboard && trackpad { return (.trackpad, true) }
+        return (stored, keyboard ? trackpad : true)
     }
 }

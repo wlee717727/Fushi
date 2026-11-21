@@ -3,44 +3,105 @@ import SwiftUI
 // MARK: - 模式的顯示資料
 
 extension ModeKind {
-    var title: String {
+    var title: LocalizedStringKey {
         switch self {
-        case .screenB: return "B 面清潔"
-        case .deckC: return "C 面清潔"
-        case .all: return "全鎖"
-        }
-    }
-
-    var sidebarSubtitle: String {
-        switch self {
-        case .screenB: return "螢幕"
-        case .deckC: return "鍵盤與觸控板"
-        case .all: return "需要外接滑鼠"
+        case .screen: return "Screen Cleaning"
+        case .keyboard: return "Keyboard Cleaning"
+        case .trackpad: return "Trackpad Cleaning"
+        case .all: return "Full Lock"
         }
     }
 
     /// 頁面上的一句話：講「效果」，細節留給下面的卡片
-    var summary: String {
+    var summary: LocalizedStringKey {
         switch self {
-        case .screenB: return TouchScreen.isPresent
-            ? "螢幕全黑、觸控停用，灰塵與指紋一目了然。"
-            : "螢幕全黑、點擊不會按到東西，灰塵與指紋一目了然。"
-        case .deckC: return "鍵盤、觸控板各自選擇要不要鎖，螢幕照常顯示。"
-        case .all: return "螢幕全黑、全部輸入鎖住，只留外接滑鼠。"
+        case .screen: return TouchScreen.isPresent ? "The screen goes black and touch is off." : "The screen goes black and clicks do nothing."
+        case .keyboard: return "Every key is paused."
+        case .trackpad: return "The built-in trackpad is paused."
+        case .all: return "The screen goes black. Only an external mouse works."
         }
     }
 
     var symbol: String {
         switch self {
-        case .screenB: return "sparkles.tv"
-        case .deckC: return "keyboard"
+        case .screen: return "sparkles.tv"
+        case .keyboard: return "keyboard"
+        case .trackpad: return "rectangle.and.hand.point.up.left"
         case .all: return "lock.fill"
         }
     }
 
+    /// 四張插畫同一個取景，只有拂塵移動：螢幕 → 鍵盤 → 觸控板 → 整台
     var heroImage: String {
-        self == .screenB ? "HeroScreen" : "HeroKeyboard"
+        switch self {
+        case .screen: return "HeroScreen"
+        case .keyboard: return "HeroKeyboard"
+        case .trackpad: return "HeroTrackpad"
+        case .all: return "HeroAll"
+        }
     }
+
+    /// 這一頁需要「輔助使用」權限嗎 (螢幕清潔不需要)
+    var needsAccessibility: Bool { self != .screen }
+}
+
+// MARK: - 依語言自動調整視窗大小
+
+/// 主視窗打開時「依內容自動調整大小」：
+/// - 側邊欄：量出目前語言最長的功能名稱，寬度剛好放得下 (任何語言都完整顯示)
+/// - 內容區：固定用最舒服的寬度 (插畫最寬 560 點＋左右留白)
+/// - 高度：880 點，不超過螢幕
+@MainActor
+enum MainLayout {
+    /// 側邊欄要放得下的文字 (和 ModeKind.title、權限列、分組標題同樣的翻譯 key)
+    private static var sidebarTitles: [String] {
+        [String(localized: "Screen Cleaning"), String(localized: "Keyboard Cleaning"),
+         String(localized: "Trackpad Cleaning"), String(localized: "Full Lock"),
+         String(localized: "Permissions")]
+    }
+
+    static let sidebarWidth: CGFloat = {
+        let font = NSFont.preferredFont(forTextStyle: .body)
+        let longest = sidebarTitles
+            .map { ($0 as NSString).size(withAttributes: [.font: font]).width }
+            .max() ?? 120
+        // 列表左右內距、品牌小方塊 26、間距 10、右側狀態圖示 20、捲軸與餘裕
+        return max(200, ceil(longest + 112))
+    }()
+
+    static let detailWidth: CGFloat = 640
+    static let preferredHeight: CGFloat = 880
+
+    /// 把主視窗調成這個語言最舒服的大小 (主視窗每次出現時呼叫)
+    static func fit(_ window: NSWindow) {
+        // 等系統還原完上次的視窗位置後再調整，否則會被蓋掉
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            guard let screen = window.screen ?? NSScreen.main else { return }
+            let visible = screen.visibleFrame
+            let size = NSSize(width: min(sidebarWidth + detailWidth, visible.width - 40),
+                              height: min(preferredHeight, visible.height - 40))
+            var frame = window.frameRect(forContentRect: NSRect(origin: .zero, size: size))
+            // 以目前視窗中心為準調整，並確保整個視窗在螢幕內
+            frame.origin.x = min(max(window.frame.midX - frame.width / 2, visible.minX), visible.maxX - frame.width)
+            frame.origin.y = min(max(window.frame.midY - frame.height / 2, visible.minY), visible.maxY - frame.height)
+            window.setFrame(frame, display: true, animate: false)
+        }
+    }
+}
+
+/// 放在主視窗畫面背後：視窗真正出現時，回報是哪一個視窗並調整大小
+private struct WindowFitter: NSViewRepresentable {
+    final class Probe: NSView {
+        private weak var fitted: NSWindow?
+        override func viewDidMoveToWindow() {
+            super.viewDidMoveToWindow()
+            guard let window, window !== fitted else { return }
+            fitted = window
+            MainLayout.fit(window)
+        }
+    }
+    func makeNSView(context: Context) -> NSView { Probe() }
+    func updateNSView(_ nsView: NSView, context: Context) {}
 }
 
 // MARK: - 主視窗
@@ -62,9 +123,10 @@ struct MainView: View {
                 .navigationSplitViewColumnWidth(min: 400, ideal: 560)
         }
         .frame(minWidth: 420, minHeight: 680)
-        .alert("無法開始", isPresented: Binding(get: { model.alertMessage != nil },
+        .background(WindowFitter())
+        .alert("Can’t start", isPresented: Binding(get: { model.alertMessage != nil },
                                               set: { if !$0 { model.alertMessage = nil } })) {
-            Button("好") { model.alertMessage = nil }
+            Button("OK") { model.alertMessage = nil }
         } message: {
             Text(model.alertMessage ?? "")
         }
@@ -79,22 +141,23 @@ struct MainView: View {
     private var sidebar: some View {
         List(selection: Binding(get: { Optional(model.sidebar) },
                                 set: { if let v = $0 { model.sidebar = v } })) {
-            Section("清潔模式") {
+            Section("Cleaning modes") {
                 ForEach(ModeKind.allCases) { kind in
-                    SidebarRow(symbol: kind.symbol, title: kind.title, subtitle: kind.sidebarSubtitle)
+                    SidebarRow(symbol: kind.symbol, title: kind.title)
                         .tag(SidebarItem.mode(kind))
                 }
             }
-            Section("設定") {
-                SidebarRow(symbol: "hand.raised.fill", title: "權限",
-                           subtitle: permissions.accessibility ? "已允許" : "需要設定",
-                           warning: !permissions.accessibility)
+            Section("Settings") {
+                SidebarRow(symbol: "hand.raised.fill", title: "Permissions",
+                           status: permissions.accessibility ? .ok : .warning)
                     .tag(SidebarItem.permissions)
             }
         }
         .listStyle(.sidebar)
         .modifier(DarkSidebarBackground())
-        .navigationSplitViewColumnWidth(min: 190, ideal: 210, max: 260)
+        // 寬度依目前語言最長的名稱計算：任何語言都完整顯示，不用拖拉
+        .navigationSplitViewColumnWidth(min: MainLayout.sidebarWidth, ideal: MainLayout.sidebarWidth,
+                                        max: MainLayout.sidebarWidth + 60)
     }
 
     // MARK: 內容區
@@ -110,24 +173,31 @@ struct MainView: View {
     }
 }
 
-/// 側邊欄的一列：品牌色淡底小方塊＋名稱＋一行小字。
+/// 側邊欄的一列：品牌色淡底小方塊＋名稱；需要時右側顯示狀態小圖示 (和系統設定的做法一樣，不加說明小字)。
 private struct SidebarRow: View {
+    enum Status { case none, ok, warning }
     let symbol: String
-    let title: String
-    let subtitle: String
-    var warning = false
+    let title: LocalizedStringKey
+    var status: Status = .none
 
     var body: some View {
         HStack(spacing: 10) {
             BrandTile(symbol: symbol, size: 26)
-            VStack(alignment: .leading, spacing: 1) {
-                Text(title)
-                Text(subtitle)
-                    .font(.caption)
-                    .foregroundStyle(warning ? AnyShapeStyle(Color.orange) : AnyShapeStyle(.tertiary))
+            Text(title)
+            Spacer(minLength: 4)
+            switch status {
+            case .none: EmptyView()
+            case .ok:
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundStyle(Brand.accent)
+                    .accessibilityLabel("Allowed")
+            case .warning:
+                Image(systemName: "exclamationmark.circle.fill")
+                    .foregroundStyle(.orange)
+                    .accessibilityLabel("Needs setup")
             }
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, 3)
     }
 }
 
@@ -150,9 +220,9 @@ private struct DarkSidebarBackground: ViewModifier {
 enum ContentColumn {
     static func width(visibleWidth: CGFloat, visibleHeight: CGFloat) -> CGFloat {
         let byWidth = visibleWidth - 56                          // 左右各留 28
-        let reservedHeight: CGFloat = 450                        // 標題、說明、兩組卡片 (最多四張) 與上下留白的高度
+        let reservedHeight: CGFloat = 520                        // 標題、摘要、兩區共四張卡片與上下留白的高度 (四頁都是這個結構)
         let byHeight = (visibleHeight - reservedHeight) * 1.6    // 插畫是 16:10，寬 = 高 × 1.6
-        return max(340, min(560, byWidth, byHeight))
+        return max(280, min(560, byWidth, byHeight))   // 視窗矮時插畫縮小，四張卡片一定看得到
     }
 }
 
@@ -174,10 +244,13 @@ private struct ModePage: View {
 
                 HStack(spacing: 10) {
                     Text(kind.title).font(.largeTitle.weight(.bold))
+                        // 窄視窗＋長英文時，標題縮小而不是換行或截斷；狀態標籤維持原大小
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                     if kind == .all && !model.externalMouse.isConnected {
-                        StatusBadge(text: "需要外接滑鼠", color: .orange)
-                    } else if kind != .screenB && !permissions.accessibility {
-                        StatusBadge(text: "需要權限", color: .orange)
+                        StatusBadge(text: "Needs an external mouse", color: .orange)
+                    } else if kind.needsAccessibility && !permissions.accessibility {
+                        StatusBadge(text: "Needs permission", color: .orange)
                     }
                 }
                 .padding(.top, 20)
@@ -205,59 +278,66 @@ private struct ModePage: View {
     @ViewBuilder
     private var cards: some View {
         switch kind {
-        case .screenB:
-            SectionTitle("怎麼用")
+        case .screen:
+            // 四頁同樣的結構：「會鎖住」＋「怎麼結束」，切換時對齊、不會有一頁特別空
+            SectionTitle("What gets locked")
+            BrandStepCard(symbol: "hand.point.up.left", title: TouchScreen.isPresent ? "Screen touch" : "Screen clicks",
+                          trailing: .locked)
+            SectionTitle("How to finish")
+            BrandStepCard(symbol: "escape", title: "Hold Esc for 3 s")
+        case .keyboard:
+            SectionTitle("What gets locked")
             VStack(spacing: 8) {
-                BrandStepCard(symbol: "moon.fill", title: "螢幕變成全黑",
-                              detail: TouchScreen.isPresent ? "觸控螢幕怎麼碰都不會按到東西" : "游標隱藏，點擊不會按到東西")
-                BrandStepCard(symbol: "sparkles", title: "碰到鍵盤或觸控板，畫面會呼吸",
-                              detail: "四周亮起金光，提醒電腦還開著；不會跳出可以按的按鈕")
-                BrandStepCard(symbol: "escape", title: "長按 Esc 3 秒結束",
-                              detail: "按住時出現 3、2、1 倒數；時間到也會自動解鎖")
+                BrandStepCard(symbol: "keyboard", title: "Keyboard", trailing: .locked)
+                BrandToggleCard(symbol: "rectangle.and.hand.point.up.left", title: "Also lock the trackpad",
+                                isOn: $model.keyboardAlsoLocksTrackpad)
             }
-        case .deckC:
-            SectionTitle("要鎖住什麼")
-            VStack(spacing: 8) {
-                BrandToggleCard(symbol: "keyboard", title: "鍵盤",
-                                detail: "所有按鍵與亮度、音量等功能鍵", isOn: $model.deckKeyboard)
-                BrandToggleCard(symbol: "rectangle.and.hand.point.up.left", title: "觸控板",
-                                detail: "內建觸控板；外接滑鼠照常可用", isOn: $model.deckTrackpad)
-            }
-            SectionTitle("怎麼結束")
-            VStack(spacing: 8) {
-                BrandStepCard(symbol: "hand.tap", title: "按住面板上的「結束清潔」2 秒",
-                              detail: endHint)
-                BrandStepCard(symbol: "escape", title: "長按 Esc 3 秒，一定能退出",
-                              detail: "鍵盤鎖住時也有效；時間到也會自動解鎖")
-            }
+            finishCards
+        case .trackpad:
+            SectionTitle("What gets locked")
+            BrandStepCard(symbol: "rectangle.and.hand.point.up.left", title: "Built-in trackpad", trailing: .locked)
+            finishCards
         case .all:
-            SectionTitle("外接滑鼠")
-            ExternalMouseCard(monitor: model.externalMouse)
-            SectionTitle("怎麼結束")
+            SectionTitle("What gets locked")
+            BrandStepCard(symbol: "lock.fill",
+                          title: TouchScreen.isPresent ? "Keyboard, trackpad, and touch screen" : "Keyboard and trackpad",
+                          trailing: .locked)
+            // 和鍵盤頁一樣「兩區、四張卡片」：外接滑鼠就是用來結束的工具，所以放在「怎麼結束」第一張
+            SectionTitle("How to finish")
             VStack(spacing: 8) {
-                BrandStepCard(symbol: "computermouse", title: "動一下外接滑鼠叫出面板",
-                              detail: "再用滑鼠按住「結束清潔」2 秒")
-                BrandStepCard(symbol: "bolt.horizontal.circle", title: "拔掉外接滑鼠，立刻全部解鎖",
-                              detail: "藍牙斷線、沒電也一樣；長按 Esc 3 秒也能解鎖")
+                ExternalMouseCard(monitor: model.externalMouse)
+                BrandStepCard(symbol: "hand.tap", title: "Move the mouse, then hold the red button for 2 s")
+                BrandStepCard(symbol: "bolt.horizontal.circle", title: "Unplug the mouse to unlock instantly")
             }
         }
     }
 
-    /// 依照「鎖了哪些、這台有沒有觸控螢幕」說明可以用什麼結束
-    private var endHint: String {
-        let touch = TouchScreen.isPresent
-        if model.deckTrackpad {
-            return touch ? "觸控板鎖住時，用觸控螢幕或外接滑鼠按" : "觸控板鎖住時，用外接滑鼠按；沒有滑鼠就長按 Esc 3 秒"
+    /// 鍵盤、觸控板頁共用的「怎麼結束」：標題直接寫出用什麼按，不另外解釋
+    @ViewBuilder
+    private var finishCards: some View {
+        SectionTitle("How to finish")
+        VStack(spacing: 8) {
+            BrandStepCard(symbol: "hand.tap", title: endButtonTitle)
+            BrandStepCard(symbol: "escape", title: "Hold Esc for 3 s")
         }
-        return touch ? "用觸控板、滑鼠或觸控螢幕都可以" : "用觸控板或滑鼠都可以"
+    }
+
+    /// 依照「這一頁會不會鎖觸控板、這台有沒有觸控螢幕」寫出用什麼按「結束清潔」
+    private var endButtonTitle: LocalizedStringKey {
+        let touch = TouchScreen.isPresent
+        let trackpadLocked = kind == .trackpad || (kind == .keyboard && model.keyboardAlsoLocksTrackpad)
+        if trackpadLocked {
+            return touch ? "Hold the red button for 2 s with the touch screen or a mouse" : "Hold the red button for 2 s with an external mouse"
+        }
+        return "Hold the red button on the panel for 2 s"
     }
 }
 
 /// 可以開關的品牌卡片 (C 面要鎖哪些)。
 private struct BrandToggleCard: View {
     let symbol: String
-    let title: String
-    let detail: String
+    let title: LocalizedStringKey
+    var detail: LocalizedStringKey? = nil
     @Binding var isOn: Bool
 
     var body: some View {
@@ -269,8 +349,10 @@ private struct BrandToggleCard: View {
                 .background(Circle().fill((isOn ? Brand.accent : Color.secondary).opacity(0.14)))
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(.body.weight(.medium))
-                Text(detail).font(.callout).foregroundStyle(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
+                if let detail {
+                    Text(detail).font(.callout).foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             Spacer(minLength: 8)
             Toggle(title, isOn: $isOn)
@@ -300,14 +382,23 @@ private struct ExternalMouseCard: View {
                 .frame(width: 32, height: 32)
                 .background(Circle().fill((monitor.isConnected ? Brand.accent : Color.orange).opacity(0.14)))
             VStack(alignment: .leading, spacing: 2) {
-                Text(monitor.isConnected ? monitor.names.joined(separator: "、") : "沒有偵測到外接滑鼠")
-                    .font(.body.weight(.medium))
-                Text(monitor.isConnected ? "全鎖期間只有它能操作" : "接上滑鼠或外接觸控板後就能開始 (藍牙或 USB 都可以)")
-                    .font(.callout).foregroundStyle(.secondary)
+                Group {
+                    // 裝置名稱照原樣顯示；沒接滑鼠時的說明要翻譯
+                    if monitor.isConnected {
+                        Text(verbatim: monitor.names.joined(separator: ", "))
+                    } else {
+                        Text("No external mouse detected")
+                    }
+                }
+                .font(.body.weight(.medium))
+                if !monitor.isConnected {
+                    Text("Connect a mouse to start")
+                        .font(.callout).foregroundStyle(.secondary)
+                }
             }
             Spacer(minLength: 8)
             if monitor.isConnected {
-                Label("已連接", systemImage: "checkmark.circle.fill")
+                Label("Connected", systemImage: "checkmark.circle.fill")
                     .font(.callout.weight(.medium))
                     .foregroundStyle(Brand.accent)
                     .fixedSize()
@@ -322,8 +413,8 @@ private struct ExternalMouseCard: View {
 
 /// 卡片群組的小標題
 struct SectionTitle: View {
-    let text: String
-    init(_ text: String) { self.text = text }
+    let text: LocalizedStringKey
+    init(_ text: LocalizedStringKey) { self.text = text }
     var body: some View {
         Text(text)
             .font(.headline)
@@ -333,7 +424,7 @@ struct SectionTitle: View {
 }
 
 struct StatusBadge: View {
-    let text: String
+    let text: LocalizedStringKey
     let color: Color
     var body: some View {
         Text(text)
@@ -342,6 +433,7 @@ struct StatusBadge: View {
             .padding(.horizontal, 8)
             .padding(.vertical, 3)
             .background(Capsule().fill(color.opacity(0.14)))
+            .fixedSize()
     }
 }
 
@@ -356,17 +448,18 @@ private struct StartBar: View {
     var body: some View {
         VStack(spacing: 0) {
             Rectangle().fill(Brand.cardStroke).frame(height: 1)
-            HStack(spacing: 12) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(primaryLine)
-                        .font(.callout.weight(.medium))
-                    secondaryLine
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .monospacedDigit()
+            // 放得下就左右排；長語言或窄視窗放不下時，按鈕換到說明下方 (不會把說明擠成一條)
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 12) {
+                    statusText.fixedSize()
+                    Spacer(minLength: 12)
+                    button
                 }
-                Spacer(minLength: 12)
-                actionButton
+                VStack(alignment: .leading, spacing: 10) {
+                    statusText.fixedSize(horizontal: false, vertical: true)
+                    button
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .frame(width: column)
             .padding(.vertical, 14)
@@ -375,22 +468,40 @@ private struct StartBar: View {
         .background(Brand.pageBottom)
     }
 
+    private var statusText: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(primaryLine)
+                .font(.callout.weight(.medium))
+            secondaryLine
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .monospacedDigit()
+        }
+    }
+
+    /// 按鈕永遠一行、不被壓縮
+    private var button: some View {
+        actionButton
+            .lineLimit(1)
+            .fixedSize()
+    }
+
     @ViewBuilder
     private var actionButton: some View {
         if model.state.isCountingDown {
-            Button("取消") { model.cancelCountdown() }
+            Button("Cancel") { model.cancelCountdown() }
                 .buttonStyle(BrandSecondaryButtonStyle())
                 .keyboardShortcut(.cancelAction)
         } else if model.state.isCleaning {
-            Button("清潔中…") {}
+            Button("Cleaning…") {}
                 .buttonStyle(BrandPrimaryButtonStyle())
                 .disabled(true)
         } else if model.selectedModeNeedsPermission {
-            Button("先允許權限…") { model.presentPermissionGuide() }
+            Button("Grant Permission…") { model.presentPermissionGuide() }
                 .buttonStyle(BrandPrimaryButtonStyle())
                 .keyboardShortcut(.defaultAction)
         } else {
-            Button("開始清潔") { model.startSelected() }
+            Button("Start Cleaning") { model.startSelected() }
                 .buttonStyle(BrandPrimaryButtonStyle())
                 .keyboardShortcut(.defaultAction)
                 .disabled(model.startBlockedReason != nil)
@@ -398,23 +509,23 @@ private struct StartBar: View {
     }
 
     private var primaryLine: String {
-        if let n = model.state.countdownRemaining(at: model.now) { return "\(n) 秒後開始" }
-        if model.state.isCleaning { return "清潔中，\(model.remainingText) 後自動解鎖" }
-        if model.selectedModeNeedsPermission { return "鎖鍵盤需要「輔助使用」權限" }
-        return model.startBlockedReason ?? "倒數 3 秒後鎖定"
+        if let n = model.state.countdownRemaining(at: model.now) { return String(localized: "Starting in \(n) s") }
+        if model.state.isCleaning { return String(localized: "Cleaning · unlocks in \(model.remainingText)") }
+        if model.selectedModeNeedsPermission { return String(localized: "Locking requires Accessibility permission") }
+        return model.startBlockedReason ?? String(localized: "Locks after a 3-second countdown")
     }
 
     @ViewBuilder
     private var secondaryLine: some View {
         if model.state.isCountingDown {
-            Text("按 Esc 或「取消」可以停止")
+            Text("Press Esc or Cancel to stop")
         } else if model.selectedModeNeedsPermission {
-            Text("允許一次之後就不用再設定")
+            Text("Allow it once and you’re set")
         } else {
             HStack(spacing: 6) {
-                Text("\(SessionPolicy.durationText(seconds: model.effectiveDuration))後自動解鎖")
+                Text("Unlocks automatically after \(SessionPolicy.durationText(seconds: model.effectiveDuration))")
                 SettingsLink {
-                    Text("更改時間").font(.caption.weight(.medium)).foregroundStyle(Brand.accent)
+                    Text("Change Time").font(.caption.weight(.medium)).foregroundStyle(Brand.accent)
                 }
                 .buttonStyle(.plain)
             }

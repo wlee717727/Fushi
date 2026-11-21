@@ -2,12 +2,6 @@ import AppKit
 import Carbon.HIToolbox   // IsSecureEventInputEnabled：偵測密碼欄位的安全輸入
 import SwiftUI
 
-/// 主畫面上選的是哪一類模式。
-enum ModeKind: String, CaseIterable, Identifiable {
-    case screenB, deckC, all
-    var id: String { rawValue }
-}
-
 /// 主視窗側邊欄的項目。
 enum SidebarItem: Hashable {
     case mode(ModeKind)
@@ -49,8 +43,10 @@ final class AppModel: ObservableObject {
             if case .mode(let k) = sidebar, k != kind { sidebar = .mode(kind) }
         }
     }
-    @Published var deckKeyboard: Bool { didSet { defaults.set(deckKeyboard, forKey: Keys.deckKeyboard) } }
-    @Published var deckTrackpad: Bool { didSet { defaults.set(deckTrackpad, forKey: Keys.deckTrackpad) } }
+    /// 鍵盤清潔時是否同時鎖住觸控板 (擦鍵盤時手掌常會碰到觸控板，預設打開)
+    @Published var keyboardAlsoLocksTrackpad: Bool {
+        didSet { defaults.set(keyboardAlsoLocksTrackpad, forKey: Keys.keyboardAlsoTrackpad) }
+    }
     @Published var durationSeconds: Int { didSet { defaults.set(durationSeconds, forKey: Keys.duration) } }
     @Published var autoStartLastMode: Bool { didSet { defaults.set(autoStartLastMode, forKey: Keys.autoStart) } }
     @Published private(set) var lastMode: CleaningMode?
@@ -80,8 +76,9 @@ final class AppModel: ObservableObject {
 
     private enum Keys {
         static let kind = "mode.kind"
-        static let deckKeyboard = "mode.deck.keyboard"
-        static let deckTrackpad = "mode.deck.trackpad"
+        static let keyboardAlsoTrackpad = "mode.keyboard.alsoTrackpad"
+        static let oldDeckKeyboard = "mode.deck.keyboard"   // 0.3.0 以前
+        static let oldDeckTrackpad = "mode.deck.trackpad"   // 0.3.0 以前
         static let duration = "duration.seconds"
         static let autoStart = "launch.autoStartLastMode"
         static let lastMode = "mode.last"
@@ -89,11 +86,21 @@ final class AppModel: ObservableObject {
     }
 
     private init() {
-        let savedKind = ModeKind(rawValue: defaults.string(forKey: Keys.kind) ?? "") ?? .screenB
+        var savedKind = ModeKind(storedValue: defaults.string(forKey: Keys.kind) ?? "") ?? .screen
+        var alsoTrackpad = defaults.object(forKey: Keys.keyboardAlsoTrackpad) as? Bool ?? true
+        // 0.3.0 以前的「C 面兩個開關」換算成新設定 (只做一次，換算後刪掉舊值)
+        if defaults.object(forKey: Keys.keyboardAlsoTrackpad) == nil,
+           let old = ModeKind.migrate(storedKind: defaults.string(forKey: Keys.kind),
+                                      deckKeyboard: defaults.object(forKey: Keys.oldDeckKeyboard) as? Bool,
+                                      deckTrackpad: defaults.object(forKey: Keys.oldDeckTrackpad) as? Bool) {
+            savedKind = old.kind
+            alsoTrackpad = old.alsoTrackpad
+            defaults.removeObject(forKey: Keys.oldDeckKeyboard)
+            defaults.removeObject(forKey: Keys.oldDeckTrackpad)
+        }
         kind = savedKind
         sidebar = .mode(savedKind)
-        deckKeyboard = defaults.object(forKey: Keys.deckKeyboard) as? Bool ?? true
-        deckTrackpad = defaults.object(forKey: Keys.deckTrackpad) as? Bool ?? false
+        keyboardAlsoLocksTrackpad = alsoTrackpad
         let saved = defaults.integer(forKey: Keys.duration)
         durationSeconds = saved == 0 ? SessionPolicy.defaultSeconds
             : min(max(saved, SessionPolicy.minimumSeconds), SessionPolicy.maximumSeconds)
@@ -103,19 +110,18 @@ final class AppModel: ObservableObject {
 
     // MARK: 給畫面用的衍生資料
 
-    /// 目前畫面上的選擇換算成模式；C 面兩個都沒勾時是 nil。
-    var selectedMode: CleaningMode? {
-        switch kind {
-        case .screenB: return .screenB
-        case .deckC: return DeckTarget(keyboard: deckKeyboard, trackpad: deckTrackpad).map { .deckC($0) }
-        case .all: return .all
-        }
+    /// 目前畫面上的選擇換算成實際的鎖定模式。
+    var selectedMode: CleaningMode? { mode(for: kind) }
+
+    /// 側邊欄的某一頁對應的鎖定模式 (鍵盤清潔會依「同時鎖住觸控板」決定)
+    func mode(for kind: ModeKind) -> CleaningMode {
+        kind.cleaningMode(keyboardAlsoLocksTrackpad: keyboardAlsoLocksTrackpad)
     }
 
     /// 不能按【開始清潔】的原因；nil 代表可以開始。
     var startBlockedReason: String? {
-        guard let mode = selectedMode else { return "請至少選擇鍵盤或觸控板" }
-        if mode == .all && !externalMouse.isConnected { return "請先連接外接滑鼠" }
+        guard let mode = selectedMode else { return nil }
+        if mode == .all && !externalMouse.isConnected { return String(localized: "Connect an external mouse first") }
         return mode.unavailableReason
     }
 
@@ -147,7 +153,7 @@ final class AppModel: ObservableObject {
     func start(_ mode: CleaningMode) {
         guard state.isIdle else { return }
         if mode == .all && !externalMouse.isConnected {
-            alertMessage = "全鎖需要先接上外接滑鼠 (藍牙或 USB 都可以)，結束時要用它來操作。"
+            alertMessage = String(localized: "Full Lock needs an external mouse (Bluetooth or USB); you’ll use it to finish.")
             return
         }
         if let reason = mode.unavailableReason {
@@ -169,7 +175,7 @@ final class AppModel: ObservableObject {
         send(.start(mode, requestedSeconds: durationSeconds, now: Date()))
     }
 
-    static let secureInputMessage = "目前有 App 正在使用「安全輸入」(例如游標停在密碼欄位，或終端機開了安全鍵盤輸入)，macOS 不允許任何 App 鎖住鍵盤。請先點一下別的地方離開密碼欄位，再開始清潔。"
+    static let secureInputMessage = String(localized: "An app is using Secure Input (for example, the cursor is in a password field, or Terminal has Secure Keyboard Entry on), so macOS won’t let any app lock the keyboard. Click outside the password field, then start cleaning.")
 
     func startLastMode() {
         if let lastMode { start(lastMode) }
@@ -286,12 +292,12 @@ final class AppModel: ObservableObject {
         defaults.set(mode.storageValue, forKey: Keys.lastMode)
         armSafetyTimer(deadline: deadline)
 
-        let failMessage = "無法鎖定：請確認已在「系統設定 › 隱私權與安全性 › 輔助使用」勾選「拂拭」。"
+        let failMessage = String(localized: "Couldn’t lock: make sure “Fushi” is turned on in System Settings › Privacy & Security › Accessibility.")
 
         // 倒數的 3 秒內情況可能變了，真正上鎖前再檢查一次
         if mode == .all && !externalMouse.isConnected {
             failureNeedsPermissionGuide = false
-            send(.lockFailed("外接滑鼠已經中斷，沒有辦法安全地全鎖。請確認滑鼠有電、已連線後再開始。")); return
+            send(.lockFailed(String(localized: "The external mouse disconnected, so Full Lock can’t start safely. Make sure the mouse is charged and connected, then try again."))); return
         }
         if mode.locksKeyboard && IsSecureEventInputEnabled() {
             failureNeedsPermissionGuide = false
@@ -304,7 +310,7 @@ final class AppModel: ObservableObject {
             MainActor.assumeIsolated {
                 guard let self, self.state.isCleaning else { return }
                 Diagnostics.log("清潔中輔助使用權限被撤銷，自動解除")
-                self.send(.lockFailed("「輔助使用」權限在清潔中被關閉，已經自動解除鎖定。"))
+                self.send(.lockFailed(String(localized: "Accessibility permission was turned off during cleaning, so the lock was released.")))
             }
         }
         locker.onPermissionLost = lost

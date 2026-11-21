@@ -17,15 +17,14 @@ python3 scripts/analyze-probe.py --out probe-logs/report.md
 
 看報告最後的結論表。
 
-## 初步觀察 (2026-11-21，開發時在本機讀到的裝置清單，尚未做正式測試)
+## 初步觀察 (2026-11-21，在一台觸控螢幕 MacBook Pro 上讀到的裝置)
 
 - 觸控螢幕很可能是內建的獨立 HID 裝置 **`Kiwi`** (Transport FIFO、UsagePage 0x0D Digitizer／Usage 0x04 Touch Screen、Built-In)，
   跟 `Apple Internal Keyboard / Trackpad` 是**不同裝置**。這代表 HID 層至少分得出「是誰在送資料」，對第 2 階段是好消息；
   但事件層 (CGEvent) 能不能分得出來，還要等正式偵測結果。
-- 外接滑鼠：MX Master 3 (Bluetooth Low Energy)。
-- 系統裡有 **Karabiner DriverKit VirtualHIDKeyboard**：Karabiner-Elements 會把鍵盤事件改由虛擬鍵盤送出，
-  可能讓事件層看到的「鍵盤類型」等欄位變成虛擬鍵盤的值。拂拭的鍵盤攔截在 Session 層，Karabiner 送出的事件一樣會被擋；
-  但偵測時要留意這點，必要時暫時關閉 Karabiner 各測一次。
+- 外接滑鼠走藍牙 (Bluetooth Low Energy) 時，同樣可以從裝置資訊分辨出「非內建」。
+- 如果有安裝 Karabiner-Elements 這類按鍵改寫工具，系統裡會多一個虛擬鍵盤，事件可能改由它送出。
+  拂拭的鍵盤攔截在 Session 層，虛擬鍵盤送出的事件一樣會被擋；偵測時要留意這點，必要時暫時關閉這類工具各測一次。
 
 ## 二、決策表
 

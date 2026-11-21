@@ -94,9 +94,9 @@ final class SessionMachineTests: XCTestCase {
         XCTAssertEqual(SessionPolicy.clockText(seconds: 180), "3:00")
         XCTAssertEqual(SessionPolicy.clockText(seconds: 65), "1:05")
         XCTAssertEqual(SessionPolicy.clockText(seconds: -3), "0:00")
-        XCTAssertEqual(SessionPolicy.durationText(seconds: 180), "3 分鐘")
-        XCTAssertEqual(SessionPolicy.durationText(seconds: 90), "1 分 30 秒")
-        XCTAssertEqual(SessionPolicy.durationText(seconds: 30), "30 秒")
+        XCTAssertEqual(SessionPolicy.durationText(seconds: 180), "3 min")
+        XCTAssertEqual(SessionPolicy.durationText(seconds: 90), "1 min 30 s")
+        XCTAssertEqual(SessionPolicy.durationText(seconds: 30), "30 s")
     }
 
     // MARK: 倒數
@@ -240,5 +240,43 @@ final class SessionMachineTests: XCTestCase {
             XCTAssertTrue(s.isIdle)
         }
         XCTAssertNil(s.lastEnd)
+    }
+}
+
+/// 側邊欄四個頁面 → 實際鎖定模式，以及舊設定換算。
+final class ModeKindTests: XCTestCase {
+    func testEachPageLocksTheRightThing() {
+        XCTAssertEqual(ModeKind.screen.cleaningMode(keyboardAlsoLocksTrackpad: true), .screenB)
+        XCTAssertEqual(ModeKind.keyboard.cleaningMode(keyboardAlsoLocksTrackpad: true), .deckC(.keyboardAndTrackpad))
+        XCTAssertEqual(ModeKind.keyboard.cleaningMode(keyboardAlsoLocksTrackpad: false), .deckC(.keyboard))
+        XCTAssertEqual(ModeKind.trackpad.cleaningMode(keyboardAlsoLocksTrackpad: true), .deckC(.trackpad))
+        XCTAssertEqual(ModeKind.trackpad.cleaningMode(keyboardAlsoLocksTrackpad: false), .deckC(.trackpad))
+        XCTAssertEqual(ModeKind.all.cleaningMode(keyboardAlsoLocksTrackpad: false), .all)
+    }
+
+    func testOrderTopToBottom() {
+        XCTAssertEqual(ModeKind.allCases, [.screen, .keyboard, .trackpad, .all])
+    }
+
+    func testOldStoredValues() {
+        XCTAssertEqual(ModeKind(storedValue: "screenB"), .screen)
+        XCTAssertEqual(ModeKind(storedValue: "deckC"), .keyboard)
+        XCTAssertEqual(ModeKind(storedValue: "all"), .all)
+        XCTAssertEqual(ModeKind(storedValue: "trackpad"), .trackpad)
+        XCTAssertNil(ModeKind(storedValue: "???"))
+    }
+
+    func testMigrateOldDeckSwitches() {
+        XCTAssertNil(ModeKind.migrate(storedKind: "deckC", deckKeyboard: nil, deckTrackpad: nil))
+        // 舊版只鎖觸控板 → 觸控板清潔
+        XCTAssertEqual(ModeKind.migrate(storedKind: "deckC", deckKeyboard: false, deckTrackpad: true)?.kind, .trackpad)
+        // 舊版只鎖鍵盤 → 鍵盤清潔，不連觸控板
+        let k = ModeKind.migrate(storedKind: "deckC", deckKeyboard: true, deckTrackpad: false)
+        XCTAssertEqual(k?.kind, .keyboard)
+        XCTAssertEqual(k?.alsoTrackpad, false)
+        // 舊版兩個都鎖 → 鍵盤清潔＋觸控板
+        XCTAssertEqual(ModeKind.migrate(storedKind: "deckC", deckKeyboard: true, deckTrackpad: true)?.alsoTrackpad, true)
+        // 當時停在別頁：頁面照舊
+        XCTAssertEqual(ModeKind.migrate(storedKind: "screenB", deckKeyboard: true, deckTrackpad: false)?.kind, .screen)
     }
 }

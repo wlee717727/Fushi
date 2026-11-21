@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>zh-Hant</string>
+	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>$(FUSHI_DISPLAY_NAME)</string>
 	<key>CFBundleExecutable</key>
@@ -18,7 +18,12 @@
 	<string>6.0</string>
 	<key>CFBundleLocalizations</key>
 	<array>
+		<string>en</string>
 		<string>zh-Hant</string>
+		<string>zh-Hans</string>
+		<string>ja</string>
+		<string>ko</string>
+		<string>es</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>$(FUSHI_DISPLAY_NAME)</string>
@@ -33,7 +38,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>時時勤拂拭，勿使惹塵埃。</string>
+	<string>Wipe it diligently, and let no dust gather.</string>
 	<key>NSSupportsAutomaticTermination</key>
 	<false/>
 	<key>NSSupportsSuddenTermination</key>

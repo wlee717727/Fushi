@@ -52,7 +52,7 @@ final class ExternalMouseMonitor: ObservableObject {
                 // 沒有產品名稱：只有實體連線 (USB、藍牙) 才算，名稱用通用說法
                 let physical = ["USB", "Bluetooth", "Bluetooth Low Energy"].contains { transport.localizedCaseInsensitiveContains($0) }
                 guard physical else { continue }
-                product = "外接滑鼠"
+                product = String(localized: "External mouse")
             }
             if !found.contains(product) { found.append(product) }
         }

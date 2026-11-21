@@ -45,7 +45,7 @@ enum SessionPolicy {
     /// 把秒數格式化成「3 分 0 秒」。
     static func durationText(seconds: Int) -> String {
         let s = max(seconds, 0)
-        if s < 60 { return "\(s) 秒" }
-        return s % 60 == 0 ? "\(s / 60) 分鐘" : "\(s / 60) 分 \(s % 60) 秒"
+        if s < 60 { return String(localized: "\(s) s") }
+        return s % 60 == 0 ? String(localized: "\(s / 60) min") : String(localized: "\(s / 60) min \(s % 60) s")
     }
 }

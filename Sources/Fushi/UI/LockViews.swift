@@ -8,7 +8,7 @@ enum PanelButtonMetrics {
 
 /// 面板按鈕的外觀：淡色底＋圖示＋文字，和「按住結束」完全同尺寸。
 struct PanelButtonLabel: View {
-    let title: String
+    let title: LocalizedStringKey
     let symbol: String
     var tint: Color = .primary
 
@@ -19,7 +19,11 @@ struct PanelButtonLabel: View {
             Text(title)
                 .font(.body.weight(.semibold))
                 .lineLimit(1)
+                // 長語言 (德文、法文) 文字放不下時自動縮小，兩顆按鈕仍維持同樣高度
+                .minimumScaleFactor(0.7)
+                .allowsTightening(true)
         }
+        .padding(.horizontal, 10)
         .foregroundStyle(tint)
         .frame(maxWidth: .infinity)
         .frame(height: PanelButtonMetrics.height)
@@ -41,7 +45,7 @@ struct PanelButtonStyle: ButtonStyle {
 /// 要「按住」才會生效的按鈕：按住時紅色由左往右填滿整顆按鈕，填滿就執行。
 /// 為什麼要按住？清潔時手會碰到螢幕和觸控板，單純點一下太容易誤觸。
 struct HoldToConfirmButton: View {
-    let title: String
+    let title: LocalizedStringKey
     var symbol: String = "hand.tap.fill"
     var holdSeconds: Double = SessionPolicy.holdToEndSeconds
     let action: () -> Void
@@ -68,10 +72,10 @@ struct HoldToConfirmButton: View {
             } onPressingChanged: { isPressing in
                 setPressing(isPressing)
             }
-            .help("按住 \(Int(holdSeconds)) 秒")
+            .help("Hold for \(Int(holdSeconds)) seconds")
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(title)
-            .accessibilityHint("按住 \(Int(holdSeconds)) 秒")
+            .accessibilityHint("Hold for \(Int(holdSeconds)) seconds")
             .accessibilityAddTraits(.isButton)
             .accessibilityAction { action() }
     }
@@ -103,8 +107,8 @@ struct HUDCard<Content: View>: View {
 
 /// 面板標頭：App 圖示＋標題＋副標，三個面板共用同一種。
 struct HUDHeader: View {
-    let title: String
-    let subtitle: String
+    let title: LocalizedStringKey
+    let subtitle: LocalizedStringKey
     var body: some View {
         HStack(spacing: 12) {
             Image(nsImage: NSApp.applicationIconImage)
@@ -143,7 +147,7 @@ struct CountdownHUD: View {
                         .stroke(Brand.accent, style: StrokeStyle(lineWidth: 5, lineCap: .round))
                         .rotationEffect(.degrees(-90))
                         .animation(.linear(duration: 0.2), value: fraction)
-                    Text("\(remaining)")
+                    Text(verbatim: "\(remaining)")
                         .font(.system(size: 26, weight: .semibold, design: .rounded))
                         .monospacedDigit()
                         .contentTransition(.numericText(countsDown: true))
@@ -152,7 +156,7 @@ struct CountdownHUD: View {
                 .frame(width: 60, height: 60)
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("即將開始")
+                    Text("Starting soon")
                         .font(.headline)
                     Text(model.state.activeMode?.title ?? "")
                         .font(.callout)
@@ -160,7 +164,7 @@ struct CountdownHUD: View {
                 }
                 Spacer(minLength: 8)
                 Button { model.cancelCountdown() } label: {
-                    PanelButtonLabel(title: "取消", symbol: "xmark")
+                    PanelButtonLabel(title: "Cancel", symbol: "xmark")
                         .frame(width: 96)
                 }
                 .buttonStyle(PanelButtonStyle())
@@ -193,7 +197,7 @@ struct EscapeHoldProgress: View {
                             Image(systemName: "lock.open.fill")
                                 .font(.system(size: ringSize * 0.36, weight: .semibold))
                         } else {
-                            Text("\(remaining)")
+                            Text(verbatim: "\(remaining)")
                                 .font(.system(size: ringSize * 0.43, weight: .semibold, design: .rounded))
                                 .monospacedDigit()
                                 .contentTransition(.numericText(countsDown: true))
@@ -204,9 +208,9 @@ struct EscapeHoldProgress: View {
                 .frame(width: ringSize, height: ringSize)
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(done ? "正在解鎖…" : "繼續按住 Esc")
+                    Text(done ? "Unlocking…" : "Keep holding Esc")
                         .font(.headline)
-                    Text(done ? "清潔已結束" : "\(remaining) 秒後結束清潔 · 放開就取消")
+                    Text(done ? "Cleaning finished" : "Ends in \(remaining) s · release to cancel")
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .monospacedDigit()
@@ -215,7 +219,7 @@ struct EscapeHoldProgress: View {
             }
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("繼續按住 Esc 結束清潔")
+        .accessibilityLabel("Keep holding Esc to end cleaning")
     }
 }
 
@@ -259,13 +263,13 @@ struct NudgeHint: View {
                         .frame(width: 64, height: 64)
                         .shadow(color: Self.gold.opacity(0.45 * a), radius: 18)
                     VStack(spacing: 5) {
-                        Text(isFullLock ? "全部已鎖定，清潔中" : "畫面已鎖定，清潔中")
+                        Text(isFullLock ? "Everything locked · cleaning" : "Screen locked · cleaning")
                             .font(.title3.weight(.semibold))
                             .foregroundStyle(.white.opacity(0.92))
-                        Text(isFullLock ? "長按 Esc 3 秒結束 · 或動一下外接滑鼠" : "長按 Esc 3 秒結束清潔")
+                        Text(isFullLock ? "Hold Esc for 3 s to end · or move the external mouse" : "Hold Esc for 3 s to end cleaning")
                             .font(.callout)
                             .foregroundStyle(.white.opacity(0.6))
-                        Text("\(remainingText) 後自動解鎖")
+                        Text("Unlocks in \(remainingText)")
                             .font(.caption)
                             .foregroundStyle(.white.opacity(0.4))
                             .monospacedDigit()
@@ -284,24 +288,24 @@ struct DeckLockHUD: View {
     @ObservedObject var model: AppModel
     let target: DeckTarget
 
-    private var title: String {
+    private var title: LocalizedStringKey {
         switch target {
-        case .keyboard: return "鍵盤已鎖定"
-        case .trackpad: return "觸控板已鎖定"
-        case .keyboardAndTrackpad: return "鍵盤與觸控板已鎖定"
+        case .keyboard: return "Keyboard locked"
+        case .trackpad: return "Trackpad locked"
+        case .keyboardAndTrackpad: return "Keyboard & trackpad locked"
         }
     }
 
     /// 怎麼結束：依「還剩哪些輸入能用」說明
-    private var hint: String {
+    private var hint: LocalizedStringKey {
         let touch = TouchScreen.isPresent
         switch target {
         case .keyboard:
-            return touch ? "用觸控板、滑鼠或觸控螢幕按住按鈕；或長按 Esc 3 秒。" : "用觸控板或滑鼠按住按鈕；或長按 Esc 3 秒。"
+            return touch ? "Hold the button with the trackpad, a mouse, or the touch screen — or hold Esc for 3 s." : "Hold the button with the trackpad or a mouse — or hold Esc for 3 s."
         case .trackpad:
-            return touch ? "用觸控螢幕或外接滑鼠按住按鈕；或長按 Esc 3 秒。" : "用外接滑鼠按住按鈕；或長按 Esc 3 秒。"
+            return touch ? "Hold the button with the touch screen or an external mouse — or hold Esc for 3 s." : "Hold the button with an external mouse — or hold Esc for 3 s."
         case .keyboardAndTrackpad:
-            return touch ? "用觸控螢幕或外接滑鼠按住按鈕；或長按 Esc 3 秒。" : "用外接滑鼠按住按鈕；或長按 Esc 3 秒。"
+            return touch ? "Hold the button with the touch screen or an external mouse — or hold Esc for 3 s." : "Hold the button with an external mouse — or hold Esc for 3 s."
         }
     }
 
@@ -309,8 +313,8 @@ struct DeckLockHUD: View {
         HUDCard {
             ZStack {
                 VStack(alignment: .leading, spacing: 14) {
-                    HUDHeader(title: title, subtitle: "\(model.remainingText) 後自動解鎖")
-                    HoldToConfirmButton(title: "按住 2 秒結束清潔") { model.confirmEnd() }
+                    HUDHeader(title: title, subtitle: "Unlocks in \(model.remainingText)")
+                    HoldToConfirmButton(title: "Hold 2 s to end cleaning") { model.confirmEnd() }
                     Text(hint)
                         .font(.caption)
                         .foregroundStyle(.secondary)
@@ -357,24 +361,24 @@ struct OverlayRootView: View {
     private var controlPanel: some View {
         HUDCard(width: 440) {
             VStack(alignment: .leading, spacing: 16) {
-                HUDHeader(title: isFullLock ? "全部已鎖定" : (TouchScreen.isPresent ? "螢幕與觸控已鎖定" : "螢幕已鎖定"),
-                          subtitle: "\(model.remainingText) 後自動解鎖")
+                HUDHeader(title: isFullLock ? "Everything locked" : (TouchScreen.isPresent ? "Screen & touch locked" : "Screen locked"),
+                          subtitle: "Unlocks in \(model.remainingText)")
                 // 兩顆按鈕同高、同圓角、平分寬度；用顏色區分「繼續」與「結束」
                 HStack(spacing: 12) {
                     Button {
                         model.resumeDark()
                     } label: {
-                        PanelButtonLabel(title: "繼續清潔", symbol: "moon.fill")
+                        PanelButtonLabel(title: "Keep cleaning", symbol: "moon.fill")
                     }
                     .buttonStyle(PanelButtonStyle())
 
-                    HoldToConfirmButton(title: "按住 2 秒結束清潔") {
+                    HoldToConfirmButton(title: "Hold 2 s to end cleaning") {
                         model.confirmEnd()
                     }
                 }
                 Text(isFullLock
-                     ? "用外接滑鼠按住按鈕；拔掉外接滑鼠或長按 Esc 3 秒也會立刻解鎖。8 秒沒有操作會變回全黑，動一下滑鼠就會再出現。"
-                     : "也可以長按 Esc 3 秒結束。8 秒沒有操作會自動變回全黑。")
+                     ? "Hold the button with the external mouse. Unplugging the mouse or holding Esc for 3 s also unlocks right away. After 8 s without activity the screen goes black again; move the mouse to bring this back."
+                     : "You can also hold Esc for 3 s to end. After 8 s without activity the screen goes black again.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)

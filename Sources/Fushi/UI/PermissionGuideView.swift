@@ -10,32 +10,32 @@ struct PermissionsPane: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Text("權限").font(.largeTitle.weight(.bold))
-                Text("拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。")
+                Text("Permissions").font(.largeTitle.weight(.bold))
+                Text("Fushi blocks input only while cleaning and releases it the moment you finish. It never records what you type.")
                     .font(.title3)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 4)
 
-                SectionTitle("系統權限")
+                SectionTitle("System permissions")
                 // 「輸入監控」等「鎖觸控板」推出時再出現；還沒用到的權限不先要
                 PermissionCard(
                     granted: permissions.accessibility,
                     symbol: "accessibility",
-                    title: "輔助使用",
-                    detail: "C 面清潔需要：在鍵盤事件送到其他 App 之前把它擋下來。",
+                    title: "Accessibility",
+                    detail: "Needed for Keyboard Cleaning, Trackpad Cleaning, and Full Lock: blocks input before it reaches other apps.",
                     action: permissions.requestAccessibility)
-                Text("B 面清潔不需要任何權限。勾選後這一頁會自動更新。")
+                Text("Screen cleaning needs no permission. This page updates as soon as you turn it on.")
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .padding(.top, 8)
 
-                SectionTitle("找不到或勾了沒反應？")
+                SectionTitle("Can’t find it, or turning it on has no effect?")
                 VStack(spacing: 8) {
-                    BrandStepCard(symbol: "arrow.triangle.2.circlepath", title: "移除後重新加入",
-                                  detail: "在系統設定的清單裡，先用「−」移除舊的「拂拭」，再按「+」加入並打開開關。")
-                    BrandStepCard(symbol: "power", title: "重新打開拂拭",
-                                  detail: "系統有時要重新打開 App，新權限才會生效。")
+                    BrandStepCard(symbol: "arrow.triangle.2.circlepath", title: "Remove and add it again",
+                                  detail: "In the list in System Settings, remove the old “Fushi” with “−”, then add it with “+” and turn it on.")
+                    BrandStepCard(symbol: "power", title: "Reopen Fushi",
+                                  detail: "Sometimes an app must be reopened before a new permission takes effect.")
                 }
             }
             .frame(width: ContentColumn.width(visibleWidth: visible.width, visibleHeight: visible.height))
@@ -44,7 +44,7 @@ struct PermissionsPane: View {
         }
         .onGeometryChange(for: CGSize.self) { $0.size } action: { visible = $0 }
         .background(BrandBackground())
-        .navigationTitle("權限")
+        .navigationTitle("Permissions")
         .modifier(HideToolbarTitle())
         .onAppear {
             permissions.startPolling()
@@ -59,8 +59,8 @@ struct PermissionsPane: View {
 private struct PermissionCard: View {
     let granted: Bool
     let symbol: String
-    let title: String
-    let detail: String
+    let title: LocalizedStringKey
+    let detail: LocalizedStringKey
     let action: () -> Void
 
     var body: some View {
@@ -74,15 +74,17 @@ private struct PermissionCard: View {
                 Text(title).font(.body.weight(.medium))
                 Text(detail).font(.callout).foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
+                // 按鈕放在說明下方：各語言的按鈕文字長短不一，放右邊會把說明擠成一字一行
+                if !granted {
+                    Button("Open System Settings…", action: action)
+                        .padding(.top, 6)
+                }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             if granted {
-                Label("已允許", systemImage: "checkmark.circle.fill")
+                Label("Allowed", systemImage: "checkmark.circle.fill")
                     .font(.callout.weight(.medium))
                     .foregroundStyle(.green)
-                    .fixedSize()
-            } else {
-                Button("打開系統設定…", action: action)
                     .fixedSize()
             }
         }

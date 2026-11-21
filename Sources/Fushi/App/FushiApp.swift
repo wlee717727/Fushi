@@ -7,15 +7,15 @@ struct FushiApp: App {
     @StateObject private var model = AppModel.shared
 
     var body: some Scene {
-        Window("拂拭", id: "main") {
+        Window("Fushi", id: "main") {
             MainView()
                 .environmentObject(model)
         }
-        .defaultSize(width: 760, height: 680)
+        .defaultSize(width: 840, height: 880)   // 實際大小打開時由 MainLayout.fitMainWindow 依語言調整
         .windowResizability(.contentMinSize)
         .commands {
             CommandGroup(replacing: .newItem) {}
-            CommandMenu("清潔") {
+            CommandMenu("Cleaning") {
                 CleaningCommands().environmentObject(model)
             }
             CommandGroup(replacing: .help) {
@@ -27,7 +27,7 @@ struct FushiApp: App {
             SettingsView().environmentObject(model)
         }
 
-        Window("拂拭 使用說明", id: "help") {
+        Window("Fushi Help", id: "help") {
             HelpView()
         }
         .defaultSize(width: 640, height: 720)
@@ -36,7 +36,7 @@ struct FushiApp: App {
             MenuBarContent().environmentObject(model)
         } label: {
             Image(systemName: model.menuBarSymbol)
-                .accessibilityLabel("拂拭")
+                .accessibilityLabel("Fushi")
         }
     }
 }
@@ -73,12 +73,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 struct HelpMenuButton: View {
     @Environment(\.openWindow) private var openWindow
     var body: some View {
-        let help = Button("拂拭 使用說明") { openWindow(id: "help") }
+        let help = Button("Fushi Help") { openWindow(id: "help") }
             .keyboardShortcut("?", modifiers: .command)
         if #available(macOS 15.0, *) {
             // 按住 ⌥ 時才出現的支援用項目 (一般使用者看不到)
             help.modifierKeyAlternate(.option) {
-                Button("拷貝診斷資訊 (給開發者)") {
+                Button("Copy Diagnostics (for Developers)") {
                     Diagnostics.copyToPasteboard(permissions: AppModel.shared.permissions)
                 }
             }
@@ -92,12 +92,12 @@ struct HelpMenuButton: View {
 struct CleaningCommands: View {
     @EnvironmentObject var model: AppModel
     var body: some View {
-        Button("開始清潔") { model.startSelected() }
+        Button("Start Cleaning") { model.startSelected() }
             .disabled(model.startBlockedReason != nil || !model.state.isIdle)
-        Button("開始上次的模式") { model.startLastMode() }
+        Button("Start Last Mode") { model.startLastMode() }
             .disabled(model.lastMode == nil || !model.state.isIdle)
         Divider()
-        Button("權限") { model.presentPermissionGuide() }
+        Button("Permissions") { model.presentPermissionGuide() }
     }
 }
 
@@ -109,35 +109,41 @@ struct MenuBarContent: View {
     var body: some View {
         Group {
             if model.state.isCleaning {
-                Text("清潔中：\(model.state.activeMode?.title ?? "")")
-                Text("剩餘 \(model.remainingText)")
-                Button("結束清潔") { model.confirmEnd() }
+                Text("Cleaning: \(model.state.activeMode?.title ?? "")")
+                Text("\(model.remainingText) left")
+                Button("End Cleaning") { model.confirmEnd() }
             } else if model.state.isCountingDown {
-                Text("即將開始：\(model.state.activeMode?.title ?? "")")
-                Button("取消倒數") { model.cancelCountdown() }
+                Text("Starting: \(model.state.activeMode?.title ?? "")")
+                Button("Cancel Countdown") { model.cancelCountdown() }
             } else {
-                Text("拂拭：待命中")
-                Button("開始 \(CleaningMode.screenB.title)") { model.start(.screenB) }
-                Button("開始 \(CleaningMode.deckC(.keyboard).title)") { model.start(.deckC(.keyboard)) }
-                Button("開始 \(CleaningMode.deckC(.keyboardAndTrackpad).title)") { model.start(.deckC(.keyboardAndTrackpad)) }
-                Button("開始全鎖 (需要外接滑鼠)") { model.start(.all) }
-                    .disabled(!model.externalMouse.isConnected)
+                Text("Fushi: Idle")
+                // 和主視窗側邊欄同樣的四個選項、同樣的順序
+                Button("Start Screen Cleaning") { model.start(model.mode(for: .screen)) }
+                Button("Start Keyboard Cleaning") { model.start(model.mode(for: .keyboard)) }
+                Button("Start Trackpad Cleaning") { model.start(model.mode(for: .trackpad)) }
+                if model.externalMouse.isConnected {
+                    Button("Start Full Lock") { model.start(model.mode(for: .all)) }
+                } else {
+                    // 不能按時寫出原因，不只是變灰
+                    Button("Start Full Lock (Needs External Mouse)") {}
+                        .disabled(true)
+                }
                 if let last = model.lastMode {
-                    Button("開始上次的模式：\(last.title)") { model.start(last) }
+                    Button("Start Last Mode: \(last.title)") { model.start(last) }
                 }
             }
             Divider()
-            Button("打開拂拭主視窗") {
+            Button("Open Fushi Main Window") {
                 openWindow(id: "main")
                 NSApp.activate()
             }
-            SettingsLink { Text("設定…") }
-            Button("使用說明") {
+            SettingsLink { Text("Settings…") }
+            Button("Fushi Help") {
                 openWindow(id: "help")
                 NSApp.activate()
             }
             Divider()
-            Button("結束拂拭") { NSApp.terminate(nil) }
+            Button("Quit Fushi") { NSApp.terminate(nil) }
                 .keyboardShortcut("q")
         }
         .onAppear {

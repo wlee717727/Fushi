@@ -19,25 +19,25 @@ struct SettingsView: View {
                             .frame(minWidth: 72, alignment: .trailing)
                     }
                 } label: {
-                    Text("自動解鎖時間")
-                    Text("時間一到一定會解鎖，就算忘了結束也沒關係")
+                    Text("Auto-unlock time")
+                    Text("Input always unlocks when time is up, even if you forget to end cleaning")
                 }
             } header: {
-                Text("清潔")
+                Text("Cleaning")
             } footer: {
                 if SessionPolicy.isDebugBuild {
-                    Text("開發版：自動解鎖最多 \(SessionPolicy.debugCapSeconds) 秒。")
+                    Text("Development build: auto-unlock is capped at \(SessionPolicy.debugCapSeconds) seconds.")
                         .foregroundStyle(.secondary)
                 }
             }
 
-            Section("啟動") {
+            Section("Launch") {
                 Toggle(isOn: $model.autoStartLastMode) {
-                    Text("打開拂拭時，直接開始上次的模式")
+                    Text("Start the last mode when Fushi opens")
                     if let last = model.lastMode {
-                        Text("上次：\(last.title)，一樣會先倒數 3 秒，可以取消")
+                        Text("Last mode: \(last.title). A 3-second countdown still runs, so you can cancel")
                     } else {
-                        Text("還沒有清潔紀錄")
+                        Text("No cleaning history yet")
                     }
                 }
             }

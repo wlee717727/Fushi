@@ -1,0 +1,12 @@
+Fushi (拂拭)
+Copyright 2026 wlee717727
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The name "Fushi" / "拂拭" and the app icon are not granted for use as a
+trademark: forks may reuse the code under the license, but must use their
+own name and icon so users can tell them apart from the official app.
+
+Design ideas (no code copied):
+- LinearMouse (MIT) — identifying the device that sent an input event.
+- Mac Pause, KeepClean — the idea of a cleaning lock for Mac keyboards/screens.

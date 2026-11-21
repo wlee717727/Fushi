@@ -118,8 +118,9 @@ struct BrandTile: View {
 struct BrandStepCard: View {
     enum Trailing { case none, locked }
     let symbol: String
-    let title: String
-    let detail: String
+    let title: LocalizedStringKey
+    /// 只有真的有額外資訊時才寫；標題本身說得清楚就不要
+    var detail: LocalizedStringKey? = nil
     var trailing: Trailing = .none
 
     var body: some View {
@@ -131,12 +132,15 @@ struct BrandStepCard: View {
                 .background(Circle().fill(Brand.accent.opacity(0.14)))
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(.body.weight(.medium))
-                Text(detail).font(.callout).foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
+                if let detail {
+                    Text(detail).font(.callout).foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             Spacer(minLength: 8)
             if trailing == .locked {
-                Label("會鎖住", systemImage: "checkmark.circle.fill")
+                Label("Locks", systemImage: "checkmark.circle.fill")
                     .font(.callout.weight(.medium))
                     .foregroundStyle(Brand.accent)
                     .fixedSize()

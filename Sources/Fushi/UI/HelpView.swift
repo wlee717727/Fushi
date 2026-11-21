@@ -8,81 +8,86 @@ struct HelpView: View {
                 HStack(spacing: 14) {
                     Image(nsImage: NSApp.applicationIconImage).resizable().frame(width: 56, height: 56)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("拂拭 使用說明").font(.largeTitle.weight(.semibold))
-                        Text("清潔 Mac 時暫時鎖住輸入。版本 \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "")")
+                        Text("Fushi Help").font(.largeTitle.weight(.semibold))
+                        Text("Locks input while you clean your Mac. Version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "")")
                             .foregroundStyle(.secondary)
                     }
                 }
 
-                HelpSection(title: "這個 App 做什麼", symbol: "sparkles") {
-                    Text("擦螢幕、擦鍵盤時，手一定會碰到按鍵、觸控板和觸控螢幕，很容易誤觸。拂拭會在清潔期間暫時鎖住這些輸入，時間到自動解鎖。名稱出自「時時勤拂拭，勿使惹塵埃」。")
+                HelpSection(title: "What Fushi does", symbol: "sparkles") {
+                    Text("When you wipe the screen or the keyboard, your hands inevitably touch keys, the trackpad, and the touch screen. Fushi temporarily locks those inputs while you clean and unlocks them automatically when time is up. The name comes from a Zen verse: “wipe it diligently, and let no dust gather.”")
                 }
 
-                HelpSection(title: "快速開始", symbol: "play.circle") {
-                    HelpBullet("在主視窗左側選擇「B 面清潔」、「C 面清潔」或「全鎖」。")
-                    HelpBullet("按下方的「開始清潔」(或按 Return)，倒數 3 秒後開始鎖定；倒數中可以按「取消」或 Esc。")
-                    HelpBullet("清潔完按住「按住 2 秒結束清潔」，或等時間到自動解鎖。")
-                    HelpBullet("自動解鎖時間預設 3 分鐘，可以在「拂拭 › 設定」(⌘,) 調整為 30 秒到 10 分鐘。")
+                HelpSection(title: "Quick start", symbol: "play.circle") {
+                    HelpBullet("In the sidebar of the main window, choose Screen Cleaning, Keyboard Cleaning, Trackpad Cleaning, or Full Lock.")
+                    HelpBullet("Click Start Cleaning (or press Return). Locking begins after a 3-second countdown; click Cancel or press Esc during the countdown to stop.")
+                    HelpBullet("When you’re done, hold “Hold 2 s to end cleaning”, or wait for the automatic unlock.")
+                    HelpBullet("Auto-unlock is 3 minutes by default. Change it from 30 seconds to 10 minutes in Fushi › Settings (⌘,).")
                 }
 
-                HelpSection(title: "B 面清潔 (螢幕)", symbol: "sparkles.tv") {
-                    HelpBullet("所有螢幕變成全黑，OLED 不發光，最容易看出灰塵與指紋。")
-                    HelpBullet("觸控螢幕的點擊會落在黑色畫面上，不會按到任何東西。")
-                    HelpBullet("碰到鍵盤、觸控板或滑鼠時，螢幕四周的金光會緩慢呼吸，提示電腦還開著；不會跳出按鈕，擦螢幕時不會誤觸。")
-                    HelpBullet("結束：長按 Esc 3 秒 (會出現 3、2、1 倒數)，或等時間到自動解鎖。")
-                    HelpBullet("不需要任何權限。")
+                HelpSection(title: "Screen Cleaning", symbol: "sparkles.tv") {
+                    HelpBullet("Every display turns black. With OLED the pixels go dark, so dust and fingerprints are easiest to see.")
+                    HelpBullet("Taps on the touch screen land on the black screen and press nothing.")
+                    HelpBullet("When you touch the keyboard, trackpad, or mouse, a gold glow slowly breathes around the edges to show the Mac is still on. No buttons appear, so wiping the screen can’t press anything.")
+                    HelpBullet("To end: hold Esc for 3 s (a 3‑2‑1 countdown appears), or wait for the automatic unlock.")
+                    HelpBullet("No permission needed.")
                 }
 
-                HelpSection(title: "C 面清潔 (鍵盤與觸控板)", symbol: "keyboard") {
-                    HelpBullet("可以各自選擇要不要鎖「鍵盤」和「觸控板」。螢幕照常顯示。")
-                    HelpBullet("鎖鍵盤：所有按鍵都沒反應，包含亮度、音量、播放等功能鍵。")
-                    HelpBullet("鎖觸控板：只鎖 Mac 內建的觸控板 (移動、點按、手勢)；外接滑鼠、觸控螢幕照常可用。")
-                    HelpBullet("畫面上方會出現面板，按住「按住 2 秒結束清潔」就能解鎖。觸控板鎖住時請用觸控螢幕或外接滑鼠按。")
-                    HelpBullet("需要「輔助使用」權限 (第一次使用時「權限」頁會引導你開啟)。")
+                HelpSection(title: "Keyboard Cleaning", symbol: "keyboard") {
+                    HelpBullet("No key does anything, including brightness, volume, and media keys. The screen stays on.")
+                    HelpBullet("“Also lock the trackpad” is on by default, so your palms won’t move the pointer while you wipe. Turn it off if you want to keep using the trackpad.")
+                    HelpBullet("A panel appears at the top of the screen; hold “Hold 2 s to end cleaning” to unlock. When the trackpad is locked, use the touch screen or an external mouse; without either, hold Esc for 3 s.")
+                    HelpBullet("Requires Accessibility permission (the Permissions page guides you the first time).")
                 }
 
-                HelpSection(title: "全鎖", symbol: "lock.fill") {
-                    HelpBullet("螢幕全黑，鍵盤、觸控板、觸控螢幕全部鎖住，只留外接滑鼠 (藍牙或 USB 都可以)。")
-                    HelpBullet("要先接上外接滑鼠才能開始。動一下滑鼠就會叫出控制面板，再用滑鼠按住「結束清潔」2 秒。")
-                    HelpBullet("拔掉外接滑鼠 (或藍牙斷線、沒電) 會立刻全部解鎖，不會把你鎖在電腦外面。使用 USB 接收器的滑鼠 (例如羅技 Unifying／Bolt)，要拔掉接收器才算斷線，只關滑鼠電源不會解鎖。")
+                HelpSection(title: "Trackpad Cleaning", symbol: "rectangle.and.hand.point.up.left") {
+                    HelpBullet("Only the Mac’s built-in trackpad is locked (moving, clicking, gestures). The keyboard, external mice, and the touch screen keep working.")
+                    HelpBullet("To end, hold “Hold 2 s to end cleaning” with the touch screen or an external mouse, or hold Esc for 3 s.")
+                    HelpBullet("Requires Accessibility permission.")
                 }
 
-                HelpSection(title: "選單列", symbol: "menubar.rectangle") {
-                    HelpBullet("螢幕右上角的拂拭圖示會顯示目前狀態：星星是待命、計時器是倒數中、鎖頭是清潔中。")
-                    HelpBullet("從選單列可以直接開始清潔、結束清潔、打開主視窗或設定。")
-                    HelpBullet("在設定裡打開「打開拂拭時，直接開始上次的模式」，打開 App 就會直接倒數開始。")
+                HelpSection(title: "Full Lock", symbol: "lock.fill") {
+                    HelpBullet("The screen goes black and the keyboard, trackpad, and touch screen are all locked. Only an external mouse (Bluetooth or USB) still works.")
+                    HelpBullet("An external mouse must be connected before you start. Move it to bring up the control panel, then hold the red button for 2 s with the mouse.")
+                    HelpBullet("Unplugging the external mouse (or a Bluetooth disconnect or dead battery) unlocks everything instantly, so you can never be locked out. For mice with a USB receiver (such as Logitech Unifying or Bolt), unplug the receiver — turning off the mouse alone does not unlock.")
                 }
 
-                HelpSection(title: "鍵盤快速鍵", symbol: "command") {
-                    HelpShortcut(keys: "Return", text: "開始清潔 (主視窗)")
-                    HelpShortcut(keys: "Esc", text: "取消倒數 (主視窗)")
-                    HelpShortcut(keys: "長按 Esc 3 秒", text: "緊急退出：結束任何清潔模式")
-                    HelpShortcut(keys: "⌘ ,", text: "打開設定")
-                    HelpShortcut(keys: "⌘ ?", text: "打開使用說明")
-                    HelpShortcut(keys: "⌘ Q", text: "結束拂拭 (B 面清潔中無效，避免誤觸)")
+                HelpSection(title: "Menu bar", symbol: "menubar.rectangle") {
+                    HelpBullet("The Fushi icon at the top right shows the current state: sparkles when idle, a timer during the countdown, a lock while cleaning.")
+                    HelpBullet("From the menu bar you can start or end cleaning and open the main window or Settings.")
+                    HelpBullet("Turn on “Start the last mode when Fushi opens” in Settings, and opening the app starts the countdown right away.")
                 }
 
-                HelpSection(title: "安全機制", symbol: "checkmark.shield") {
-                    HelpBullet("緊急退出：任何模式下長按 Esc 3 秒，一定能結束清潔 (鍵盤鎖住時也有效)。按住時畫面會出現 3、2、1 倒數圓環，放開就取消。")
-                    HelpBullet("全黑時碰到鍵盤、觸控板或滑鼠，螢幕四周會亮起金色光暈呼吸一下，提醒電腦還開著、怎麼結束；擦觸控螢幕不會觸發。")
-                    HelpBullet("一定會自動解鎖：時間到就解鎖，鍵盤鎖定另有獨立的保險計時器。")
-                    HelpBullet("萬一拂拭當掉或被強制結束，鎖定會跟著消失，輸入立刻恢復。拂拭不修改任何系統設定。")
-                    HelpBullet("缺少權限時不會進入鎖定，而是先帶你到「權限」頁。")
+                HelpSection(title: "Keyboard shortcuts", symbol: "command") {
+                    HelpShortcut(keys: "Return", text: "Start cleaning (main window)")
+                    HelpShortcut(keys: "Esc", text: "Cancel countdown (main window)")
+                    HelpShortcut(keys: "Hold Esc for 3 s", text: "Emergency exit: ends any cleaning mode")
+                    HelpShortcut(keys: "⌘ ,", text: "Open Settings")
+                    HelpShortcut(keys: "⌘ ?", text: "Open Help")
+                    HelpShortcut(keys: "⌘ Q", text: "Quit Fushi (disabled during screen cleaning to avoid accidents)")
                 }
 
-                HelpSection(title: "常見問題", symbol: "questionmark.circle") {
-                    HelpQA(q: "電源鍵、Touch ID 也會被鎖住嗎？",
-                           a: "不會。電源鍵與 Touch ID 由硬體與系統直接處理，任何 App 都擋不住。清潔時請避開右上角的電源鍵／Touch ID，以免讓 Mac 睡眠或關機。")
-                    HelpQA(q: "更新拂拭後，鎖鍵盤失敗？",
-                           a: "打開主視窗的「權限」頁看看「輔助使用」是否還是「已允許」。如果不是，到系統設定的清單裡先移除舊的「拂拭」，再重新加入並打開開關。")
-                    HelpQA(q: "B 面清潔時，觸控板手勢還會切換桌面嗎？",
-                           a: "三指滑動、Mission Control 等系統手勢由系統處理，可能仍會作用。拂拭已停用 ⌘Tab 並隱藏 Dock 與選單列。")
-                    HelpQA(q: "Caps Lock 燈還會亮嗎？",
-                           a: "可能會。Caps Lock 由鍵盤硬體處理，清潔時碰到它，解鎖後大寫鎖定可能已經被切換。結束清潔後請看一下 Caps Lock 燈。")
-                    HelpQA(q: "鎖住時要怎麼緊急解除？",
-                           a: "任何模式長按 Esc 3 秒一定能結束 (畫面會出現 3、2、1 倒數)。C 面可以用觸控螢幕或外接滑鼠按住「按住 2 秒結束清潔」；全鎖拔掉外接滑鼠也會立刻解鎖。時間到一定會自動解鎖；清潔中如果關掉「輔助使用」權限，拂拭也會立刻解除。真的不行時，按住電源鍵強制關機也一定能恢復。")
-                    HelpQA(q: "游標在密碼欄位時，為什麼不能開始鎖鍵盤？",
-                           a: "密碼欄位會啟動 macOS 的「安全輸入」，這時系統不允許任何 App 攔截鍵盤 (這是保護密碼的設計)。請先點一下別的地方離開密碼欄位，再開始清潔。")
+                HelpSection(title: "Safety", symbol: "checkmark.shield") {
+                    HelpBullet("Emergency exit: in any mode, holding Esc for 3 s always ends cleaning (even with the keyboard locked). A 3‑2‑1 ring appears while you hold; release to cancel.")
+                    HelpBullet("When the screen is black, touching the keyboard, trackpad, or mouse makes a gold glow breathe around the edges to remind you the Mac is on and how to finish. Wiping the touch screen does not trigger it.")
+                    HelpBullet("Always unlocks: input is released when time is up, and locks have their own independent backup timers.")
+                    HelpBullet("If Fushi crashes or is force-quit, the lock disappears with it and input returns immediately. Fushi never changes system settings.")
+                    HelpBullet("Without the required permission, Fushi won’t lock; it takes you to the Permissions page instead.")
+                }
+
+                HelpSection(title: "FAQ", symbol: "questionmark.circle") {
+                    HelpQA(q: "Are the power button and Touch ID locked too?",
+                           a: "No. The power button and Touch ID are handled directly by the hardware and the system; no app can block them. Avoid the power button / Touch ID at the top right while cleaning so the Mac doesn’t sleep or shut down.")
+                    HelpQA(q: "Keyboard locking fails after updating Fushi?",
+                           a: "Open the Permissions page in the main window and check that Accessibility still says Allowed. If not, remove the old “Fushi” from the list in System Settings, then add it again and turn it on.")
+                    HelpQA(q: "During screen cleaning, can trackpad gestures still switch desktops?",
+                           a: "System gestures such as three-finger swipes and Mission Control are handled by macOS and may still work. Fushi disables ⌘Tab and hides the Dock and menu bar.")
+                    HelpQA(q: "Does the Caps Lock light still turn on?",
+                           a: "It may. Caps Lock is handled by the keyboard hardware, so if you touch it while cleaning, Caps Lock may be toggled after unlocking. Check the Caps Lock light when you finish.")
+                    HelpQA(q: "How do I unlock in an emergency?",
+                           a: "In any mode, holding Esc for 3 s always ends cleaning (a 3‑2‑1 countdown appears). In Keyboard and Trackpad Cleaning you can hold “Hold 2 s to end cleaning” with the touch screen or an external mouse; in Full Lock, unplugging the external mouse unlocks immediately. Input always unlocks when time is up, and turning off Accessibility during cleaning releases the lock at once. As a last resort, holding the power button to force a shutdown always restores input.")
+                    HelpQA(q: "Why can’t I lock the keyboard while the cursor is in a password field?",
+                           a: "Password fields turn on macOS Secure Input, which prevents any app from intercepting the keyboard (it protects your passwords). Click somewhere outside the password field first, then start cleaning.")
                 }
             }
             .padding(28)
@@ -94,7 +99,7 @@ struct HelpView: View {
 }
 
 struct HelpSection<Content: View>: View {
-    let title: String
+    let title: LocalizedStringKey
     let symbol: String
     @ViewBuilder var content: Content
     var body: some View {
@@ -109,8 +114,8 @@ struct HelpSection<Content: View>: View {
 }
 
 struct HelpBullet: View {
-    let text: String
-    init(_ text: String) { self.text = text }
+    let text: LocalizedStringKey
+    init(_ text: LocalizedStringKey) { self.text = text }
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 8) {
             Text("•").foregroundStyle(.secondary)
@@ -120,8 +125,8 @@ struct HelpBullet: View {
 }
 
 struct HelpShortcut: View {
-    let keys: String
-    let text: String
+    let keys: LocalizedStringKey
+    let text: LocalizedStringKey
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 12) {
             Text(keys)
@@ -136,8 +141,8 @@ struct HelpShortcut: View {
 }
 
 struct HelpQA: View {
-    let q: String
-    let a: String
+    let q: LocalizedStringKey
+    let a: LocalizedStringKey
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
             Text(q).font(.callout.weight(.semibold))

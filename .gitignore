@@ -13,3 +13,12 @@ probe-logs/
 .DS_Store
 # Claude Code 本機設定
 .claude/settings.local.json
+
+# 翻譯校稿檔 (由 scripts/i18n/export_review.py 產生)
+translation-review/
+
+# 開發過程的內部比對圖 (留在本機，不公開)
+Design/review/
+
+# 重寫 git 歷史前的完整備份 (含舊的作者信箱，只留在本機)
+.git-backup-*/
