@@ -1,0 +1,140 @@
+# 拂拭 (Fushi) 的 XcodeGen 專案設定。
+# 執行 `xcodegen generate` 會產生 Fushi.xcodeproj，可直接用 Xcode 開啟。
+name: Fushi
+options:
+  bundleIdPrefix: com.wlee717727
+  developmentLanguage: zh-Hant
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "14.0"
+
+settings:
+  base:
+    MARKETING_VERSION: 0.2.0
+    CURRENT_PROJECT_VERSION: 2
+    SWIFT_VERSION: "5.0"
+    # 最低支援 macOS 14 Sonoma；通用版 (Apple Silicon＋Intel)，沒有觸控螢幕的 Mac 也能用
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ARCHS: "arm64 x86_64"
+    ONLY_ACTIVE_ARCH: NO
+    # 本機沒有 Apple Development 憑證，所以用 ad-hoc 簽章 ("-")。
+    # 之後若加入憑證，把 CODE_SIGN_IDENTITY 改成 "Apple Development" 並填 DEVELOPMENT_TEAM。
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    # 不使用 App Sandbox：事件攔截 (CGEventTap) 在沙箱裡不能用。
+    ENABLE_APP_SANDBOX: NO
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    GENERATE_INFOPLIST_FILE: NO
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    # 讓系統元件 (側邊欄選取、勾選框、連結) 都用品牌強調色
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    COMBINE_HIDPI_IMAGES: YES
+
+targets:
+  Fushi:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/Fushi
+    settings:
+      base:
+        PRODUCT_NAME: Fushi
+        FUSHI_DISPLAY_NAME: 拂拭
+        PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.Fushi
+        INFOPLIST_FILE: Sources/Fushi/Info.plist
+        # 簽章身分改用 Bundle ID (預設是每次建置都會變的 cdhash)，
+        # 系統權限 (輔助使用、輸入監控) 才不會在重新建置後失效。
+      configs:
+        # 開發版用不同的 Bundle ID 與名稱，避免系統把它跟正式版搞混 (例如雙擊卻開到開發版)
+        Debug:
+          PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.Fushi.debug
+          FUSHI_DISPLAY_NAME: 拂拭 (開發版)
+        Release:
+          OTHER_CODE_SIGN_FLAGS: --requirements $(SRCROOT)/signing/Fushi.req
+    info:
+      path: Sources/Fushi/Info.plist
+      properties:
+        CFBundleName: $(FUSHI_DISPLAY_NAME)
+        CFBundleDisplayName: $(FUSHI_DISPLAY_NAME)
+        CFBundleDevelopmentRegion: zh-Hant
+        CFBundleLocalizations: [zh-Hant]
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleIconName: AppIcon
+        CFBundleIconFile: AppIcon
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHumanReadableCopyright: 時時勤拂拭，勿使惹塵埃。
+        NSSupportsAutomaticTermination: false
+        NSSupportsSuddenTermination: false
+
+  FushiProbe:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/FushiProbe
+    settings:
+      base:
+        PRODUCT_NAME: FushiProbe
+        PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.FushiProbe
+        INFOPLIST_FILE: Sources/FushiProbe/Info.plist
+        SWIFT_OBJC_BRIDGING_HEADER: Sources/FushiProbe/Support/FushiProbe-Bridging-Header.h
+      configs:
+        Debug:
+          PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.FushiProbe.debug
+        Release:
+          OTHER_CODE_SIGN_FLAGS: --requirements $(SRCROOT)/signing/FushiProbe.req
+    info:
+      path: Sources/FushiProbe/Info.plist
+      properties:
+        CFBundleName: 拂拭偵測
+        CFBundleDisplayName: 拂拭偵測工具
+        CFBundleDevelopmentRegion: zh-Hant
+        CFBundleLocalizations: [zh-Hant]
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleIconName: AppIcon
+        CFBundleIconFile: AppIcon
+        LSApplicationCategoryType: public.app-category.developer-tools
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSDesktopFolderUsageDescription: 偵測紀錄會存到桌面上 Fushi 專案資料夾裡的 probe-logs。
+        NSHumanReadableCopyright: 拂拭第 0 階段偵測工具，只監聽、不攔截。
+
+  FushiTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Sources/Fushi/Core
+      - path: Tests/FushiTests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wlee717727.FushiTests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: ""
+        BUNDLE_LOADER: ""
+
+schemes:
+  Fushi:
+    build:
+      targets:
+        Fushi: all
+        FushiTests: [test]
+    test:
+      config: Debug
+      targets: [FushiTests]
+    run:
+      config: Debug
+    archive:
+      config: Release
+  FushiProbe:
+    build:
+      targets:
+        FushiProbe: all
+    run:
+      config: Debug
+    archive:
+      config: Release

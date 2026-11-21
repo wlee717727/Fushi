@@ -1,0 +1,218 @@
+import AppKit
+import CoreGraphics
+
+/// 鎖住內建觸控板 (以及全鎖時的觸控螢幕)，外接滑鼠照常可用。
+///
+/// 做法：在最底層的 HID 位置建立主動式事件攔截。每個指標事件先查「是哪個實體裝置送的」，
+/// 是內建觸控板就擋下 (游標不會動、點擊與手勢都沒反應)，其他裝置放行。
+/// 同時「只看不擋」地監看 Esc：長按 3 秒一定能退出 (只鎖觸控板、鍵盤沒鎖時也有效)。
+///
+/// 安全設計和鍵盤鎖相同：專用執行緒、回呼只做判斷、到期一律放行、獨立的保險計時器、
+/// App 當掉時攔截隨程序消失，不修改任何系統設定。
+final class PointerLocker: @unchecked Sendable {
+    private let lock = NSLock()
+    private var tap: CFMachPort?
+    private var source: CFRunLoopSource?
+    private var runLoop: CFRunLoop?
+    private var watchdog: DispatchSourceTimer?
+    private var deadline: Date = .distantPast
+    private var active = false
+    private var policy = PointerBlockPolicy(blockBuiltInTrackpad: true, blockTouchScreen: false)
+    private var recent = RecentPointerSource()
+    private var escape = EscapeHoldDetector()
+    private var lastExternalNotify: TimeInterval = 0
+    private var lastBlockedNotify: TimeInterval = 0
+    /// 內建觸控板的動作被擋下 (最多每 0.4 秒一次，在主執行緒呼叫)
+    var onBlockedInput: (() -> Void)?
+    /// 游標最後一個「允許」的位置：觸控板的移動被擋下時，把游標拉回這裡 (避免系統已先移動游標)
+    private var lastAllowedLocation: CGPoint = .zero
+    /// 診斷統計：每種來源收到幾筆、擋下幾筆 (結束時寫進診斷紀錄)
+    private var stats: [String: (seen: Int, blocked: Int)] = [:]
+    private var loggedSources: Set<String> = []
+
+    /// 長按 Esc 3 秒 (在主執行緒呼叫)
+    var onEmergencyExit: (() -> Void)?
+    /// Esc 開始按住 (true)／放開 (false)，在主執行緒呼叫
+    var onEscapeHoldChanged: ((Bool) -> Void)?
+    /// 外接滑鼠有動作 (最多每 0.2 秒一次，在主執行緒呼叫)；全鎖時用來叫出控制面板
+    var onExternalActivity: (() -> Void)?
+
+    var isActive: Bool {
+        lock.lock(); defer { lock.unlock() }
+        return active
+    }
+
+    /// 開始攔截。回傳 false 代表系統不允許 (通常是沒有「輔助使用」權限)。
+    func start(policy: PointerBlockPolicy, until deadline: Date) -> Bool {
+        stop()
+        let pointerTypes: [UInt32] = [1, 2, 3, 4, 5, 6, 7,      // 左右鍵按下放開、移動、拖曳
+                                      18, 19, 20,               // 旋轉、手勢開始／結束
+                                      22, 23, 24,               // 捲動、數位板
+                                      25, 26, 27,               // 其他按鍵、拖曳
+                                      29, 30, 31, 32, 33, 34]   // 手勢、縮放、滑動、智慧縮放、查詢、壓力
+        var mask = pointerTypes.reduce(CGEventMask(0)) { $0 | (CGEventMask(1) << $1) }
+        mask |= CGEventMask(1) << CGEventType.keyDown.rawValue
+        mask |= CGEventMask(1) << CGEventType.keyUp.rawValue
+
+        let refcon = Unmanaged.passUnretained(self).toOpaque()
+        guard let tap = CGEvent.tapCreate(tap: .cghidEventTap, place: .headInsertEventTap, options: .defaultTap,
+                                          eventsOfInterest: mask, callback: pointerLockerCallback, userInfo: refcon),
+              let source = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, tap, 0) else {
+            return false
+        }
+
+        lock.lock()
+        self.tap = tap
+        self.source = source
+        self.deadline = deadline
+        self.policy = policy
+        self.recent = RecentPointerSource()
+        self.escape = EscapeHoldDetector()
+        self.stats = [:]
+        self.loggedSources = []
+        self.lastAllowedLocation = CGEvent(source: nil)?.location ?? .zero
+        self.active = true
+        lock.unlock()
+        Diagnostics.log("指標攔截啟動：擋觸控板=\(policy.blockBuiltInTrackpad)、擋觸控螢幕=\(policy.blockTouchScreen)、查來源函式可用=\(EventSourceLookup.isAvailable)")
+
+        let ready = DispatchSemaphore(value: 0)
+        let thread = Thread { [weak self] in
+            let rl = CFRunLoopGetCurrent()
+            CFRunLoopAddSource(rl, source, .commonModes)
+            self?.lock.lock(); self?.runLoop = rl; self?.lock.unlock()
+            CGEvent.tapEnable(tap: tap, enable: true)
+            ready.signal()
+            CFRunLoopRun()
+        }
+        thread.name = "拂拭.指標攔截"
+        thread.qualityOfService = .userInteractive
+        thread.start()
+        _ = ready.wait(timeout: .now() + 2)
+
+        let timer = DispatchSource.makeTimerSource(queue: .global(qos: .userInitiated))
+        timer.schedule(deadline: .now() + max(0, deadline.timeIntervalSinceNow) + 0.25)
+        timer.setEventHandler { [weak self] in self?.stop() }
+        lock.lock(); watchdog = timer; lock.unlock()
+        timer.resume()
+        return true
+    }
+
+    func stop() {
+        lock.lock()
+        let tap = self.tap, source = self.source, runLoop = self.runLoop, watchdog = self.watchdog
+        let wasActive = active, summary = stats
+        self.tap = nil; self.source = nil; self.runLoop = nil; self.watchdog = nil
+        self.active = false
+        lock.unlock()
+        if wasActive {
+            let text = summary.sorted { $0.key < $1.key }
+                .map { "\($0.key) 收到 \($0.value.seen)、擋下 \($0.value.blocked)" }
+                .joined(separator: "；")
+            Diagnostics.log("指標攔截結束：\(text.isEmpty ? "沒有收到任何指標事件" : text)")
+        }
+        watchdog?.cancel()
+        if let tap {
+            CGEvent.tapEnable(tap: tap, enable: false)
+            CFMachPortInvalidate(tap)
+        }
+        if let runLoop {
+            if let source { CFRunLoopRemoveSource(runLoop, source, .commonModes) }
+            CFRunLoopStop(runLoop)
+        }
+    }
+
+    fileprivate func handle(type: CGEventType, event: CGEvent) -> Unmanaged<CGEvent>? {
+        let pass = Unmanaged.passUnretained(event)
+        if type == .tapDisabledByTimeout || type == .tapDisabledByUserInput {
+            lock.lock()
+            let tap = self.tap, stillActive = active && Date() < deadline
+            lock.unlock()
+            if stillActive, let tap { CGEvent.tapEnable(tap: tap, enable: true) }
+            return pass
+        }
+        lock.lock()
+        let running = active && Date() < deadline
+        lock.unlock()
+        guard running else { return pass }   // 時間到或已停止：一律放行
+
+        let now = ProcessInfo.processInfo.systemUptime
+
+        // 按鍵：只看 Esc 有沒有被按住 3 秒，按鍵本身一律放行 (鍵盤是否鎖由鍵盤鎖負責)
+        if type == .keyDown || type == .keyUp {
+            if event.getIntegerValueField(.keyboardEventKeycode) == EscapeHoldDetector.escapeKeyCode {
+                lock.lock()
+                var trigger = false
+                var change: Bool?
+                if type == .keyDown {
+                    let wasHolding = escape.pressedAt != nil
+                    trigger = escape.keyDown(isRepeat: event.getIntegerValueField(.keyboardEventAutorepeat) != 0, at: now)
+                    if !wasHolding && escape.pressedAt != nil { change = true }
+                } else {
+                    escape.keyUp()
+                    change = false
+                }
+                lock.unlock()
+                if let change, let callback = onEscapeHoldChanged {
+                    DispatchQueue.main.async { callback(change) }
+                }
+                if trigger {
+                    stop()
+                    let callback = onEmergencyExit
+                    DispatchQueue.main.async { callback?() }
+                }
+            }
+            return pass
+        }
+
+        // 指標事件：查來源 → 判斷擋不擋
+        let sender = EventSourceLookup.sender(of: event)
+        let observed = PointerSource.classify(sender)
+        let isMove = [5, 6, 7, 27].contains(type.rawValue)   // 移動、拖曳
+        lock.lock()
+        let resolved = recent.resolve(observed, at: now)
+        let block = policy.shouldBlock(resolved)
+        var notify = false
+        if resolved == .externalPointer && now - lastExternalNotify > 0.2 {
+            lastExternalNotify = now
+            notify = true
+        }
+        var blockedNotify = false
+        if block && resolved == .builtInTrackpad && now - lastBlockedNotify > 0.4 {
+            lastBlockedNotify = now
+            blockedNotify = true
+        }
+        let key = "\(resolved)"
+        var entry = stats[key] ?? (0, 0)
+        entry.seen += 1
+        if block { entry.blocked += 1 }
+        stats[key] = entry
+        let firstOfSource = loggedSources.insert("\(observed)").inserted
+        if !block && isMove { lastAllowedLocation = event.location }
+        let holdAt = lastAllowedLocation
+        lock.unlock()
+
+        if firstOfSource {
+            Diagnostics.log("指標來源：\(observed)，事件類型 \(type.rawValue)，裝置 \(sender.map { "\($0.product) / \($0.className) / 內建=\(String(describing: $0.builtIn))" } ?? "查不到")")
+        }
+        if notify, let callback = onExternalActivity {
+            DispatchQueue.main.async { callback() }
+        }
+        if blockedNotify, let callback = onBlockedInput {
+            DispatchQueue.main.async { callback() }
+        }
+        if block && isMove {
+            // 系統可能在攔截之前就已經移動游標；把游標拉回最後允許的位置，觸控板就推不動游標
+            CGWarpMouseCursorPosition(holdAt)
+            CGAssociateMouseAndMouseCursorPosition(1)   // 取消拉回後的短暫輸入凍結，外接滑鼠不受影響
+        }
+        return block ? nil : pass
+    }
+
+    deinit { stop() }
+}
+
+private func pointerLockerCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent,
+                                   userInfo: UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
+    guard let userInfo else { return Unmanaged.passUnretained(event) }
+    return Unmanaged<PointerLocker>.fromOpaque(userInfo).takeUnretainedValue().handle(type: type, event: event)
+}

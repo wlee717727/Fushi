@@ -1,0 +1,1427 @@
+{
+  "sourceLanguage": "zh-Hant",
+  "strings": {
+    "%@ 後自動結束": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 後自動結束"
+          }
+        }
+      }
+    },
+    "%@ 後自動解鎖": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 後自動解鎖"
+          }
+        }
+      }
+    },
+    "%@後自動解鎖": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@後自動解鎖"
+          }
+        }
+      }
+    },
+    "%lld": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld"
+          }
+        }
+      }
+    },
+    "%lld 秒後結束清潔 · 放開就取消": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒後結束清潔 · 放開就取消"
+          }
+        }
+      }
+    },
+    "10 分": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10 分"
+          }
+        }
+      }
+    },
+    "30 秒": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 秒"
+          }
+        }
+      }
+    },
+    "B 面清潔 (螢幕) 不需要任何權限。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "B 面清潔 (螢幕) 不需要任何權限。"
+          }
+        }
+      }
+    },
+    "B 面清潔不需要任何權限。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "B 面清潔不需要任何權限。"
+          }
+        }
+      }
+    },
+    "B 面清潔不需要任何權限。勾選後這一頁會自動更新。": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "B 面清潔不需要任何權限。勾選後這一頁會自動更新。"
+          }
+        }
+      }
+    },
+    "C 面「鎖鍵盤」需要「輔助使用」權限 (B 面不需要)。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C 面「鎖鍵盤」需要「輔助使用」權限 (B 面不需要)。"
+          }
+        }
+      }
+    },
+    "C 面全部": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C 面全部"
+          }
+        }
+      }
+    },
+    "C 面清潔": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C 面清潔"
+          }
+        }
+      }
+    },
+    "•": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "•"
+          }
+        }
+      }
+    },
+    "上次的模式：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次的模式：%@"
+          }
+        }
+      }
+    },
+    "上次：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次：%@"
+          }
+        }
+      }
+    },
+    "上次：%@，一樣會先倒數 3 秒，可以取消": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次：%@，一樣會先倒數 3 秒，可以取消"
+          }
+        }
+      }
+    },
+    "也可以長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也可以長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。"
+          }
+        }
+      }
+    },
+    "也可以長按 Esc 3 秒結束。8 秒沒有操作會自動變回全黑。": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "也可以長按 Esc 3 秒結束。8 秒沒有操作會自動變回全黑。"
+          }
+        }
+      }
+    },
+    "使用說明": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用說明"
+          }
+        }
+      }
+    },
+    "倒數 3 秒後鎖定，%@後自動解鎖": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "倒數 3 秒後鎖定，%@後自動解鎖"
+          }
+        }
+      }
+    },
+    "允許一次之後就不用再設定": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允許一次之後就不用再設定"
+          }
+        }
+      }
+    },
+    "先允許權限…": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先允許權限…"
+          }
+        }
+      }
+    },
+    "全部已鎖定，清潔中": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部已鎖定，清潔中"
+          }
+        }
+      }
+    },
+    "全鎖": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全鎖"
+          }
+        }
+      }
+    },
+    "全鎖即將推出": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全鎖即將推出"
+          }
+        }
+      }
+    },
+    "全鎖會把鍵盤、觸控板、觸控螢幕全部鎖住，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。\n要先用偵測工具確認三種輸入分得出來，才能安全開放。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全鎖會把鍵盤、觸控板、觸控螢幕全部鎖住，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。\n要先用偵測工具確認三種輸入分得出來，才能安全開放。"
+          }
+        }
+      }
+    },
+    "全鎖期間只有它能操作": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全鎖期間只有它能操作"
+          }
+        }
+      }
+    },
+    "剩餘 %@": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "剩餘 %@"
+          }
+        }
+      }
+    },
+    "剩餘 %@ 自動結束": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "剩餘 %@ 自動結束"
+          }
+        }
+      }
+    },
+    "剩餘 %@ 自動解鎖": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "剩餘 %@ 自動解鎖"
+          }
+        }
+      }
+    },
+    "勾選後這個畫面會自動更新，不需要重新開啟。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "勾選後這個畫面會自動更新，不需要重新開啟。"
+          }
+        }
+      }
+    },
+    "即將推出": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即將推出"
+          }
+        }
+      }
+    },
+    "即將開始": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即將開始"
+          }
+        }
+      }
+    },
+    "即將開始：%@": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即將開始：%@"
+          }
+        }
+      }
+    },
+    "取消": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "取消倒數": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消倒數"
+          }
+        }
+      }
+    },
+    "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖。"
+          }
+        }
+      }
+    },
+    "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同時鎖住鍵盤、觸控板與觸控螢幕，只留外接滑鼠解鎖；拔掉外接滑鼠會立刻全部解鎖。"
+          }
+        }
+      }
+    },
+    "啟動": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "啟動"
+          }
+        }
+      }
+    },
+    "在系統設定的清單裡，先用「−」移除舊的「拂拭」，再按「+」重新加入並打開開關。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在系統設定的清單裡，先用「−」移除舊的「拂拭」，再按「+」重新加入並打開開關。"
+          }
+        }
+      }
+    },
+    "好": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
+          }
+        }
+      }
+    },
+    "完成": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
+          }
+        }
+      }
+    },
+    "尚未授權": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未授權"
+          }
+        }
+      }
+    },
+    "就算忘了結束，也一定會解鎖": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "就算忘了結束，也一定會解鎖"
+          }
+        }
+      }
+    },
+    "已允許": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已允許"
+          }
+        }
+      }
+    },
+    "已允許所需權限": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已允許所需權限"
+          }
+        }
+      }
+    },
+    "已授權": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已授權"
+          }
+        }
+      }
+    },
+    "已連接": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已連接"
+          }
+        }
+      }
+    },
+    "待偵測結果確認": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待偵測結果確認"
+          }
+        }
+      }
+    },
+    "怎麼用": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "怎麼用"
+          }
+        }
+      }
+    },
+    "打開拂拭主視窗": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開拂拭主視窗"
+          }
+        }
+      }
+    },
+    "打開拂拭主視窗…": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開拂拭主視窗…"
+          }
+        }
+      }
+    },
+    "打開拂拭時，直接開始上次的模式": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開拂拭時，直接開始上次的模式"
+          }
+        }
+      }
+    },
+    "打開系統設定…": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開系統設定…"
+          }
+        }
+      }
+    },
+    "找不到或勾了沒反應？": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到或勾了沒反應？"
+          }
+        }
+      }
+    },
+    "拂拭": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭"
+          }
+        }
+      }
+    },
+    "拂拭 使用說明": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭 使用說明"
+          }
+        }
+      }
+    },
+    "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。"
+          }
+        }
+      }
+    },
+    "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。勾選後這裡會自動更新。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭只在清潔期間攔截輸入，結束後立刻放行，不會記錄你按了什麼。勾選後這裡會自動更新。"
+          }
+        }
+      }
+    },
+    "拂拭需要兩項權限": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭需要兩項權限"
+          }
+        }
+      }
+    },
+    "拂拭：待命中": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拂拭：待命中"
+          }
+        }
+      }
+    },
+    "拷貝診斷資訊": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷貝診斷資訊"
+          }
+        }
+      }
+    },
+    "拷貝診斷資訊 (給開發者)": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷貝診斷資訊 (給開發者)"
+          }
+        }
+      }
+    },
+    "按 Esc 或「取消」可以停止": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按 Esc 或「取消」可以停止"
+          }
+        }
+      }
+    },
+    "按住 %lld 秒": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住 %lld 秒"
+          }
+        }
+      }
+    },
+    "按住【結束清潔】2 秒，或長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按住【結束清潔】2 秒，或長按 Esc 2 秒結束。8 秒沒有操作會自動變回全黑。"
+          }
+        }
+      }
+    },
+    "接上滑鼠或外接觸控板後就能開始 (藍牙或 USB 都可以)": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接上滑鼠或外接觸控板後就能開始 (藍牙或 USB 都可以)"
+          }
+        }
+      }
+    },
+    "擦螢幕、擦鍵盤時，手一定會碰到按鍵、觸控板和觸控螢幕，很容易誤觸。拂拭會在清潔期間暫時鎖住這些輸入，時間到自動解鎖。名稱出自「時時勤拂拭，勿使惹塵埃」。": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "擦螢幕、擦鍵盤時，手一定會碰到按鍵、觸控板和觸控螢幕，很容易誤觸。拂拭會在清潔期間暫時鎖住這些輸入，時間到自動解鎖。名稱出自「時時勤拂拭，勿使惹塵埃」。"
+          }
+        }
+      }
+    },
+    "時時勤拂拭，勿使惹塵埃。選好模式後按【開始清潔】，倒數 3 秒後鎖定。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時時勤拂拭，勿使惹塵埃。選好模式後按【開始清潔】，倒數 3 秒後鎖定。"
+          }
+        }
+      }
+    },
+    "時間一到一定會解鎖，就算忘了結束也沒關係": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時間一到一定會解鎖，就算忘了結束也沒關係"
+          }
+        }
+      }
+    },
+    "時間到自動解鎖": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "時間到自動解鎖"
+          }
+        }
+      }
+    },
+    "更改": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改"
+          }
+        }
+      }
+    },
+    "更改時間": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改時間"
+          }
+        }
+      }
+    },
+    "會鎖住": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "會鎖住"
+          }
+        }
+      }
+    },
+    "會鎖住什麼": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "會鎖住什麼"
+          }
+        }
+      }
+    },
+    "查看偵測步驟": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看偵測步驟"
+          }
+        }
+      }
+    },
+    "權限": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "權限"
+          }
+        }
+      }
+    },
+    "權限設定…": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "權限設定…"
+          }
+        }
+      }
+    },
+    "正在解鎖…": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在解鎖…"
+          }
+        }
+      }
+    },
+    "清潔": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔"
+          }
+        }
+      }
+    },
+    "清潔 Mac 時暫時鎖住輸入。版本 %@": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔 Mac 時暫時鎖住輸入。版本 %@"
+          }
+        }
+      }
+    },
+    "清潔中…": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔中…"
+          }
+        }
+      }
+    },
+    "清潔中・觸控已鎖定": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔中・觸控已鎖定"
+          }
+        }
+      }
+    },
+    "清潔中，螢幕已鎖定": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔中，螢幕已鎖定"
+          }
+        }
+      }
+    },
+    "清潔中，觸控已鎖定": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔中，觸控已鎖定"
+          }
+        }
+      }
+    },
+    "清潔中：%@": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔中：%@"
+          }
+        }
+      }
+    },
+    "清潔已結束": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔已結束"
+          }
+        }
+      }
+    },
+    "清潔模式": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清潔模式"
+          }
+        }
+      }
+    },
+    "無法開始": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法開始"
+          }
+        }
+      }
+    },
+    "用外接滑鼠按住按鈕；拔掉外接滑鼠或長按 Esc 3 秒也會立刻解鎖。8 秒沒有操作會變回全黑，動一下滑鼠就會再出現。": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用外接滑鼠按住按鈕；拔掉外接滑鼠或長按 Esc 3 秒也會立刻解鎖。8 秒沒有操作會變回全黑，動一下滑鼠就會再出現。"
+          }
+        }
+      }
+    },
+    "用觸控板、滑鼠或觸控螢幕按住按鈕": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕"
+          }
+        }
+      }
+    },
+    "用觸控板、滑鼠或觸控螢幕按住按鈕 2 秒": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕 2 秒"
+          }
+        }
+      }
+    },
+    "用觸控板、滑鼠或觸控螢幕按住按鈕。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕。"
+          }
+        }
+      }
+    },
+    "用觸控板、滑鼠或觸控螢幕按住按鈕；或長按 Esc 3 秒。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用觸控板、滑鼠或觸控螢幕按住按鈕；或長按 Esc 3 秒。"
+          }
+        }
+      }
+    },
+    "畫面已鎖定，清潔中": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "畫面已鎖定，清潔中"
+          }
+        }
+      }
+    },
+    "秒後開始清潔": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "秒後開始清潔"
+          }
+        }
+      }
+    },
+    "稍後再說": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "稍後再說"
+          }
+        }
+      }
+    },
+    "系統有時要重新打開拂拭，新權限才會生效。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系統有時要重新打開拂拭，新權限才會生效。"
+          }
+        }
+      }
+    },
+    "系統權限": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系統權限"
+          }
+        }
+      }
+    },
+    "結束拂拭": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束拂拭"
+          }
+        }
+      }
+    },
+    "結束清潔": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束清潔"
+          }
+        }
+      }
+    },
+    "繼續按住 Esc": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續按住 Esc"
+          }
+        }
+      }
+    },
+    "繼續按住 Esc 結束清潔": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續按住 Esc 結束清潔"
+          }
+        }
+      }
+    },
+    "繼續清潔": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續清潔"
+          }
+        }
+      }
+    },
+    "自動解鎖": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動解鎖"
+          }
+        }
+      }
+    },
+    "自動解鎖時間": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自動解鎖時間"
+          }
+        }
+      }
+    },
+    "要清潔哪裡？": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要清潔哪裡？"
+          }
+        }
+      }
+    },
+    "要鎖住什麼": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要鎖住什麼"
+          }
+        }
+      }
+    },
+    "觸控板": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "觸控板"
+          }
+        }
+      }
+    },
+    "設定": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        }
+      }
+    },
+    "設定…": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定…"
+          }
+        }
+      }
+    },
+    "設定權限…": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定權限…"
+          }
+        }
+      }
+    },
+    "還沒允許「輔助使用」": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還沒允許「輔助使用」"
+          }
+        }
+      }
+    },
+    "還沒有清潔紀錄": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還沒有清潔紀錄"
+          }
+        }
+      }
+    },
+    "鍵盤": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤"
+          }
+        }
+      }
+    },
+    "鍵盤 (含亮度、音量等功能鍵)": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤 (含亮度、音量等功能鍵)"
+          }
+        }
+      }
+    },
+    "鍵盤已鎖定": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鍵盤已鎖定"
+          }
+        }
+      }
+    },
+    "鎖觸控板要等偵測工具確認「觸控板」和「觸控螢幕」分得出來才會開放，避免連解鎖用的觸控螢幕也被鎖住。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鎖觸控板要等偵測工具確認「觸控板」和「觸控螢幕」分得出來才會開放，避免連解鎖用的觸控螢幕也被鎖住。"
+          }
+        }
+      }
+    },
+    "鎖觸控板開放後才能一次全選": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鎖觸控板開放後才能一次全選"
+          }
+        }
+      }
+    },
+    "長按 Esc 3 秒結束 · 或動一下外接滑鼠": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長按 Esc 3 秒結束 · 或動一下外接滑鼠"
+          }
+        }
+      }
+    },
+    "長按 Esc 3 秒結束 · 或按任意鍵叫出面板": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長按 Esc 3 秒結束 · 或按任意鍵叫出面板"
+          }
+        }
+      }
+    },
+    "長按 Esc 3 秒結束清潔": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長按 Esc 3 秒結束清潔"
+          }
+        }
+      }
+    },
+    "開啟拂拭時，立即開始上次的模式": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開啟拂拭時，立即開始上次的模式"
+          }
+        }
+      }
+    },
+    "開始 %@": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始 %@"
+          }
+        }
+      }
+    },
+    "開始 B 面清潔 (螢幕)": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始 B 面清潔 (螢幕)"
+          }
+        }
+      }
+    },
+    "開始 C 面清潔 (只鎖鍵盤)": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始 C 面清潔 (只鎖鍵盤)"
+          }
+        }
+      }
+    },
+    "開始上次的模式": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始上次的模式"
+          }
+        }
+      }
+    },
+    "開始上次的模式：%@": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始上次的模式：%@"
+          }
+        }
+      }
+    },
+    "開始全鎖 (需要外接滑鼠)": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始全鎖 (需要外接滑鼠)"
+          }
+        }
+      }
+    },
+    "開始清潔": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始清潔"
+          }
+        }
+      }
+    },
+    "開發中的版本是 ad-hoc 簽章：每次重新建置後，系統會把它當成新的 App，要把清單裡舊的「拂拭」移除再重新勾選。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開發中的版本是 ad-hoc 簽章：每次重新建置後，系統會把它當成新的 App，要把清單裡舊的「拂拭」移除再重新勾選。"
+          }
+        }
+      }
+    },
+    "開發測試版：自動解鎖最多 %lld 秒。": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開發測試版：自動解鎖最多 %lld 秒。"
+          }
+        }
+      }
+    },
+    "開發版：自動解鎖最多 %lld 秒。": {
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開發版：自動解鎖最多 %lld 秒。"
+          }
+        }
+      }
+    },
+    "需要外接滑鼠才能使用": {
+      "extractionState": "stale",
+      "localizations": {
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要外接滑鼠才能使用"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

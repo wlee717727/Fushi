@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019BF4E1A711DC6AF4A7812B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E74EDC661FC95138801449 /* MainView.swift */; };
+		19CD029BF6D5260AE5CB155B /* SessionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A29B0E7933C143885880 /* SessionPolicy.swift */; };
+		1A6B2B769FEDB5B1D3D52038 /* PointerPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB383C52E6E563054241DA /* PointerPolicyTests.swift */; };
+		23D3E614E435258FA5D0C291 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC02EC2309578F3916F95F2 /* Brand.swift */; };
+		267325ECE5F8FDBA9819DD89 /* FushiProbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0866B689F81FB7DEC8BA112 /* FushiProbeApp.swift */; };
+		330537DDE74B7C3EE9220F48 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B43EB3CEAF9CE40A7EC3DD /* AppModel.swift */; };
+		3793EC1203C408FF5964F1A4 /* EventTapProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1239722E6C11D881E2570 /* EventTapProbe.swift */; };
+		3C5354D32BB3D37E482136D8 /* DirectionMockups.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF329CE214DD12FDA9FD282 /* DirectionMockups.swift */; };
+		3CE47AB33C3DC8392B4D86D5 /* PointerPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276AD47A8138D2681136DF /* PointerPolicy.swift */; };
+		3E24B5CAF6ABF2B4D375FC26 /* KeyboardLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967266E60F9086337E8677BD /* KeyboardLocker.swift */; };
+		472176BE24DE3C98F769BCA8 /* ProbeRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF103BE7B36930F6D5115AE /* ProbeRecorder.swift */; };
+		4BDE17B27703576610A7AA26 /* TouchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FEDFF30A48C770F3F324BF /* TouchPadView.swift */; };
+		512FF9C8B8000E5F9B054F74 /* EventSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CA83D6866ADB53C72CAFA /* EventSender.swift */; };
+		513F2592531FF3F928143A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53562E471E05A85E313126E9 /* Assets.xcassets */; };
+		52C1F76871DB5F9D150E9D9A /* CleaningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641A43853665457B257B08F /* CleaningMode.swift */; };
+		54EE291848C0B030F65B9E4B /* EventSourceLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E7E89CB8C5951953980833 /* EventSourceLookup.swift */; };
+		566ED4BAF0933472BBCDB7FC /* PermissionCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC7CA18707E8CBED699BCA /* PermissionCenter.swift */; };
+		58DB94912223360C95C5B84C /* ObjCSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DB8FAF4E44D249D8E03DB /* ObjCSafe.m */; };
+		60A4C0C5E906EACCB9DC990D /* PointerLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B664AEE4F53DA1D8BFEF1C9 /* PointerLocker.swift */; };
+		70062C156BC7C2C7F5795DF8 /* PointerPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3276AD47A8138D2681136DF /* PointerPolicy.swift */; };
+		73DD7BAAD4CF3C30A2462C2D /* CleaningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641A43853665457B257B08F /* CleaningMode.swift */; };
+		756767038AF050832C5EBE54 /* ProbeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A731C20E401D50652C3ED845 /* ProbeModel.swift */; };
+		7AE1DEF4A3F34D1F1E7FCDEB /* SessionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A29B0E7933C143885880 /* SessionPolicy.swift */; };
+		835BF1CCF9158F09A4467FB1 /* SessionMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2915391033595F39F7F2927 /* SessionMachine.swift */; };
+		868894A989112944F62F7B14 /* EscapeHold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0DA6757ACD17BE9EA47C1 /* EscapeHold.swift */; };
+		8D89345DED945B2AF8E979AD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 97F66546505785E2ED0B5A88 /* Localizable.xcstrings */; };
+		A50B4BB5063EE2F9CE376F95 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286AA2137DEF6BC1878837C9 /* Diagnostics.swift */; };
+		AC5D6DF94393C7F231773AEF /* PanelSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = C218C4281DD1A6D3D37AF7E9 /* PanelSnapshots.swift */; };
+		BE4E7696F74EE4E624E2EA74 /* ExternalMouseMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF54B2828E77F55CA7207062 /* ExternalMouseMonitor.swift */; };
+		BE8070D6477AA61918DCD546 /* SessionMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2915391033595F39F7F2927 /* SessionMachine.swift */; };
+		BF149E7811B9D6B72D07AC65 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA11685647DE3D1E8467F00B /* Localizable.xcstrings */; };
+		BF6E19452A22D579CE60E68B /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569D0D05CB670CD61D0B2D1 /* HelpView.swift */; };
+		C48F58D70E6A76EC6616B4DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69FA38B72479FB08217CECC /* SettingsView.swift */; };
+		CBE9651C8A456F2E1F3769BA /* ScreenOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985A09EAF6C81AF710AB1CA4 /* ScreenOverlayController.swift */; };
+		CCB1607B5206ADB5CC0EF5ED /* ProbeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C08722ECEE8C728E20CD8D /* ProbeView.swift */; };
+		D35BBB70244DC81DD639483D /* EscapeHoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6295438BE5013FE52863B603 /* EscapeHoldTests.swift */; };
+		D5742A8F043A1D32B84ED9D9 /* HIDProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE1D56A2AE40A4BCAF1B6B /* HIDProbe.swift */; };
+		DD04A272393ED8A573625AAD /* PermissionGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BDEC1579071F7A51FB0107 /* PermissionGuideView.swift */; };
+		DF06F2FFCC6F9A44AB1D4912 /* FushiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA42856F4CD743D01668D2BD /* FushiApp.swift */; };
+		E178328F8DC6C6FCF2FDCFC7 /* EscapeHold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0DA6757ACD17BE9EA47C1 /* EscapeHold.swift */; };
+		E5D76885D1E78AB4AF0263C2 /* TouchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77979D1F55E90D09AAD5E71 /* TouchScreen.swift */; };
+		E9DD049205321FF8E8F657A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0038C4D8CE5E4344DB2CDC07 /* Assets.xcassets */; };
+		EBB9768F11EE53FB655CCEBB /* SessionMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32BC579A192A421D32A4774 /* SessionMachineTests.swift */; };
+		F6AC56C7E9EB14B3448D44D3 /* LockViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82485686D3F1C05234153C67 /* LockViews.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0038C4D8CE5E4344DB2CDC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00965CB514F4A5DF23D2C191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		05A346B17D6349C73F8F1E8F /* ObjCSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCSafe.h; sourceTree = "<group>"; };
+		06A0DA6757ACD17BE9EA47C1 /* EscapeHold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeHold.swift; sourceTree = "<group>"; };
+		11DC7CA18707E8CBED699BCA /* PermissionCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCenter.swift; sourceTree = "<group>"; };
+		1B664AEE4F53DA1D8BFEF1C9 /* PointerLocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerLocker.swift; sourceTree = "<group>"; };
+		1CBB383C52E6E563054241DA /* PointerPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerPolicyTests.swift; sourceTree = "<group>"; };
+		286AA2137DEF6BC1878837C9 /* Diagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
+		29B43EB3CEAF9CE40A7EC3DD /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		2AF103BE7B36930F6D5115AE /* ProbeRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbeRecorder.swift; sourceTree = "<group>"; };
+		33C08722ECEE8C728E20CD8D /* ProbeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbeView.swift; sourceTree = "<group>"; };
+		3DDB3AC2E6190BA14BE18D63 /* FushiProbe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FushiProbe-Bridging-Header.h"; sourceTree = "<group>"; };
+		41FEDFF30A48C770F3F324BF /* TouchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPadView.swift; sourceTree = "<group>"; };
+		53562E471E05A85E313126E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6295438BE5013FE52863B603 /* EscapeHoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeHoldTests.swift; sourceTree = "<group>"; };
+		7641A43853665457B257B08F /* CleaningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningMode.swift; sourceTree = "<group>"; };
+		80BDEC1579071F7A51FB0107 /* PermissionGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionGuideView.swift; sourceTree = "<group>"; };
+		82485686D3F1C05234153C67 /* LockViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViews.swift; sourceTree = "<group>"; };
+		9569D0D05CB670CD61D0B2D1 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		967266E60F9086337E8677BD /* KeyboardLocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLocker.swift; sourceTree = "<group>"; };
+		97F66546505785E2ED0B5A88 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		985A09EAF6C81AF710AB1CA4 /* ScreenOverlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenOverlayController.swift; sourceTree = "<group>"; };
+		A731C20E401D50652C3ED845 /* ProbeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbeModel.swift; sourceTree = "<group>"; };
+		A8E74EDC661FC95138801449 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AA42856F4CD743D01668D2BD /* FushiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FushiApp.swift; sourceTree = "<group>"; };
+		AAF329CE214DD12FDA9FD282 /* DirectionMockups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionMockups.swift; sourceTree = "<group>"; };
+		B32BC579A192A421D32A4774 /* SessionMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMachineTests.swift; sourceTree = "<group>"; };
+		B657C6F66026CDA09BB17B34 /* FushiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FushiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC02EC2309578F3916F95F2 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		BF54B2828E77F55CA7207062 /* ExternalMouseMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalMouseMonitor.swift; sourceTree = "<group>"; };
+		C218C4281DD1A6D3D37AF7E9 /* PanelSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelSnapshots.swift; sourceTree = "<group>"; };
+		C2915391033595F39F7F2927 /* SessionMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMachine.swift; sourceTree = "<group>"; };
+		C3276AD47A8138D2681136DF /* PointerPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerPolicy.swift; sourceTree = "<group>"; };
+		C69FA38B72479FB08217CECC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C77979D1F55E90D09AAD5E71 /* TouchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchScreen.swift; sourceTree = "<group>"; };
+		C8E7E89CB8C5951953980833 /* EventSourceLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSourceLookup.swift; sourceTree = "<group>"; };
+		CBD2A29B0E7933C143885880 /* SessionPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPolicy.swift; sourceTree = "<group>"; };
+		D08BD33968AB8ADB86752382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3CE1D56A2AE40A4BCAF1B6B /* HIDProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDProbe.swift; sourceTree = "<group>"; };
+		D9286EF09B36B3CDFC2681ED /* Fushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3DB8FAF4E44D249D8E03DB /* ObjCSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCSafe.m; sourceTree = "<group>"; };
+		E0866B689F81FB7DEC8BA112 /* FushiProbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FushiProbeApp.swift; sourceTree = "<group>"; };
+		EA11685647DE3D1E8467F00B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F0389DE7B28F589E40923A59 /* FushiProbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FushiProbe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A1239722E6C11D881E2570 /* EventTapProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTapProbe.swift; sourceTree = "<group>"; };
+		FB7CA83D6866ADB53C72CAFA /* EventSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSender.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0555A15B9CDBB7A06B2CD822 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BCC02EC2309578F3916F95F2 /* Brand.swift */,
+				9569D0D05CB670CD61D0B2D1 /* HelpView.swift */,
+				82485686D3F1C05234153C67 /* LockViews.swift */,
+				A8E74EDC661FC95138801449 /* MainView.swift */,
+				80BDEC1579071F7A51FB0107 /* PermissionGuideView.swift */,
+				C69FA38B72479FB08217CECC /* SettingsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		15B154270F0B646E6A25F922 /* FushiTests */ = {
+			isa = PBXGroup;
+			children = (
+				6295438BE5013FE52863B603 /* EscapeHoldTests.swift */,
+				1CBB383C52E6E563054241DA /* PointerPolicyTests.swift */,
+				B32BC579A192A421D32A4774 /* SessionMachineTests.swift */,
+			);
+			path = FushiTests;
+			sourceTree = "<group>";
+		};
+		348F9057AB73C65820AD82E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0038C4D8CE5E4344DB2CDC07 /* Assets.xcassets */,
+				EA11685647DE3D1E8467F00B /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		36834D2FCD914A4DC14B9C55 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				29B43EB3CEAF9CE40A7EC3DD /* AppModel.swift */,
+				286AA2137DEF6BC1878837C9 /* Diagnostics.swift */,
+				AAF329CE214DD12FDA9FD282 /* DirectionMockups.swift */,
+				AA42856F4CD743D01668D2BD /* FushiApp.swift */,
+				C218C4281DD1A6D3D37AF7E9 /* PanelSnapshots.swift */,
+				C77979D1F55E90D09AAD5E71 /* TouchScreen.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		368F5DC73303BD175A2F7952 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				46A0B9878B3789E7F56E52EA /* Fushi */,
+				4337EB42BA16690F6909E82E /* FushiProbe */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4337EB42BA16690F6909E82E /* FushiProbe */ = {
+			isa = PBXGroup;
+			children = (
+				D08BD33968AB8ADB86752382 /* Info.plist */,
+				4687E879FBBE2CDAEA7E48EB /* App */,
+				8BAB5D6A0BD3837E846ABFB0 /* Probe */,
+				348F9057AB73C65820AD82E2 /* Resources */,
+				CC163F240D2FAE56340CAC57 /* Support */,
+				C2388413941F59E2CDB95E26 /* UI */,
+			);
+			path = FushiProbe;
+			sourceTree = "<group>";
+		};
+		4687E879FBBE2CDAEA7E48EB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E0866B689F81FB7DEC8BA112 /* FushiProbeApp.swift */,
+				A731C20E401D50652C3ED845 /* ProbeModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		46A0B9878B3789E7F56E52EA /* Fushi */ = {
+			isa = PBXGroup;
+			children = (
+				00965CB514F4A5DF23D2C191 /* Info.plist */,
+				36834D2FCD914A4DC14B9C55 /* App */,
+				7E147613A0BA4DABB3696E72 /* Core */,
+				CAD0317BA09D82C0955F2B64 /* Lock */,
+				B6489FAC14DDD9CD3790C686 /* Permissions */,
+				C0A9E20F9874D9C63867265F /* Resources */,
+				0555A15B9CDBB7A06B2CD822 /* UI */,
+			);
+			path = Fushi;
+			sourceTree = "<group>";
+		};
+		60F79E06381B0CD8971EDBAD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				15B154270F0B646E6A25F922 /* FushiTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		62D82A2A02D1CC37E0067A14 = {
+			isa = PBXGroup;
+			children = (
+				368F5DC73303BD175A2F7952 /* Sources */,
+				60F79E06381B0CD8971EDBAD /* Tests */,
+				D0179B2B0AE48B1E9F37DBAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E147613A0BA4DABB3696E72 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7641A43853665457B257B08F /* CleaningMode.swift */,
+				06A0DA6757ACD17BE9EA47C1 /* EscapeHold.swift */,
+				C3276AD47A8138D2681136DF /* PointerPolicy.swift */,
+				C2915391033595F39F7F2927 /* SessionMachine.swift */,
+				CBD2A29B0E7933C143885880 /* SessionPolicy.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8BAB5D6A0BD3837E846ABFB0 /* Probe */ = {
+			isa = PBXGroup;
+			children = (
+				FB7CA83D6866ADB53C72CAFA /* EventSender.swift */,
+				F5A1239722E6C11D881E2570 /* EventTapProbe.swift */,
+				D3CE1D56A2AE40A4BCAF1B6B /* HIDProbe.swift */,
+				2AF103BE7B36930F6D5115AE /* ProbeRecorder.swift */,
+			);
+			path = Probe;
+			sourceTree = "<group>";
+		};
+		B6489FAC14DDD9CD3790C686 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				11DC7CA18707E8CBED699BCA /* PermissionCenter.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
+		C0A9E20F9874D9C63867265F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53562E471E05A85E313126E9 /* Assets.xcassets */,
+				97F66546505785E2ED0B5A88 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2388413941F59E2CDB95E26 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				33C08722ECEE8C728E20CD8D /* ProbeView.swift */,
+				41FEDFF30A48C770F3F324BF /* TouchPadView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CAD0317BA09D82C0955F2B64 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				C8E7E89CB8C5951953980833 /* EventSourceLookup.swift */,
+				BF54B2828E77F55CA7207062 /* ExternalMouseMonitor.swift */,
+				967266E60F9086337E8677BD /* KeyboardLocker.swift */,
+				1B664AEE4F53DA1D8BFEF1C9 /* PointerLocker.swift */,
+				985A09EAF6C81AF710AB1CA4 /* ScreenOverlayController.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		CC163F240D2FAE56340CAC57 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3DDB3AC2E6190BA14BE18D63 /* FushiProbe-Bridging-Header.h */,
+				05A346B17D6349C73F8F1E8F /* ObjCSafe.h */,
+				DA3DB8FAF4E44D249D8E03DB /* ObjCSafe.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		D0179B2B0AE48B1E9F37DBAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9286EF09B36B3CDFC2681ED /* Fushi.app */,
+				F0389DE7B28F589E40923A59 /* FushiProbe.app */,
+				B657C6F66026CDA09BB17B34 /* FushiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FFEDDDDDFD66754B87462A6 /* FushiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 941E4565482C7CE354B2C5EB /* Build configuration list for PBXNativeTarget "FushiTests" */;
+			buildPhases = (
+				4F8A5C2C72E3E7CE24076915 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FushiTests;
+			packageProductDependencies = (
+			);
+			productName = FushiTests;
+			productReference = B657C6F66026CDA09BB17B34 /* FushiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1CD590850DC8F8977F2F942 /* Fushi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DE886E0CBA08DC613785782 /* Build configuration list for PBXNativeTarget "Fushi" */;
+			buildPhases = (
+				485B3CF5D21C183ED9411B65 /* Sources */,
+				94CC1134491B56783B90C6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fushi;
+			packageProductDependencies = (
+			);
+			productName = Fushi;
+			productReference = D9286EF09B36B3CDFC2681ED /* Fushi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBFE79C36DD0CDBF302E89A3 /* FushiProbe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA96355779C2E2693996F89F /* Build configuration list for PBXNativeTarget "FushiProbe" */;
+			buildPhases = (
+				8F130424282158C42CB8CB2D /* Sources */,
+				B224368E3E0DA64F1D985B5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FushiProbe;
+			packageProductDependencies = (
+			);
+			productName = FushiProbe;
+			productReference = F0389DE7B28F589E40923A59 /* FushiProbe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6EECD8F8C81BDE8FBDB1EEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7FFEDDDDDFD66754B87462A6 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					A1CD590850DC8F8977F2F942 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					CBFE79C36DD0CDBF302E89A3 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 377FAA3217BF5252C442202E /* Build configuration list for PBXProject "Fushi" */;
+			developmentRegion = "zh-Hant";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"zh-Hant",
+			);
+			mainGroup = 62D82A2A02D1CC37E0067A14;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D0179B2B0AE48B1E9F37DBAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1CD590850DC8F8977F2F942 /* Fushi */,
+				CBFE79C36DD0CDBF302E89A3 /* FushiProbe */,
+				7FFEDDDDDFD66754B87462A6 /* FushiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94CC1134491B56783B90C6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				513F2592531FF3F928143A3E /* Assets.xcassets in Resources */,
+				8D89345DED945B2AF8E979AD /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B224368E3E0DA64F1D985B5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9DD049205321FF8E8F657A1 /* Assets.xcassets in Resources */,
+				BF149E7811B9D6B72D07AC65 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		485B3CF5D21C183ED9411B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330537DDE74B7C3EE9220F48 /* AppModel.swift in Sources */,
+				23D3E614E435258FA5D0C291 /* Brand.swift in Sources */,
+				52C1F76871DB5F9D150E9D9A /* CleaningMode.swift in Sources */,
+				A50B4BB5063EE2F9CE376F95 /* Diagnostics.swift in Sources */,
+				3C5354D32BB3D37E482136D8 /* DirectionMockups.swift in Sources */,
+				868894A989112944F62F7B14 /* EscapeHold.swift in Sources */,
+				54EE291848C0B030F65B9E4B /* EventSourceLookup.swift in Sources */,
+				BE4E7696F74EE4E624E2EA74 /* ExternalMouseMonitor.swift in Sources */,
+				DF06F2FFCC6F9A44AB1D4912 /* FushiApp.swift in Sources */,
+				BF6E19452A22D579CE60E68B /* HelpView.swift in Sources */,
+				3E24B5CAF6ABF2B4D375FC26 /* KeyboardLocker.swift in Sources */,
+				F6AC56C7E9EB14B3448D44D3 /* LockViews.swift in Sources */,
+				019BF4E1A711DC6AF4A7812B /* MainView.swift in Sources */,
+				AC5D6DF94393C7F231773AEF /* PanelSnapshots.swift in Sources */,
+				566ED4BAF0933472BBCDB7FC /* PermissionCenter.swift in Sources */,
+				DD04A272393ED8A573625AAD /* PermissionGuideView.swift in Sources */,
+				60A4C0C5E906EACCB9DC990D /* PointerLocker.swift in Sources */,
+				70062C156BC7C2C7F5795DF8 /* PointerPolicy.swift in Sources */,
+				CBE9651C8A456F2E1F3769BA /* ScreenOverlayController.swift in Sources */,
+				835BF1CCF9158F09A4467FB1 /* SessionMachine.swift in Sources */,
+				7AE1DEF4A3F34D1F1E7FCDEB /* SessionPolicy.swift in Sources */,
+				C48F58D70E6A76EC6616B4DB /* SettingsView.swift in Sources */,
+				E5D76885D1E78AB4AF0263C2 /* TouchScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F8A5C2C72E3E7CE24076915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73DD7BAAD4CF3C30A2462C2D /* CleaningMode.swift in Sources */,
+				E178328F8DC6C6FCF2FDCFC7 /* EscapeHold.swift in Sources */,
+				D35BBB70244DC81DD639483D /* EscapeHoldTests.swift in Sources */,
+				3CE47AB33C3DC8392B4D86D5 /* PointerPolicy.swift in Sources */,
+				1A6B2B769FEDB5B1D3D52038 /* PointerPolicyTests.swift in Sources */,
+				BE8070D6477AA61918DCD546 /* SessionMachine.swift in Sources */,
+				EBB9768F11EE53FB655CCEBB /* SessionMachineTests.swift in Sources */,
+				19CD029BF6D5260AE5CB155B /* SessionPolicy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F130424282158C42CB8CB2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512FF9C8B8000E5F9B054F74 /* EventSender.swift in Sources */,
+				3793EC1203C408FF5964F1A4 /* EventTapProbe.swift in Sources */,
+				267325ECE5F8FDBA9819DD89 /* FushiProbeApp.swift in Sources */,
+				D5742A8F043A1D32B84ED9D9 /* HIDProbe.swift in Sources */,
+				58DB94912223360C95C5B84C /* ObjCSafe.m in Sources */,
+				756767038AF050832C5EBE54 /* ProbeModel.swift in Sources */,
+				472176BE24DE3C98F769BCA8 /* ProbeRecorder.swift in Sources */,
+				CCB1607B5206ADB5CC0EF5ED /* ProbeView.swift in Sources */,
+				4BDE17B27703576610A7AA26 /* TouchPadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		051ADB7A9D52417519393237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sources/FushiProbe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wlee717727.FushiProbe.debug;
+				PRODUCT_NAME = FushiProbe;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/FushiProbe/Support/FushiProbe-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		2C915607F2893BDA6DD6F3C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FUSHI_DISPLAY_NAME = "拂拭";
+				INFOPLIST_FILE = Sources/Fushi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--requirements $(SRCROOT)/signing/Fushi.req";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wlee717727.Fushi;
+				PRODUCT_NAME = Fushi;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		39F60760FF4A47A3010AEC34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wlee717727.FushiTests;
+				SDKROOT = macosx;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		3CB995247734E4652D37344B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wlee717727.FushiTests;
+				SDKROOT = macosx;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		6411A97045E4E9E7C50181DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sources/FushiProbe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--requirements $(SRCROOT)/signing/FushiProbe.req";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wlee717727.FushiProbe;
+				PRODUCT_NAME = FushiProbe;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/FushiProbe/Support/FushiProbe-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		7AA1E1C2E509364C721CCF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FUSHI_DISPLAY_NAME = "拂拭 (開發版)";
+				INFOPLIST_FILE = Sources/Fushi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wlee717727.Fushi.debug;
+				PRODUCT_NAME = Fushi;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A2F3F216F4298AF89B2DB469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.2.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C7E5022070A1D19CE20543B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.2.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DE886E0CBA08DC613785782 /* Build configuration list for PBXNativeTarget "Fushi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AA1E1C2E509364C721CCF36 /* Debug */,
+				2C915607F2893BDA6DD6F3C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		377FAA3217BF5252C442202E /* Build configuration list for PBXProject "Fushi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E5022070A1D19CE20543B5 /* Debug */,
+				A2F3F216F4298AF89B2DB469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		941E4565482C7CE354B2C5EB /* Build configuration list for PBXNativeTarget "FushiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39F60760FF4A47A3010AEC34 /* Debug */,
+				3CB995247734E4652D37344B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FA96355779C2E2693996F89F /* Build configuration list for PBXNativeTarget "FushiProbe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051ADB7A9D52417519393237 /* Debug */,
+				6411A97045E4E9E7C50181DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6EECD8F8C81BDE8FBDB1EEC /* Project object */;
+}

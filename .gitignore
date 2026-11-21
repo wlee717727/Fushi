@@ -1,0 +1,15 @@
+# 建置產物
+build/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+# 編好的 App 與打包檔 (從 GitHub Release 取得)
+/Fushi.app
+/FushiProbe.app
+*.zip
+# 偵測紀錄可能含個人使用習慣，不進版控
+probe-logs/
+# macOS
+.DS_Store
+# Claude Code 本機設定
+.claude/settings.local.json
