@@ -62,6 +62,10 @@ final class AppModel: ObservableObject {
     }
     /// 這次啟動時的語言設定；和 language 不同代表要重新開啟才會生效
     let launchLanguage: AppLanguage
+    /// 正在重新打開 (防連點：開新的一份需要零點幾秒，這段時間按鈕要停用)
+    @Published private(set) var isRelaunching = false
+    /// 重新打開失敗的原因，顯示在設定視窗的語言區塊下方
+    @Published private(set) var relaunchError: String?
 
     let permissions = PermissionCenter()
     /// 由畫面設定，用來在需要時把主視窗叫出來。
@@ -210,18 +214,22 @@ final class AppModel: ObservableObject {
     /// 先用系統的「開啟 App」開新的一份，確認開成功才結束自己：
     /// 從「下載」資料夾直接執行時，macOS 會讓 App 跑在臨時路徑，等自己結束後再開可能會找不到。
     func relaunch() {
-        guard state.isIdle else { return }
+        guard state.isIdle, !isRelaunching else { return }
+        isRelaunching = true
+        relaunchError = nil
         let config = NSWorkspace.OpenConfiguration()
         config.createsNewApplicationInstance = true
         config.arguments = ["-" + Self.relaunchArgument, "YES"]
         NSWorkspace.shared.openApplication(at: Bundle.main.bundleURL, configuration: config) { app, error in
             DispatchQueue.main.async {
-                if let error {
-                    Diagnostics.log("重新打開失敗：\(error.localizedDescription)")
-                    AppModel.shared.alertMessage = String(localized: "Couldn’t reopen Fushi. Quit and open it again to use the new language.")
+                let model = AppModel.shared
+                guard error == nil, app != nil else {
+                    Diagnostics.log("重新打開失敗：\(error?.localizedDescription ?? "沒有開出新的一份")")
+                    model.isRelaunching = false
+                    model.relaunchError = String(localized: "Couldn’t reopen Fushi. Quit and open it again to use the new language.")
                     return
                 }
-                if app != nil { NSApp.terminate(nil) }
+                NSApp.terminate(nil)
             }
         }
     }
@@ -243,7 +251,9 @@ final class AppModel: ObservableObject {
     func handleLaunch() {
         #if DEBUG
         // 開發用：-FushiTestRelaunch YES 啟動 2 秒後自動執行「立即重新打開」，用來實測重新打開的流程
-        if UserDefaults.standard.bool(forKey: "FushiTestRelaunch") {
+        // 重新打開的那一次不再觸發，就算這個參數被寫進設定也不會無限重開
+        if UserDefaults.standard.bool(forKey: "FushiTestRelaunch"),
+           !UserDefaults.standard.bool(forKey: Self.relaunchArgument) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in self?.relaunch() }
         }
         #endif

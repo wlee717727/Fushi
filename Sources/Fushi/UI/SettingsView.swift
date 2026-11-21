@@ -19,12 +19,18 @@ struct SettingsView: View {
                 }
             } footer: {
                 if model.language != model.launchLanguage {
-                    HStack(spacing: 10) {
-                        Text("Reopen Fushi to use the new language.")
-                            .foregroundStyle(.secondary)
-                        Spacer(minLength: 8)
-                        Button("Reopen Now") { model.relaunch() }
-                            .disabled(!model.state.isIdle)
+                    VStack(alignment: .leading, spacing: 6) {
+                        HStack(spacing: 10) {
+                            Text("Reopen Fushi to use the new language.")
+                                .foregroundStyle(.secondary)
+                            Spacer(minLength: 8)
+                            Button("Reopen Now") { model.relaunch() }
+                                .disabled(!model.state.isIdle || model.isRelaunching)
+                        }
+                        // 失敗時直接顯示在這裡 (使用者正在看設定視窗)
+                        if let error = model.relaunchError {
+                            Text(error).foregroundStyle(.orange)
+                        }
                     }
                 } else {
                     Text("“Follow System” uses the language in System Settings › General › Language & Region.")
