@@ -27,7 +27,10 @@ enum EventSourceLookup {
     static var isAvailable: Bool { copyHIDEvent != nil && getSenderID != nil }
 
     private static let lock = NSLock()
+    /// 查過的來源。查到的永久記住；查不到的只記 2 秒 (避免每個事件都重查拖慢攔截，
+    /// 也讓藍牙滑鼠重新連線瞬間查不到時，2 秒後能再查一次)
     nonisolated(unsafe) private static var cache: [UInt64: SenderInfo] = [:]
+    nonisolated(unsafe) private static var misses: [UInt64: TimeInterval] = [:]
 
     /// 事件的來源裝置；查不到時回傳 nil。
     static func sender(of event: CGEvent) -> SenderInfo? {
@@ -36,10 +39,14 @@ enum EventSourceLookup {
         let id = get(hid)
         guard id != 0 else { return nil }
         lock.lock()
+        let now = ProcessInfo.processInfo.systemUptime
         if let hit = cache[id] { lock.unlock(); return hit }
+        if let missedAt = misses[id], now - missedAt < 2 { lock.unlock(); return nil }
         lock.unlock()
         let info = describe(id)
-        lock.lock(); cache[id] = info; lock.unlock()
+        lock.lock()
+        if let info { cache[id] = info; misses[id] = nil } else { misses[id] = now }
+        lock.unlock()
         return info
     }
 

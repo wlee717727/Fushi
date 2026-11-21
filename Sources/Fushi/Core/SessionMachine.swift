@@ -115,6 +115,12 @@ struct SessionState: Equatable, Sendable {
             phase = .idle
             lastEnd = .countdownCancelled
 
+        // 倒數中電腦睡著，醒來時連清潔時間都已經過了 → 直接回到待命 (不要先上鎖再立刻解鎖)
+        case (.countdown(_, let endsAt, let seconds), .tick(let now))
+            where now >= endsAt.addingTimeInterval(TimeInterval(seconds)):
+            phase = .idle
+            lastEnd = .timeout
+
         // 倒數結束 → 開始清潔。截止時間從「倒數結束的那一刻」起算，不受計時器延遲影響。
         case (.countdown(let mode, let endsAt, let seconds), .tick(let now)) where now >= endsAt:
             phase = .cleaning(mode: mode,

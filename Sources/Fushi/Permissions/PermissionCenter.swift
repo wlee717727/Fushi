@@ -8,8 +8,8 @@ import IOKit.hid
 /// - 輸入監控 (Input Monitoring)：只監聽 (不擋) 鍵盤與指標事件需要；
 ///   第 2 階段分辨裝置時會用到，偵測工具 FushiProbe 也需要。
 ///
-/// 這兩個權限都綁定在 App 的「簽章」上。ad-hoc 簽章每次重新建置都會改變，
-/// 系統會把新版當成另一個 App，所以重新建置後要到系統設定重新勾選。
+/// 權限綁定在 App 的「簽章身分」上。Release 版用 signing/Fushi.req 把身分固定成 Bundle ID，
+/// 重新建置後權限不會失效；Debug 版沒有固定，每次重新建置都要到系統設定重新勾選。
 @MainActor
 final class PermissionCenter: ObservableObject {
     @Published private(set) var accessibility = false

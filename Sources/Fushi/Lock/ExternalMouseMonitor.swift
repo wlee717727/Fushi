@@ -33,7 +33,8 @@ final class ExternalMouseMonitor: ObservableObject {
             let monitor = Unmanaged<ExternalMouseMonitor>.fromOpaque(ctx).takeUnretainedValue()
             MainActor.assumeIsolated { monitor.refresh() }
         }, context)
-        IOHIDManagerScheduleWithRunLoop(manager, CFRunLoopGetMain(), CFRunLoopMode.defaultMode.rawValue)
+        // 用通用模式：選單打開、正在拖曳時也收得到斷線通知
+        IOHIDManagerScheduleWithRunLoop(manager, CFRunLoopGetMain(), CFRunLoopMode.commonModes.rawValue)
         refresh()
     }
 
@@ -42,10 +43,17 @@ final class ExternalMouseMonitor: ObservableObject {
         var found: [String] = []
         for device in all {
             let builtIn = (IOHIDDeviceGetProperty(device, "Built-In" as CFString) as? NSNumber)?.boolValue ?? false
-            let product = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString) as? String ?? ""
+            var product = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString) as? String ?? ""
+            let transport = IOHIDDeviceGetProperty(device, kIOHIDTransportKey as CFString) as? String ?? ""
             // 排除內建裝置與虛擬裝置 (例如 Karabiner 的虛擬裝置)
             if builtIn || product.localizedCaseInsensitiveContains("karabiner")
-                || product.localizedCaseInsensitiveContains("virtual") || product.isEmpty { continue }
+                || product.localizedCaseInsensitiveContains("virtual") { continue }
+            if product.isEmpty {
+                // 沒有產品名稱：只有實體連線 (USB、藍牙) 才算，名稱用通用說法
+                let physical = ["USB", "Bluetooth", "Bluetooth Low Energy"].contains { transport.localizedCaseInsensitiveContains($0) }
+                guard physical else { continue }
+                product = "外接滑鼠"
+            }
             if !found.contains(product) { found.append(product) }
         }
         found.sort()

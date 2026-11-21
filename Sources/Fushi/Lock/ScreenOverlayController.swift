@@ -24,15 +24,18 @@ final class ScreenOverlayController {
     private var cursorHidden = false
     private var savedPresentation: NSApplication.PresentationOptions = []
     private var screenObserver: NSObjectProtocol?
+    private var resignObserver: NSObjectProtocol?
+    /// 是否顯示中 (獨立記錄：螢幕清單短暫變成空的時，視窗數量會是 0，不能拿來判斷)
+    private(set) var isShowing = false
 
     init(model: AppModel) {
         self.model = model
     }
 
-    var isShowing: Bool { !windows.isEmpty }
-
     func show() {
         guard let model else { return }
+        if isShowing { buildWindows(model: model); return }
+        isShowing = true
         NSApp.activate()
         buildWindows(model: model)
 
@@ -49,16 +52,40 @@ final class ScreenOverlayController {
                 self.buildWindows(model: model)   // 插拔外接螢幕時重新蓋滿
             }
         }
+        // 全黑期間被別的程式 (Spotlight、系統對話框) 搶走前景：馬上搶回來，
+        // 否則按鍵會打進後面看不到的 App，長按 Esc 也收不到
+        resignObserver = NotificationCenter.default.addObserver(
+            forName: NSApplication.didResignActiveNotification, object: nil, queue: .main
+        ) { [weak self] _ in
+            MainActor.assumeIsolated { self?.reclaimFocus() }
+        }
+        // 從選單列開始時，系統有時不讓拂拭立刻到前景：稍後再確認一次
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+            if !NSApp.isActive { self?.reclaimFocus() }
+        }
         setCursorHidden(true)
     }
 
     func hide() {
         if let screenObserver { NotificationCenter.default.removeObserver(screenObserver) }
+        if let resignObserver { NotificationCenter.default.removeObserver(resignObserver) }
         screenObserver = nil
+        resignObserver = nil
         windows.forEach { $0.orderOut(nil) }
         windows.removeAll()
-        NSApp.presentationOptions = savedPresentation
+        // 只有真的顯示過全黑畫面才還原 (C 面沒動過這些設定，不要去重設)
+        if isShowing { NSApp.presentationOptions = savedPresentation }
+        isShowing = false
         setCursorHidden(false)
+    }
+
+    /// 確認拂拭在前景、全黑視窗是焦點視窗
+    func reclaimFocus() {
+        guard isShowing else { return }
+        Diagnostics.log("全黑畫面失去前景，重新搶回")
+        NSApp.activate()
+        let mainScreen = NSScreen.main ?? NSScreen.screens.first
+        (windows.first { $0.screen == mainScreen } ?? windows.first)?.makeKeyAndOrderFront(nil)
     }
 
     /// 全黑時隱藏游標；控制面板亮起時顯示游標，方便用觸控板按按鈕。

@@ -14,6 +14,26 @@ final class SessionMachineTests: XCTestCase {
         return s
     }
 
+    // MARK: 睡眠
+
+    /// 倒數中電腦睡著，醒來時清潔時間也已經過了：直接回到待命，不要先上鎖再立刻解鎖
+    func testCountdownWakingPastDeadlineGoesIdle() {
+        var s = SessionState(isDebugBuild: false)
+        s.handle(.start(.screenB, requestedSeconds: 60, now: t0))
+        s.handle(.tick(now: at(3 + 60 + 5)))
+        XCTAssertTrue(s.isIdle)
+        XCTAssertEqual(s.lastEnd, .timeout)
+    }
+
+    /// 倒數中睡一下、醒來時還沒到解鎖時間：照常開始清潔，截止時間仍從倒數結束起算
+    func testCountdownWakingBeforeDeadlineStartsCleaning() {
+        var s = SessionState(isDebugBuild: false)
+        s.handle(.start(.screenB, requestedSeconds: 60, now: t0))
+        s.handle(.tick(now: at(30)))
+        XCTAssertTrue(s.isCleaning)
+        XCTAssertEqual(s.deadline, at(3 + 60))
+    }
+
     // MARK: 模式
 
     func testDeckTargetRejectsNothingSelected() {

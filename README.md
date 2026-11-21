@@ -46,7 +46,7 @@ Fushi/
 
 1. 打開 `Fushi.app`。第一次會出現權限引導；B 面清潔不需要權限，C 面鎖鍵盤需要「輔助使用」。
 2. 選模式 → 調自動解鎖時間 → 按【開始清潔】→ 倒數 3 秒後鎖定。
-3. 結束：按住【結束清潔】2 秒、B 面可長按 Esc 2 秒、或等時間到。
+3. 結束：任何模式長按 Esc 3 秒 (畫面會出現 3、2、1 倒數)、C 面與全鎖可用觸控螢幕或外接滑鼠按住【結束清潔】2 秒、或等時間到。
 4. App 內「說明」選單 (⌘?) 有完整使用說明。
 
 **電源鍵與 Touch ID 無法鎖定**，清潔時請避開。
@@ -69,7 +69,7 @@ xcodegen generate && open Fushi.xcodeproj
 
 ### 開發者注意事項
 
-- **簽章與權限**：目前用 ad-hoc 簽章。macOS 的「輔助使用」「輸入監控」權限綁定在 App 的簽章上，ad-hoc 簽章每次重新建置都會變，系統會當成新的 App，要到系統設定把舊項目移除再重新勾選。加入 Apple Development 憑證後就不會有這個問題 (改 `project.yml` 的 `CODE_SIGN_IDENTITY` 與 `DEVELOPMENT_TEAM`)。
+- **簽章與權限**：目前用 ad-hoc 簽章。macOS 的「輔助使用」權限綁定在 App 的簽章身分上。Release 版用 `signing/Fushi.req` 把身分固定成 Bundle ID，重新建置後權限不會失效；Debug 版 (`拂拭 (開發版)`) 沒有固定，每次重新建置都要到系統設定移除舊項目再重新勾選。
 - **Debug 版**：自動解鎖上限強制 30 秒，方便開發測試時不會被鎖太久。
 - **圖示**：把 1024×1024 的正式圖放到 `Design/AppIcon-1024.png` (偵測工具用 `Design/ProbeIcon-1024.png`)，執行 `scripts/make-appicon.sh` 再重新建置。
 

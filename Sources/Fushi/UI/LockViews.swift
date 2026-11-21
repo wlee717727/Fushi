@@ -220,7 +220,7 @@ struct EscapeHoldProgress: View {
 }
 
 /// 全黑時碰到鍵盤／觸控板／滑鼠的回饋：螢幕四周的金色光暈呼吸兩下，中央淡淡浮出「長按 Esc 3 秒結束」，
-/// 3 秒後自己淡出。讓使用者知道電腦還開著、拂拭正在保護畫面。
+/// 停手 6 秒後緩慢淡出 (持續碰觸會一直亮著)。讓使用者知道電腦還開著、拂拭正在保護畫面。
 struct NudgeHint: View {
     let startedAt: Date
     let endsAt: Date

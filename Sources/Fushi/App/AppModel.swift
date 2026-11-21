@@ -1,4 +1,5 @@
 import AppKit
+import Carbon.HIToolbox   // IsSecureEventInputEnabled：偵測密碼欄位的安全輸入
 import SwiftUI
 
 /// 主畫面上選的是哪一類模式。
@@ -70,6 +71,12 @@ final class AppModel: ObservableObject {
     private var keyMonitor: Any?
     private var mouseMonitor: Any?
     private var safetyTimer: DispatchSourceTimer?
+    /// 最後防線：主程式卡死、超過解鎖時間 5 秒還沒收掉畫面，就直接結束拂拭 (不經過主執行緒)
+    private var lastResortTimer: DispatchSourceTimer?
+    /// 「清潔中」旗標：背景的最後防線要讀，所以放在加鎖的盒子裡
+    private let cleaningFlag = Locked(false)
+    /// 上鎖失敗時是否要帶到權限頁 (外接滑鼠中斷、安全輸入這類失敗不需要)
+    private var failureNeedsPermissionGuide = true
 
     private enum Keys {
         static let kind = "mode.kind"
@@ -153,9 +160,16 @@ final class AppModel: ObservableObject {
             presentPermissionGuide()
             return
         }
+        // 有 App 正在用「安全輸入」(例如游標停在密碼欄位)：macOS 不讓任何 App 攔截鍵盤，鎖了也沒用
+        if mode.locksKeyboard && IsSecureEventInputEnabled() {
+            alertMessage = Self.secureInputMessage
+            return
+        }
         Diagnostics.log("開始倒數：\(mode.storageValue)，設定 \(durationSeconds) 秒")
         send(.start(mode, requestedSeconds: durationSeconds, now: Date()))
     }
+
+    static let secureInputMessage = "目前有 App 正在使用「安全輸入」(例如游標停在密碼欄位，或終端機開了安全鍵盤輸入)，macOS 不允許任何 App 鎖住鍵盤。請先點一下別的地方離開密碼欄位，再開始清潔。"
 
     func startLastMode() {
         if let lastMode { start(lastMode) }
@@ -239,6 +253,8 @@ final class AppModel: ObservableObject {
         // 進入清潔
         if new.isCleaning && !old.isCleaning, let mode = new.activeMode, let deadline = new.deadline {
             beginCleaning(mode: mode, deadline: deadline)
+            // 上鎖途中失敗 (已經收拾完、回到待命)：後面用舊狀態的步驟一律不做，免得又把游標藏起來
+            guard state == new else { return }
         }
         // B 面全黑／控制面板切換
         if let display = new.screenDisplay, display != old.screenDisplay {
@@ -253,7 +269,14 @@ final class AppModel: ObservableObject {
             stopTicker()
             if case .lockFailed(let message)? = new.lastEnd {
                 alertMessage = message
-                presentPermissionGuide()
+                // 主視窗可能是關著的 (從選單列開始)：一定打開並帶到前景，提示才看得到；權限問題再切到權限頁
+                if failureNeedsPermissionGuide {
+                    presentPermissionGuide()
+                } else {
+                    openMainWindow?()
+                    NSApp.activate()
+                }
+                failureNeedsPermissionGuide = true
             }
         }
     }
@@ -264,6 +287,28 @@ final class AppModel: ObservableObject {
         armSafetyTimer(deadline: deadline)
 
         let failMessage = "無法鎖定：請確認已在「系統設定 › 隱私權與安全性 › 輔助使用」勾選「拂拭」。"
+
+        // 倒數的 3 秒內情況可能變了，真正上鎖前再檢查一次
+        if mode == .all && !externalMouse.isConnected {
+            failureNeedsPermissionGuide = false
+            send(.lockFailed("外接滑鼠已經中斷，沒有辦法安全地全鎖。請確認滑鼠有電、已連線後再開始。")); return
+        }
+        if mode.locksKeyboard && IsSecureEventInputEnabled() {
+            failureNeedsPermissionGuide = false
+            send(.lockFailed(Self.secureInputMessage)); return
+        }
+        cleaningFlag.set(true)
+        armLastResort(deadline: deadline)
+        // 清潔中「輔助使用」被關掉：攔截已經自己停了，這裡結束清潔並說明
+        let lost: () -> Void = { [weak self] in
+            MainActor.assumeIsolated {
+                guard let self, self.state.isCleaning else { return }
+                Diagnostics.log("清潔中輔助使用權限被撤銷，自動解除")
+                self.send(.lockFailed("「輔助使用」權限在清潔中被關閉，已經自動解除鎖定。"))
+            }
+        }
+        locker.onPermissionLost = lost
+        pointerLocker.onPermissionLost = lost
         let emergency: () -> Void = { [weak self] in
             MainActor.assumeIsolated {
                 Diagnostics.log("緊急退出：長按 Esc 3 秒")
@@ -321,8 +366,11 @@ final class AppModel: ObservableObject {
     }
 
     private func endCleaning() {
+        cleaningFlag.set(false)
         safetyTimer?.cancel()
         safetyTimer = nil
+        lastResortTimer?.cancel()
+        lastResortTimer = nil
         locker.stop()
         pointerLocker.stop()
         pointerLocker.onExternalActivity = nil
@@ -343,10 +391,35 @@ final class AppModel: ObservableObject {
         let timer = DispatchSource.makeTimerSource(queue: .global(qos: .userInitiated))
         timer.schedule(deadline: .now() + max(0, deadline.timeIntervalSinceNow) + 0.1)
         timer.setEventHandler { [weak self] in
-            Task { @MainActor in self?.send(.tick(now: Date())) }
+            Task { @MainActor in
+                guard let self else { return }
+                self.send(.tick(now: Date()))
+                // 時鐘被往回調時 tick 不會判定到期；保險計時器到了就一定結束
+                if self.state.isCleaning {
+                    Diagnostics.log("保險計時器到期，強制結束清潔")
+                    self.confirmEnd()
+                }
+            }
         }
         timer.resume()
         safetyTimer = timer
+    }
+
+    /// 最後防線：超過解鎖時間 5 秒，主程式還沒結束清潔 (例如主執行緒卡死)，就直接結束拂拭。
+    /// 程式結束時全黑視窗與所有攔截都會跟著消失。完全不經過主執行緒。
+    private func armLastResort(deadline: Date) {
+        lastResortTimer?.cancel()
+        let flag = cleaningFlag
+        let timer = DispatchSource.makeTimerSource(queue: .global(qos: .utility))
+        timer.schedule(deadline: .now() + max(0, deadline.timeIntervalSinceNow) + 5)
+        timer.setEventHandler {
+            guard flag.get() else { return }
+            Diagnostics.log("最後防線：超過解鎖時間仍未結束，直接結束拂拭")
+            // 用 _exit 不用 exit：exit 會先跑收尾程序，主執行緒卡死時收尾也可能卡在同一個鎖上
+            _exit(0)
+        }
+        timer.resume()
+        lastResortTimer = timer
     }
 
     private func startTicker() {
@@ -444,7 +517,16 @@ final class AppModel: ObservableObject {
     private func setEscHold(_ holding: Bool) {
         guard state.isCleaning else { return }
         if holding {
-            if !escHolding { escHolding = true; escHoldStartedAt = Date() }
+            if !escHolding {
+                let start = Date()
+                escHolding = true
+                escHoldStartedAt = start
+                // 放開事件萬一漏掉：4.5 秒後還在清潔中，就把倒數收掉，讓結束按鈕回來
+                DispatchQueue.main.asyncAfter(deadline: .now() + SessionPolicy.emergencyEscapeSeconds + 1.5) { [weak self] in
+                    guard let self, self.escHoldStartedAt == start, self.state.isCleaning else { return }
+                    self.cancelEscHold()
+                }
+            }
         } else {
             cancelEscHold()
         }
