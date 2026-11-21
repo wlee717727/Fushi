@@ -69,7 +69,7 @@ Known limits: while a password field is active (macOS Secure Input), no app can 
 
 ## Languages
 
-English, 繁體中文, 简体中文, 日本語, 한국어, Español — chosen automatically from your system language (anything else falls back to English). Want to add yours? See [docs/TRANSLATING.md](docs/TRANSLATING.md).
+English, 繁體中文, 简体中文, 日本語, 한국어, Español — chosen automatically from your system language (anything else falls back to English), or pick one in **Fushi › Settings › Language**. Want to add yours? See [docs/TRANSLATING.md](docs/TRANSLATING.md).
 
 ## How it works
 
@@ -93,7 +93,7 @@ Development notes:
 - The Debug build is a separate app ("Fushi Dev", bundle ID `…Fushi.debug`) whose auto-unlock is capped at 30 seconds, so a bug can never lock you out for long.
 - Run unit tests with `xcodebuild -scheme Fushi test`. Debug-only tools: `-FushiSnapshot <folder>` renders the lock panels to PNG without locking anything.
 
-The repository also contains **FushiProbe**, a listen-only diagnostic tool used during development to measure how the touch screen, trackpad and mice appear to macOS (see `docs/PROBE-GUIDE.md`).
+The repository also contains **FushiProbe**, a listen-only diagnostic tool used during development to measure how the touch screen, trackpad and mice appear to macOS (see `docs/PROBE-GUIDE.md`). Build it with `FUSHI_COPY_PROBE=1 scripts/build.sh`.
 
 ## License
 

@@ -1636,6 +1636,40 @@
         }
       }
     },
+    "Follow System": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Igual que el sistema"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システムに合わせる"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 설정 따르기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟隨系統"
+          }
+        }
+      }
+    },
     "From the menu bar you can start or end cleaning and open the main window or Settings.": {
       "localizations": {
         "es": {
@@ -2350,6 +2384,40 @@
         }
       }
     },
+    "How do I change the language?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Cómo cambio el idioma?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "言語を切り替えるには？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "언어는 어떻게 바꾸나요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "怎么切换语言？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "怎麼切換語言？"
+          }
+        }
+      }
+    },
     "How do I unlock in an emergency?": {
       "localizations": {
         "es": {
@@ -2992,6 +3060,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "鍵盤、觸控板與觸控螢幕"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "言語"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "언어"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "語言"
           }
         }
       }
@@ -3676,6 +3778,40 @@
         }
       }
     },
+    "Open Fushi › Settings (⌘,) and choose a language, then click Reopen Now. “Follow System” uses the language in System Settings › General › Language & Region.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre Fushi › Ajustes (⌘,), elige un idioma y haz clic en Volver a abrir ahora. «Igual que el sistema» usa el idioma de Ajustes del Sistema › General › Idioma y región."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「Fushi › 設定」(⌘,) で言語を選び、「今すぐ開き直す」をクリックします。「システムに合わせる」は「システム設定 › 一般 › 言語と地域」の言語を使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘Fushi › 설정’(⌘,)에서 언어를 고른 다음 ‘지금 다시 열기’를 클릭하세요. ‘시스템 설정 따르기’는 ‘시스템 설정 › 일반 › 언어 및 지역’의 언어를 사용합니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开“拂拭 › 设置”(⌘,) 选择语言，再点按“立即重新打开”。“跟随系统”会使用“系统设置 › 通用 › 语言与地区”中的语言。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打開「拂拭 › 設定」(⌘,) 選擇語言，再按「立即重新開啟」。「跟隨系統」會使用「系統設定 › 一般 › 語言與地區」的語言。"
+          }
+        }
+      }
+    },
     "Open Help": {
       "localizations": {
         "es": {
@@ -4080,6 +4216,74 @@
           "stringUnit": {
             "state": "translated",
             "value": "重新打開拂拭"
+          }
+        }
+      }
+    },
+    "Reopen Fushi to use the new language.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vuelve a abrir Fushi para usar el nuevo idioma."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しい言語を使うには Fushi を開き直してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새 언어를 적용하려면 Fushi를 다시 여세요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新打开拂拭后使用新语言。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新開啟拂拭後套用新語言。"
+          }
+        }
+      }
+    },
+    "Reopen Now": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a abrir ahora"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今すぐ開き直す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "지금 다시 열기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即重新打开"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即重新開啟"
           }
         }
       }
@@ -5987,6 +6191,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "「同時鎖住觸控板」預設打開，擦鍵盤時手掌碰到也不會移動游標；想邊擦邊用觸控板就把它關掉。"
+          }
+        }
+      }
+    },
+    "“Follow System” uses the language in System Settings › General › Language & Region.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«Igual que el sistema» usa el idioma de Ajustes del Sistema › General › Idioma y región."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「システムに合わせる」は「システム設定 › 一般 › 言語と地域」の言語を使います。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "‘시스템 설정 따르기’는 ‘시스템 설정 › 일반 › 언어 및 지역’의 언어를 사용합니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“跟随系统”会使用“系统设置 › 通用 › 语言与地区”中的语言。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「跟隨系統」會使用「系統設定 › 一般 › 語言與地區」的語言。"
           }
         }
       }

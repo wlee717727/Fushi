@@ -60,7 +60,7 @@
 
 ## 語言
 
-英文、繁體中文、簡體中文、日文、韓文、西班牙文，依系統語言自動切換 (其他語言顯示英文)。想幫忙加入你的語言，請看 [docs/TRANSLATING.md](docs/TRANSLATING.md)。
+英文、繁體中文、簡體中文、日文、韓文、西班牙文，依系統語言自動切換 (其他語言顯示英文)，也可以在 **拂拭 › 設定 › 語言** 自己選。想幫忙加入你的語言，請看 [docs/TRANSLATING.md](docs/TRANSLATING.md)。
 
 ## 原理
 
@@ -84,7 +84,7 @@ scripts/build.sh
 - 開發版是另一個 App (「Fushi Dev」，Bundle ID `…Fushi.debug`)，自動解鎖上限 30 秒，程式有 bug 也不會把你鎖太久。
 - 開發版工具：`-FushiSnapshot <資料夾>` 可以把鎖定面板直接畫成 PNG，不必真的鎖定。
 
-專案裡另有開發用的 **FushiProbe 偵測工具** (只監聽、不攔截)，用來量測觸控螢幕、觸控板、滑鼠在 macOS 裡的樣子，說明見 `docs/PROBE-GUIDE.md`。
+專案裡另有開發用的 **FushiProbe 偵測工具** (只監聽、不攔截)，用來量測觸控螢幕、觸控板、滑鼠在 macOS 裡的樣子，說明見 `docs/PROBE-GUIDE.md`；要產生它請執行 `FUSHI_COPY_PROBE=1 scripts/build.sh`。
 
 ## 授權
 

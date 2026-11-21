@@ -50,6 +50,18 @@ final class AppModel: ObservableObject {
     @Published var durationSeconds: Int { didSet { defaults.set(durationSeconds, forKey: Keys.duration) } }
     @Published var autoStartLastMode: Bool { didSet { defaults.set(autoStartLastMode, forKey: Keys.autoStart) } }
     @Published private(set) var lastMode: CleaningMode?
+    /// App 內選的語言：寫進這個 App 自己的 AppleLanguages (和「系統設定 › 語言與地區 › App」同一個設定)
+    @Published var language: AppLanguage {
+        didSet {
+            if let code = language.code {
+                defaults.set([code], forKey: "AppleLanguages")
+            } else {
+                defaults.removeObject(forKey: "AppleLanguages")
+            }
+        }
+    }
+    /// 這次啟動時的語言設定；和 language 不同代表要重新開啟才會生效
+    let launchLanguage: AppLanguage
 
     let permissions = PermissionCenter()
     /// 由畫面設定，用來在需要時把主視窗叫出來。
@@ -106,6 +118,11 @@ final class AppModel: ObservableObject {
             : min(max(saved, SessionPolicy.minimumSeconds), SessionPolicy.maximumSeconds)
         autoStartLastMode = defaults.bool(forKey: Keys.autoStart)
         lastMode = defaults.string(forKey: Keys.lastMode).flatMap(CleaningMode.init(storageValue:))
+        // 只看這個 App 自己的設定 (不含系統的偏好語言)，才分得出「跟隨系統」
+        let ownLanguages = defaults.persistentDomain(forName: Bundle.main.bundleIdentifier ?? "")?["AppleLanguages"] as? [String]
+        let current = AppLanguage.from(appleLanguages: ownLanguages)
+        language = current
+        launchLanguage = current
     }
 
     // MARK: 給畫面用的衍生資料
@@ -185,6 +202,21 @@ final class AppModel: ObservableObject {
     func confirmEnd() { send(.confirmEnd) }
     func resumeDark() { send(.resumeDark) }
     func panelInteraction() { send(.interaction(now: Date())) }
+
+    /// 重新開啟拂拭 (套用新的語言)。清潔中不做，避免鎖定被中途結束。
+    func relaunch() {
+        guard state.isIdle else { return }
+        let task = Process()
+        task.executableURL = URL(fileURLWithPath: "/bin/sh")
+        // 等這個程序結束後再打開新的一份
+        task.arguments = ["-c", "sleep 0.8; /usr/bin/open -n \"$0\"", Bundle.main.bundlePath]
+        do {
+            try task.run()
+            NSApp.terminate(nil)
+        } catch {
+            Diagnostics.log("重新開啟失敗：\(error.localizedDescription)")
+        }
+    }
 
     func presentPermissionGuide() {
         Diagnostics.log("打開權限頁")

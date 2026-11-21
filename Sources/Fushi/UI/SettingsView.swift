@@ -7,6 +7,32 @@ struct SettingsView: View {
     var body: some View {
         Form {
             Section {
+                Picker(selection: $model.language) {
+                    Text("Follow System").tag(AppLanguage.system)
+                    Divider()
+                    ForEach(AppLanguage.allCases.filter { $0 != .system }) { lang in
+                        // 語言名稱用該語言書寫 (慣例)，看不懂目前語言的人也找得到
+                        Text(verbatim: lang.nativeName ?? "").tag(lang)
+                    }
+                } label: {
+                    Text("Language")
+                }
+            } footer: {
+                if model.language != model.launchLanguage {
+                    HStack(spacing: 10) {
+                        Text("Reopen Fushi to use the new language.")
+                            .foregroundStyle(.secondary)
+                        Spacer(minLength: 8)
+                        Button("Reopen Now") { model.relaunch() }
+                            .disabled(!model.state.isIdle)
+                    }
+                } else {
+                    Text("“Follow System” uses the language in System Settings › General › Language & Region.")
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Section {
                 LabeledContent {
                     HStack(spacing: 12) {
                         Slider(value: Binding(get: { Double(model.durationSeconds) },

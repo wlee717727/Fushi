@@ -44,7 +44,11 @@ elif [ "$sync_status" != 0 ]; then
 fi
 
 echo "▶︎ 4/4 複製 App 到專案根目錄"
-for app in Fushi FushiProbe; do
+# 偵測工具 FushiProbe 是開發用的，平常只編譯 (確保程式碼沒壞)、不複製出來；
+# 需要量測時執行：FUSHI_COPY_PROBE=1 scripts/build.sh
+apps="Fushi"
+[ "${FUSHI_COPY_PROBE:-0}" = 1 ] && apps="Fushi FushiProbe"
+for app in $apps; do
     src="$DERIVED/Build/Products/Release/$app.app"
     dst="$ROOT/$app.app"
     if [ -d "$dst" ]; then

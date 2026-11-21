@@ -86,6 +86,8 @@ struct HelpView: View {
                            a: "It may. Caps Lock is handled by the keyboard hardware, so if you touch it while cleaning, Caps Lock may be toggled after unlocking. Check the Caps Lock light when you finish.")
                     HelpQA(q: "How do I unlock in an emergency?",
                            a: "In any mode, holding Esc for 3 s always ends cleaning (a 3‑2‑1 countdown appears). In Keyboard and Trackpad Cleaning you can hold “Hold 2 s to end cleaning” with the touch screen or an external mouse; in Full Lock, unplugging the external mouse unlocks immediately. Input always unlocks when time is up, and turning off Accessibility during cleaning releases the lock at once. As a last resort, holding the power button to force a shutdown always restores input.")
+                    HelpQA(q: "How do I change the language?",
+                           a: "Open Fushi › Settings (⌘,) and choose a language, then click Reopen Now. “Follow System” uses the language in System Settings › General › Language & Region.")
                     HelpQA(q: "Why can’t I lock the keyboard while the cursor is in a password field?",
                            a: "Password fields turn on macOS Secure Input, which prevents any app from intercepting the keyboard (it protects your passwords). Click somewhere outside the password field first, then start cleaning.")
                 }
