@@ -11,6 +11,7 @@ final class AppLanguageTests: XCTestCase {
         XCTAssertEqual(AppLanguage.from(appleLanguages: ["en-US"]), .en)
         XCTAssertEqual(AppLanguage.from(appleLanguages: ["zh-Hant"]), .zhHant)
         XCTAssertEqual(AppLanguage.from(appleLanguages: ["zh-Hant-TW"]), .zhHant)
+        XCTAssertEqual(AppLanguage.from(appleLanguages: ["zh-MO"]), .zhHant)
         XCTAssertEqual(AppLanguage.from(appleLanguages: ["zh-Hans-CN"]), .zhHans)
         XCTAssertEqual(AppLanguage.from(appleLanguages: ["ja-JP"]), .ja)
         XCTAssertEqual(AppLanguage.from(appleLanguages: ["ko"]), .ko)

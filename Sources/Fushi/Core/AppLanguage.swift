@@ -35,7 +35,7 @@ enum AppLanguage: String, CaseIterable, Identifiable, Sendable {
     /// 從 App 自己的 AppleLanguages 設定判斷目前的選擇 (沒有設定 → 跟隨系統)
     static func from(appleLanguages: [String]?) -> AppLanguage {
         guard let first = appleLanguages?.first else { return .system }
-        if first.hasPrefix("zh-Hant") || first == "zh-TW" || first == "zh-HK" { return .zhHant }
+        if first.hasPrefix("zh-Hant") || ["zh-TW", "zh-HK", "zh-MO"].contains(first) { return .zhHant }
         if first.hasPrefix("zh-Hans") || first == "zh-CN" || first == "zh" { return .zhHans }
         let base = String(first.prefix { $0 != "-" && $0 != "_" })
         return AppLanguage(rawValue: base) ?? .system

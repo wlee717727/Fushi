@@ -203,18 +203,26 @@ final class AppModel: ObservableObject {
     func resumeDark() { send(.resumeDark) }
     func panelInteraction() { send(.interaction(now: Date())) }
 
-    /// 重新開啟拂拭 (套用新的語言)。清潔中不做，避免鎖定被中途結束。
+    /// 重新打開時帶的啟動參數：新的一份看到就跳過「自動開始上次的模式」
+    static let relaunchArgument = "FushiRelaunched"
+
+    /// 重新打開拂拭 (套用新的語言)。清潔中不做，避免鎖定被中途結束。
+    /// 先用系統的「開啟 App」開新的一份，確認開成功才結束自己：
+    /// 從「下載」資料夾直接執行時，macOS 會讓 App 跑在臨時路徑，等自己結束後再開可能會找不到。
     func relaunch() {
         guard state.isIdle else { return }
-        let task = Process()
-        task.executableURL = URL(fileURLWithPath: "/bin/sh")
-        // 等這個程序結束後再打開新的一份
-        task.arguments = ["-c", "sleep 0.8; /usr/bin/open -n \"$0\"", Bundle.main.bundlePath]
-        do {
-            try task.run()
-            NSApp.terminate(nil)
-        } catch {
-            Diagnostics.log("重新開啟失敗：\(error.localizedDescription)")
+        let config = NSWorkspace.OpenConfiguration()
+        config.createsNewApplicationInstance = true
+        config.arguments = ["-" + Self.relaunchArgument, "YES"]
+        NSWorkspace.shared.openApplication(at: Bundle.main.bundleURL, configuration: config) { app, error in
+            DispatchQueue.main.async {
+                if let error {
+                    Diagnostics.log("重新打開失敗：\(error.localizedDescription)")
+                    AppModel.shared.alertMessage = String(localized: "Couldn’t reopen Fushi. Quit and open it again to use the new language.")
+                    return
+                }
+                if app != nil { NSApp.terminate(nil) }
+            }
         }
     }
 
@@ -233,13 +241,21 @@ final class AppModel: ObservableObject {
 
     /// App 啟動後呼叫：需要的話自動開始上次的模式 (一樣有 3 秒倒數可以取消)。
     func handleLaunch() {
+        #if DEBUG
+        // 開發用：-FushiTestRelaunch YES 啟動 2 秒後自動執行「立即重新打開」，用來實測重新打開的流程
+        if UserDefaults.standard.bool(forKey: "FushiTestRelaunch") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in self?.relaunch() }
+        }
+        #endif
         // 只有「真的還沒允許」時才主動帶到權限頁；已經允許就直接停在模式頁
         permissions.refresh()
         if needsFirstRunGuide && !permissions.accessibility {
             presentPermissionGuide()
             return
         }
-        if autoStartLastMode, let lastMode, lastMode.isAvailableInPhase1 {
+        // 為了換語言而重新打開的那一次，不要自動開始清潔 (使用者只是想換語言)
+        let isRelaunch = UserDefaults.standard.bool(forKey: Self.relaunchArgument)
+        if autoStartLastMode, !isRelaunch, let lastMode, lastMode.isAvailableInPhase1 {
             start(lastMode)
         }
     }

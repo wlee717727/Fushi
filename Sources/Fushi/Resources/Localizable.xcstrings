@@ -1191,6 +1191,40 @@
         }
       }
     },
+    "Couldn’t reopen Fushi. Quit and open it again to use the new language.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo volver a abrir Fushi. Sal y ábrelo de nuevo para usar el nuevo idioma."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi を開き直せませんでした。終了してからもう一度開くと新しい言語になります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fushi를 다시 열 수 없습니다. 종료한 뒤 다시 열면 새 언어가 적용됩니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法重新打开拂拭。请退出拂拭后再打开，即可使用新语言。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法重新打開拂拭。請結束拂拭後再打開，就會套用新語言。"
+          }
+        }
+      }
+    },
     "Development build: auto-unlock is capped at %lld seconds.": {
       "localizations": {
         "es": {
@@ -3807,7 +3841,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "打開「拂拭 › 設定」(⌘,) 選擇語言，再按「立即重新開啟」。「跟隨系統」會使用「系統設定 › 一般 › 語言與地區」的語言。"
+            "value": "打開「拂拭 › 設定」(⌘,) 選擇語言，再按「立即重新打開」。「跟隨系統」會使用「系統設定 › 一般 › 語言與地區」的語言。"
           }
         }
       }
@@ -4249,7 +4283,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "重新開啟拂拭後套用新語言。"
+            "value": "重新打開拂拭後套用新語言。"
           }
         }
       }
@@ -4283,7 +4317,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "立即重新開啟"
+            "value": "立即重新打開"
           }
         }
       }
