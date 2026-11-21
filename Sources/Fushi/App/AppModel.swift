@@ -53,6 +53,7 @@ final class AppModel: ObservableObject {
     /// App 內選的語言：寫進這個 App 自己的 AppleLanguages (和「系統設定 › 語言與地區 › App」同一個設定)
     @Published var language: AppLanguage {
         didSet {
+            relaunchError = nil   // 換了語言，上一次的失敗訊息就不再適用
             if let code = language.code {
                 defaults.set([code], forKey: "AppleLanguages")
             } else {
