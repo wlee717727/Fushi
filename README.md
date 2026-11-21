@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Wipe your screen, keyboard and trackpad without pressing anything.</b><br>
-  Built for the <b>2026 MacBook Pro with touch screen (M5 · PROLED XDR)</b> — Apple's first touch-screen Mac.<br>
+  Built for the <b>2026 MacBook Pro with PROLED XDR Display and Touch display (M5 Pro / M5 Max)</b> — the first MacBook Pro you can touch.<br>
   Also supports Macs without a touch screen, on macOS 14 Sonoma or later.
 </p>
 
@@ -20,7 +20,7 @@
 
 ## Why
 
-On a touch-screen MacBook Pro, wiping the PROLED XDR display taps buttons, and wiping the keyboard deck types into whatever app is in front. Fushi temporarily locks exactly what you are cleaning, then unlocks automatically when time is up.
+On a MacBook Pro with Touch display, wiping the PROLED XDR Display taps buttons, and wiping the keyboard deck types into whatever app is in front. Fushi temporarily locks exactly what you are cleaning, then unlocks automatically when time is up.
 
 ## Four modes
 

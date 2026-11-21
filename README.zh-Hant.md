@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>擦螢幕、擦鍵盤、擦觸控板時，不會按到任何東西。</b><br>
-  專為 <b>2026 年觸控螢幕 MacBook Pro (M5 · PROLED XDR)</b> 設計 —— Apple 第一代觸控螢幕 Mac。<br>
+  專為 <b>2026 年 PROLED XDR Display 觸控螢幕 MacBook Pro (M5 Pro / M5 Max)</b> 設計 —— 第一款可以觸控的 MacBook Pro。<br>
   也支援沒有觸控螢幕的 Mac (macOS 14 Sonoma 以上)。
 </p>
 
@@ -20,7 +20,7 @@
 
 ## 為什麼需要
 
-觸控螢幕 MacBook Pro 擦 PROLED XDR 螢幕時會點到按鈕，擦鍵盤時會打字進前景的 App。拂拭會在清潔期間暫時鎖住你正在擦的部位，時間到自動解鎖。
+觸控螢幕 MacBook Pro 擦 PROLED XDR Display 時會點到按鈕，擦鍵盤時會打字進前景的 App。拂拭會在清潔期間暫時鎖住你正在擦的部位，時間到自動解鎖。
 
 ## 四種模式
 
