@@ -7,7 +7,7 @@
 <p align="center">
   <b>Wipe your screen, keyboard and trackpad without pressing anything.</b><br>
   Built for the <b>2026 MacBook Pro with touch screen (M5 · PROLED XDR)</b> — Apple's first touch-screen Mac.<br>
-  Works on every Mac running macOS 14 Sonoma or later, with or without a touch screen.
+  Also supports Macs without a touch screen, on macOS 14 Sonoma or later.
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@ On a touch-screen MacBook Pro, wiping the PROLED XDR display taps buttons, and w
   <img src="docs/images/lock-panel.png" width="380" alt="Keyboard locked panel">
 </p>
 
-## You can never be locked out
+## Designed so you can always get out
 
 - **Hold <kbd>Esc</kbd> for 3 seconds** ends any mode, even with the keyboard locked. A 3‑2‑1 ring shows the progress.
 - **Auto-unlock** after 30 s – 10 min (3 min by default), backed by independent timers that do not rely on the main thread.
@@ -57,12 +57,15 @@ While the screen is black, touching the keyboard or trackpad makes a gold glow b
    Fushi is not notarized by Apple (it is a free open-source app). If macOS blocks it, open **System Settings › Privacy & Security** and click **Open Anyway**.
 3. For keyboard, trackpad and full-lock cleaning, allow **Accessibility** when Fushi asks (System Settings › Privacy & Security › Accessibility). Screen cleaning needs no permission.
 
-Requirements: macOS 14 Sonoma or later · Apple silicon or Intel (universal app).
+Requirements: macOS 14 Sonoma or later. Universal app for Apple silicon and Intel; tested on Apple silicon.
+
+Known limits: while a password field is active (macOS Secure Input), no app can lock the keyboard, so Fushi asks you to leave the field first. The power button and Touch ID are handled by the hardware and cannot be locked — avoid them while cleaning.
 
 ## Privacy
 
 - Fushi blocks input only while cleaning. It **never records what you type** and has **no network access**.
 - Diagnostics stay on your Mac (unified log) and are copied only if you choose "Copy Diagnostics".
+- Found a security problem? Please report it privately — see [SECURITY.md](SECURITY.md).
 
 ## Languages
 
@@ -94,7 +97,11 @@ The repository also contains **FushiProbe**, a listen-only diagnostic tool used 
 
 ## License
 
-[Apache License 2.0](LICENSE). You may use, modify and redistribute the code. The name "Fushi" / "拂拭" and the app icon identify the official app — forks must use their own name and icon (see [NOTICE](NOTICE)).
+The source code is licensed under the [Apache License 2.0](LICENSE): you may use, modify and redistribute it.
+
+The app icon and illustrations (`Design/` and the image sets in `Assets.xcassets`) are **not** covered by the Apache License — all rights reserved. The name "Fushi" / "拂拭" identifies the official app. Forks must use their own name, icon and artwork (see [NOTICE](NOTICE)).
+
+Fushi is an independent project and is not affiliated with, endorsed by, or sponsored by Apple Inc. Apple, Mac, MacBook Pro, macOS and Touch ID are trademarks of Apple Inc.
 
 Ideas (no code copied) from LinearMouse (identifying the source device of an event), Mac Pause and KeepClean.
 

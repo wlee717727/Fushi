@@ -92,14 +92,14 @@ final class ProbeRecorder: @unchecked Sendable {
         }
     }
 
-    /// 紀錄資料夾：App 放在專案根目錄時，就是旁邊的 probe-logs；否則用桌面上的 Fushi 專案資料夾。
+    /// 紀錄資料夾：App 放在專案根目錄時，就是旁邊的 probe-logs；否則放在桌面的 FushiProbe-logs。
     private static func chooseLogDirectory() -> URL {
         let besideApp = Bundle.main.bundleURL.deletingLastPathComponent()
         if FileManager.default.fileExists(atPath: besideApp.appendingPathComponent("project.yml").path) {
             return besideApp.appendingPathComponent("probe-logs", isDirectory: true)
         }
         return FileManager.default.homeDirectoryForCurrentUser
-            .appendingPathComponent("Desktop/Fushi/probe-logs", isDirectory: true)
+            .appendingPathComponent("Desktop/FushiProbe-logs", isDirectory: true)
     }
 
     // MARK: 標籤

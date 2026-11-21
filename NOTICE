@@ -1,11 +1,15 @@
 Fushi (拂拭)
 Copyright 2026 wlee717727
 
-This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+The source code is licensed under the Apache License, Version 2.0 (see LICENSE).
 
-The name "Fushi" / "拂拭" and the app icon are not granted for use as a
-trademark: forks may reuse the code under the license, but must use their
-own name and icon so users can tell them apart from the official app.
+Artwork exception: the app icon and illustrations — everything under Design/
+and the image sets in Sources/*/Resources/Assets.xcassets — are NOT licensed
+under the Apache License. All rights reserved. Forks must use their own name,
+icon and artwork so users can tell them apart from the official app.
+
+Fushi is not affiliated with, endorsed by, or sponsored by Apple Inc.
+Apple, Mac, MacBook Pro, macOS and Touch ID are trademarks of Apple Inc.
 
 Design ideas (no code copied):
 - LinearMouse (MIT) — identifying the device that sent an input event.

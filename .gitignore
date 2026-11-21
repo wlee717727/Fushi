@@ -12,7 +12,7 @@ probe-logs/
 # macOS
 .DS_Store
 # Claude Code 本機設定
-.claude/settings.local.json
+.claude/
 
 # 翻譯校稿檔 (由 scripts/i18n/export_review.py 產生)
 translation-review/
@@ -22,3 +22,10 @@ Design/review/
 
 # 重寫 git 歷史前的完整備份 (含舊的作者信箱，只留在本機)
 .git-backup-*/
+
+# Xcode 測試結果與磁碟映像
+*.xcresult
+*.dmg
+
+# 內部開發文件 (計畫、測試清單、審查報告)，只留在本機
+docs-internal/
